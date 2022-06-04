@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Gendml</title>
+  
+  <subtitle>Gendml的博客</subtitle>
+  <link href="https://gend-max.gitee.io/atom.xml" rel="self"/>
+  
+  <link href="https://gend-max.gitee.io/"/>
+  <updated>2022-06-03T15:34:50.222Z</updated>
+  <id>https://gend-max.gitee.io/</id>
+  
+  <author>
+    <name>Gendml</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux</title>
+    <link href="https://gend-max.gitee.io/2022/05/17/linux/"/>
+    <id>https://gend-max.gitee.io/2022/05/17/linux/</id>
+    <published>2022-05-17T15:40:12.000Z</published>
+    <updated>2022-06-03T15:34:50.222Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、Lunix系统技术&quot;&gt;&lt;a href=&quot;#一、Lunix系统技术&quot; class=&quot;headerlink&quot; title=&quot;一、Lunix系统技术&quot;&gt;&lt;/a&gt;一、Lunix系统技术&lt;/h2&gt;&lt;h2 id=&quot;（一）常用命令&quot;&gt;&lt;a href=&quot;#（一）常用命令&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://gend-max.gitee.io/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="https://gend-max.gitee.io/tags/linux/"/>
+    
+    <category term="raspberry command" scheme="https://gend-max.gitee.io/tags/raspberry-command/"/>
+    
+    <category term="node command" scheme="https://gend-max.gitee.io/tags/node-command/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习与神经网络</title>
+    <link href="https://gend-max.gitee.io/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/"/>
+    <id>https://gend-max.gitee.io/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/</id>
+    <published>2022-05-17T15:35:15.000Z</published>
+    <updated>2022-05-17T15:52:30.527Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1、梯度下降法&quot;&gt;&lt;a href=&quot;#1、梯度下降法&quot; class=&quot;headerlink&quot; title=&quot;1、梯度下降法&quot;&gt;&lt;/a&gt;1、梯度下降法&lt;/h1&gt;&lt;h2 id=&quot;1-1梯度&quot;&gt;&lt;a href=&quot;#1-1梯度&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="deep learning" scheme="https://gend-max.gitee.io/categories/deep-learning/"/>
+    
+    
+    <category term="deep learning" scheme="https://gend-max.gitee.io/tags/deep-learning/"/>
+    
+    <category term="neural network" scheme="https://gend-max.gitee.io/tags/neural-network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot</title>
+    <link href="https://gend-max.gitee.io/2022/05/17/springboot/"/>
+    <id>https://gend-max.gitee.io/2022/05/17/springboot/</id>
+    <published>2022-05-17T15:27:35.000Z</published>
+    <updated>2022-05-17T15:30:37.789Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="spingboot" scheme="https://gend-max.gitee.io/categories/spingboot/"/>
+    
+    
+    <category term="spingboot" scheme="https://gend-max.gitee.io/tags/spingboot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringMVC</title>
+    <link href="https://gend-max.gitee.io/2022/05/17/springmvc/"/>
+    <id>https://gend-max.gitee.io/2022/05/17/springmvc/</id>
+    <published>2022-05-17T15:05:07.000Z</published>
+    <updated>2022-05-17T15:47:41.575Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、SpringMVC简介&quot;&gt;&lt;a href=&quot;#一、SpringMVC简介&quot; class=&quot;headerlink&quot; title=&quot;一、SpringMVC简介&quot;&gt;&lt;/a&gt;一、SpringMVC简介&lt;/h1&gt;&lt;h3 id=&quot;1、什么是MVC&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="springmvc" scheme="https://gend-max.gitee.io/categories/springmvc/"/>
+    
+    
+    <category term="springmvc" scheme="https://gend-max.gitee.io/tags/springmvc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git V2.0</title>
+    <link href="https://gend-max.gitee.io/2022/05/17/git/"/>
+    <id>https://gend-max.gitee.io/2022/05/17/git/</id>
+    <published>2022-05-17T14:44:29.000Z</published>
+    <updated>2022-05-17T15:12:17.421Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;row&quot;&gt;
+    &lt;embed src=&quot;git.pdf&quot; width=&quot;100%&quot; height=&quot;550&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="https://gend-max.gitee.io/categories/git/"/>
+    
+    
+    <category term="git" scheme="https://gend-max.gitee.io/tags/git/"/>
+    
+    <category term="github" scheme="https://gend-max.gitee.io/tags/github/"/>
+    
+    <category term="gitee" scheme="https://gend-max.gitee.io/tags/gitee/"/>
+    
+    <category term="gitlib" scheme="https://gend-max.gitee.io/tags/gitlib/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gendml的健身指导手册</title>
+    <link href="https://gend-max.gitee.io/2022/05/12/fitness/"/>
+    <id>https://gend-max.gitee.io/2022/05/12/fitness/</id>
+    <published>2022-05-12T09:11:00.000Z</published>
+    <updated>2022-05-17T15:10:00.300Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、饮食：&quot;&gt;&lt;a href=&quot;#一、饮食：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="fitness" scheme="https://gend-max.gitee.io/categories/fitness/"/>
+    
+    
+    <category term="健身" scheme="https://gend-max.gitee.io/tags/%E5%81%A5%E8%BA%AB/"/>
+    
+    <category term="燃脂" scheme="https://gend-max.gitee.io/tags/%E7%87%83%E8%84%82/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构与算法</title>
+    <link href="https://gend-max.gitee.io/2022/05/12/algorithm/"/>
+    <id>https://gend-max.gitee.io/2022/05/12/algorithm/</id>
+    <published>2022-05-12T02:24:01.000Z</published>
+    <updated>2022-05-12T10:31:32.787Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;算法模板&quot;&gt;&lt;a href=&quot;#算法模板&quot; class=&quot;headerlink&quot; title=&quot;算法模板&quot;&gt;&lt;/a&gt;算法模板&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-cpp&quot; data-language=&quot;cpp&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="algorithm" scheme="https://gend-max.gitee.io/categories/algorithm/"/>
+    
+    
+    <category term="algorithm" scheme="https://gend-max.gitee.io/tags/algorithm/"/>
+    
+    <category term="C++ STL" scheme="https://gend-max.gitee.io/tags/C-STL/"/>
+    
+    <category term="LeetCode" scheme="https://gend-max.gitee.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+</feed>
