@@ -41,9 +41,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.2">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Gendml" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Gendml" type="application/atom+xml">
 </head>
 
 
@@ -542,7 +542,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-12
+                    2022-06-12
                 </div>
                 
 
@@ -605,9 +605,7 @@
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
-<h2 id="algorithm"><a href="#algorithm" class="headerlink" title="algorithm"></a>algorithm</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">min</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">min</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span> 
 <span class="token function">max</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token function">abs</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//求绝对值</span>
 <span class="token function">swap</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//交换x和y的值</span>
@@ -889,7 +887,7 @@ string<span class="token operator">:</span>npos<span class="token punctuation">;
 <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取元素个数，复杂度O(1)</span>
 <span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//判空</span>
 <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//清空元素，复杂度O(N)</span>
-<span class="token function">lower_bound</span> <span class="token punctuation">(</span><span class="token keyword">const</span> value_type<span class="token operator">&amp;</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//参考algorithm头文件下常用函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">lower_bound</span> <span class="token punctuation">(</span><span class="token keyword">const</span> value_type<span class="token operator">&amp;</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//参考https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo头文件下常用函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p>set，集合，为内部自动有序(note: 增序)且不含重复元素的容器，内部由红黑树实现。相似的容器为multiset，内部可以允许有重复元素；unordered_set，可以去重但是无序，内部由散列实现，速度比set要快很多。</p>
 <ol>
@@ -917,7 +915,7 @@ string<span class="token operator">:</span>npos<span class="token punctuation">;
 <span class="token comment">// Operations</span>
 <span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//返回set中对应值为value的迭代器，时间复杂度O(logN)</span>
 <span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Count elements with a specific value</span>
-<span class="token function">lower_bound</span> <span class="token punctuation">(</span><span class="token keyword">const</span> value_type<span class="token operator">&amp;</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//参考algorithm头文件下常用函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">lower_bound</span> <span class="token punctuation">(</span><span class="token keyword">const</span> value_type<span class="token operator">&amp;</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//参考https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo头文件下常用函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="cmath"><a href="#cmath" class="headerlink" title="cmath"></a>cmath</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">abs</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> 求n的绝对值
 <span class="token keyword">double</span> cos<span class="token operator">/</span>sin<span class="token operator">/</span><span class="token function">tan</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">)</span> 求x的三角函数值（x为弧度值）
@@ -1037,8 +1035,8 @@ int main() {
 <p>11、在定义变量的时候需要进行初始化，否则在dev-c++虽然能运行，但是程序不能跑</p>
 <h1 id="3、C-STL"><a href="#3、C-STL" class="headerlink" title="3、C++ STL"></a>3、C++ STL</h1><h2 id="3-1树"><a href="#3-1树" class="headerlink" title="3.1树"></a>3.1树</h2><h3 id="3-1-1、三种遍历方式"><a href="#3-1-1、三种遍历方式" class="headerlink" title="3.1.1、三种遍历方式"></a>3.1.1、三种遍历方式</h3><p>先序遍历 中序遍历 后序遍历</p>
 <p>遍历方式：迭代（栈） 递归</p>
-<p><img src="/2022/05/12/algorithm/20200429125611101.jpg" alt="image"></p>
-<p><img src="/2022/05/12/algorithm/20200429125706860.jpg" alt="image"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20200429125611101.jpg" alt="image"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20200429125706860.jpg" alt="image"></p>
 <h3 id="3-1-2、DFS算法：深度优先搜索算法"><a href="#3-1-2、DFS算法：深度优先搜索算法" class="headerlink" title="3.1.2、DFS算法：深度优先搜索算法"></a>3.1.2、DFS算法：<strong>深度</strong>优先搜索算法</h3><p>（二叉树）</p>
 <p>在搜索到一个新的节点时，立即对该新节点进行遍历；因此遍历<strong>需要用先入后出的栈</strong>来实现，<strong>也可以通过与栈等价的递归</strong>来实现。对于树结构而言，由于总是对新节点调用遍历，因此看起来是向着“深”的方向前进。</p>
 <p>考虑如下一颗简单的树。我们从 1 号节点开始遍历，假如遍历顺序是从左子节点到右子节点，</p>
@@ -1047,7 +1045,7 @@ int main() {
 <p>父结点）-&gt;1（子节点均已完成遍历，返回父结点）-&gt;3（遍历更深一层的右子节点）-&gt;1（无子节</p>
 <p>点，返回父结点）-&gt; 结束程序（子节点均已完成遍历）。如果我们使用栈实现，我们的栈顶元素</p>
 <p>的变化过程为 1-&gt;2-&gt;4-&gt;3。 </p>
-<p><img src="/2022/05/12/algorithm/image-20220307212205463.jpg" alt="image-20220307212205463"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220307212205463.jpg" alt="image-20220307212205463"></p>
 <p><strong>深度优先搜索也可以用来检测环路</strong>：记录每个遍历过的节点的父节点，<strong>若一个节点被再次遍</strong></p>
 <p><strong>历且父节点不同，则说明有环</strong>。</p>
 <p>有时我们可能会需要对已经搜索过的节点进行标记，以防止在遍历时重复搜索某个节点，这</p>
@@ -1072,14 +1070,14 @@ instName<span class="token punctuation">[</span><span class="token number">4</sp
 <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取元素个数，复杂度O(1)</span>
 <span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//判空</span>
 <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//清空元素，复杂度O(N)</span>
-<span class="token function">lower_bound</span> <span class="token punctuation">(</span><span class="token keyword">const</span> value_type<span class="token operator">&amp;</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//参考algorithm头文件下常用函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">lower_bound</span> <span class="token punctuation">(</span><span class="token keyword">const</span> value_type<span class="token operator">&amp;</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//参考https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo头文件下常用函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="3-3图"><a href="#3-3图" class="headerlink" title="3.3图"></a>3.3图</h2><p>一般使用递归写</p>
 <h3 id="3-3-1、深度优先算法DFS"><a href="#3-3-1、深度优先算法DFS" class="headerlink" title="3.3.1、深度优先算法DFS"></a>3.3.1、深度优先算法DFS</h3><p>以“深度”为第一关键词，每次都沿路径到不能再前进时才退回到最近的岔路口</p>
-<p><img src="/2022/05/12/algorithm/image-20220310170013400.jpg" alt="image-20220310170013400"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220310170013400.jpg" alt="image-20220310170013400"></p>
 <h3 id="3-3-2、广度优先算法BFS"><a href="#3-3-2、广度优先算法BFS" class="headerlink" title="3.3.2、广度优先算法BFS"></a>3.3.2、广度优先算法BFS</h3><p>以“广度”为第一关键词，每次以扩散的方式向外访问顶点</p>
-<p><img src="/2022/05/12/algorithm/image-20220310165946094.jpg" alt="image-20220310165946094"></p>
-<h1 id="4、题目分类"><a href="#4、题目分类" class="headerlink" title="4、题目分类"></a>4、题目分类</h1><p><img src="/2022/05/12/algorithm/image-20220105174805802.jpg" alt="image-20220105174805802"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220310165946094.jpg" alt="image-20220310165946094"></p>
+<h1 id="4、题目分类"><a href="#4、题目分类" class="headerlink" title="4、题目分类"></a>4、题目分类</h1><p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220105174805802.png"></p>
 <h1 id="5、查找法"><a href="#5、查找法" class="headerlink" title="5、查找法"></a>5、查找法</h1><h2 id="5-1二分法"><a href="#5-1二分法" class="headerlink" title="5.1二分法"></a>5.1二分法</h2><p>1、二分法（基础写法 左闭右闭）：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> arr<span class="token punctuation">,</span><span class="token keyword">int</span> key<span class="token punctuation">)</span><span class="token punctuation">{</span>
 	<span class="token keyword">int</span> low<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//数组最小索引值</span>
@@ -1229,7 +1227,7 @@ instName<span class="token punctuation">[</span><span class="token number">4</sp
 <p>性），然后对桶进行排序。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">unordered_map</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span>type<span class="token punctuation">)</span> mapname<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="/2022/05/12/algorithm/ad27531bbe762c0cf408a1e80f6468800d3e4ee2d6318963276b9ed923dd2c54-file_1561712388097.jfif" alt="img"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/ad27531bbe762c0cf408a1e80f6468800d3e4ee2d6318963276b9ed923dd2c54-file_1561712388097.jfif" alt="img"></p>
 <h1 id="7、贪心算法"><a href="#7、贪心算法" class="headerlink" title="7、贪心算法"></a>7、贪心算法</h1><p>​    顾名思义，贪心算法或贪心思想采用贪心的策略，保证每次操作都是局部最优的，从而使最</p>
 <p>后得到的结果是全局最优的。</p>
 <h2 id="7-1分配问题"><a href="#7-1分配问题" class="headerlink" title="7.1分配问题"></a>7.1分配问题</h2><h2 id="7-2区间问题"><a href="#7-2区间问题" class="headerlink" title="7.2区间问题"></a>7.2区间问题</h2><p>优先保留区间小并且不相交的区间</p>
@@ -2075,7 +2073,7 @@ instName<span class="token punctuation">[</span><span class="token number">4</sp
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.4k</span>
+                        class="white-color">25.3k</span>
             
             
             
@@ -2293,25 +2291,9 @@ $(function () {
     
 
     <!-- 雪花特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
-            }
-        </script>
     
 
     <!-- 鼠标星星特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
-            }
-        </script>
     
 
      

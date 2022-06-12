@@ -41,9 +41,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.2">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Gendml" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Gendml" type="application/atom+xml">
 </head>
 
 
@@ -538,21 +538,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-05-17
+                    2022-06-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    5 分
                 </div>
                 
 
@@ -572,14 +572,14 @@
             <div id="articleContent">
                 <h1 id="1、梯度下降法"><a href="#1、梯度下降法" class="headerlink" title="1、梯度下降法"></a>1、梯度下降法</h1><h2 id="1-1梯度"><a href="#1-1梯度" class="headerlink" title="1.1梯度"></a>1.1梯度</h2><p>梯度是函数增长最快的方向，梯度的模为这一方向的变化率。</p>
 <p>对于一元函数求梯度，公式为:<br>$$<br>\frac{d y}{d x}=f^{\prime}(x)=\lim _{\Delta x \rightarrow 0} \frac{\mathrm{f}(\mathrm{x}+\Delta x)-f(x)}{\Delta x}<br>$$<br>很显然，该函数的梯度为一条<strong>切线</strong>。</p>
-<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220326213334951.png" alt="image-20220326213334951" style="zoom: 33%;">
+<img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220326213334951.png" alt="image-20220326213334951" style="zoom: 33%;">
 
 <p>而对于多维函数，比如f(x,y)，此函数的梯度为一个<strong>切面</strong>。</p>
-<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220326213602608.png" alt="image-20220326213602608" style="zoom:33%;">
+<img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220326213602608.png" alt="image-20220326213602608" style="zoom:33%;">
 
 <p>如果再进行维度拓展，将无法进行求解，科学家通过引入<strong>偏导</strong>，求解梯度：</p>
 <h2 id="1-2梯度下降法思路"><a href="#1-2梯度下降法思路" class="headerlink" title="1.2梯度下降法思路"></a>1.2梯度下降法思路</h2><p>找到函数的梯度，在此方向取负梯度，函数下降的最快，进而找到函数的最小值，一般用于求解损失函数的最小值，优化模型。</p>
-<h1 id="2、Python中的广播"><a href="#2、Python中的广播" class="headerlink" title="2、Python中的广播"></a>2、Python中的广播</h1><h2 id="2-1广播案例"><a href="#2-1广播案例" class="headerlink" title="2.1广播案例"></a>2.1广播案例</h2><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220329214513085.png" alt="image-20220329214513085" style="zoom: 33%;">
+<h1 id="2、Python中的广播"><a href="#2、Python中的广播" class="headerlink" title="2、Python中的广播"></a>2、Python中的广播</h1><h2 id="2-1广播案例"><a href="#2-1广播案例" class="headerlink" title="2.1广播案例"></a>2.1广播案例</h2><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220329214513085.png" alt="image-20220329214513085" style="zoom: 33%;">
 
 <p>当两个矩阵相加，在不符合线性代数矩阵运算时，矩阵会自动扩展结构，然后执行运算</p>
 <h2 id="2-2Numpy中的广播机制"><a href="#2-2Numpy中的广播机制" class="headerlink" title="2.2Numpy中的广播机制"></a>2.2Numpy中的广播机制</h2><p>广播(Broadcast)是 numpy 对不同形状(shape)的数组进行数值计算的方式， 对数组的算术运算通常在相应的元素上进行。</p>
@@ -601,100 +601,49 @@ b <span class="token operator">=</span> np<span class="token punctuation">.</spa
  <span class="token punctuation">[</span><span class="token number">31</span> <span class="token number">32</span> <span class="token number">33</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>下面的图片展示了数组 b 如何通过广播来与数组 a 兼容。</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image0020619.gif" alt="img"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image0020619.gif" alt="img"></p>
 <h1 id="3、最小二乘法"><a href="#3、最小二乘法" class="headerlink" title="3、最小二乘法"></a>3、最小二乘法</h1><h2 id="3-1什么是线性回归？"><a href="#3-1什么是线性回归？" class="headerlink" title="3.1什么是线性回归？"></a>3.1什么是线性回归？</h2><p>比如，在二维空间中，线性回归就是要找一条直线，并且让这条直线尽可能拟合图中的数据点</p>
-<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220330160837326.png" alt="image-20220330160837326" style="zoom: 67%;">
+<img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220330160837326.png" alt="image-20220330160837326" style="zoom: 67%;">
 
-<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220330160919509.png" alt="image-20220330160919509" style="zoom:67%;">
+<img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220330160919509.png" alt="image-20220330160919509" style="zoom:67%;">
 
 <p>每条红色竖线是预测数据到真实数据的差距（误差），称为欧氏距离，然后将这些误差加起来，就得到线性回归的损失函数。<br>$$<br>\sum_{i=0}^{m} (y^{(i)} - \hat{y}  ^{(i)} )^{^{2} }<br>$$</p>
 <h2 id="3-2最小二乘法"><a href="#3-2最小二乘法" class="headerlink" title="3.2最小二乘法"></a>3.2最小二乘法</h2><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/topic/19668117/intro">见知乎专栏</a></p>
 <p><strong>在实际观测时，考虑到观测值带有偶然误差，总是作多余观测</strong>。</p>
-<p>在这种情况下，为了求得a和b，就需要在不同时刻（t1, t2,……tn）来测定其位置，得出一组观测值（y1, y2, ……yn）。这时，由式 y=at+b 可以得到：</p>
-<p><img src="https://www.zhihu.com/equation?tex=v_%7Bi%7D=b+at_%7Bi%7D-y_%7Bi%7D%EF%BC%8C(i=1,2,%E2%80%A6,n)" alt="v_{i}=b+at_{i}-y_{i}，(i=1,2,…,n)"></p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741031.svg" alt="t_{i}">、<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation.svg" alt="y_{i}">为第 i 次观测值， <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation.svg" alt="v_{i}"> 即第 i 次观测时的观测误差。</p>
-<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/v2-a048590480fab02f9c185b11e8446af7_b.jpg" alt="img" style="zoom:67%;">
-
-<p>按照最小二乘原理的要求，认为“最佳”地拟合于各观测点的估计曲线，应使各观测点到该曲线的<strong>偏差的平方和</strong>达到<strong>最小</strong>。</p>
-<p>就是要在满足</p>
-<p><img src="https://www.zhihu.com/equation?tex=%5Csum_%7Bi=1%7D%5E%7Bn%7D%7Bv_%7Bi%7D%5E%7B2%7D%7D=%5Csum_%7Bi=1%7D%5E%7Bn%7D(b+at_%7Bi%7D-y_%7Bi%7D)%5E%7B2%7D=%E6%9C%80%E5%B0%8F" alt="\sum_{i=1}^{n}{v_{i}^{2}}=\sum_{i=1}^{n}(b+at_{i}-y_{i})^{2}=最小"></p>
-<p>的条件下解出参数的估值a和b，可以使用梯度下降法求解。</p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220613001311.png"></p>
 <h1 id="4、最大似然估计"><a href="#4、最大似然估计" class="headerlink" title="4、最大似然估计"></a>4、最大似然估计</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/55791843">见知乎专栏</a></p>
 <p>最大似然估计可以说是应用非常广泛的一种参数估计的方法。它的原理也很简单：利用已知的样本，找出最有可能生成该样本的参数。</p>
-<h2 id="4-1什么是似然函数？"><a href="#4-1什么是似然函数？" class="headerlink" title="4.1什么是似然函数？"></a>4.1什么是似然函数？</h2><p>　似然性（likelihood）与概率（possibility）同样可以表示事件发生的可能性大小，但是二者有着很大的区别：</p>
-<ul>
-<li>概率 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation.svg" alt="[公式]"> 是在已知参数 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation.svg" alt="[公式]"> 的情况下，发生观测结果 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740952.svg" alt="[公式]"> 可能性大小；（从过程推结果）</li>
-<li>似然性 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation.svg" alt="[公式]"> 则是从观测结果 <img src="https://www.zhihu.com/equation?tex=x" alt="[公式]"> 出发，分布函数的参数为 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation.svg" alt="[公式]"> 的可能性大小；（从结果推过程）</li>
-</ul>
-<p>似然函数如下：L表示似然函数，P表示概率，其中 <img src="https://www.zhihu.com/equation?tex=x" alt="[公式]"> 已知， <img src="https://www.zhihu.com/equation?tex=%5Ctheta" alt="[公式]"> 未知。</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740971.svg" alt="[公式]"></p>
-<p>举例说明，若对于两个参数 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740968.svg" alt="[公式]"> , <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740966.svg" alt="[公式]"> ，并且满足</p>
-<p><img src="https://www.zhihu.com/equation?tex=L(%5Ctheta_1%7Cx)=p(x%7C%5Ctheta_1)%3Ep(x%7C%5Ctheta_2)=L(%5Ctheta_2%7Cx)%5C%5C" alt="[公式]"></p>
-<p>那么意味着 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740986.svg" alt="[公式]"> 时，随机变量 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740989.svg" alt="[公式]"> 生成 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740952.svg" alt="[公式]"> 的概率大于当参数 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741010.svg" alt="[公式]"> 时。这也正是似然的意义所在，若观测数据为 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740952.svg" alt="[公式]"> ，那么 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740968.svg" alt="[公式]"> 是比 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740966.svg" alt="[公式]"> 更有可能为分布函数的参数。</p>
-<p>在不同的时候， <img src="https://www.zhihu.com/equation?tex=p(x%7C%5Ctheta)" alt="[公式]"> 可以表示概率也可以用于计算似然，这里给出个人的理解，整理如下</p>
-<ul>
-<li>在 <img src="https://www.zhihu.com/equation?tex=%5Ctheta" alt="[公式]"> 已知，<img src="https://www.zhihu.com/equation?tex=x" alt="[公式]"> 为变量的情况下，<img src="https://www.zhihu.com/equation?tex=p(x%7C%5Ctheta)" alt="[公式]"> 为概率，表示通过已知的分布函数与参数，随机生成出 <img src="https://www.zhihu.com/equation?tex=x" alt="[公式]"> 的概率；</li>
-<li>在 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation.svg" alt="[公式]"> 为变量，<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740952.svg" alt="[公式]"> 已知的情况下，<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation.svg" alt="[公式]"> 为似然函数，它表示对于不同的 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation.svg" alt="[公式]"> ，出现 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740952.svg" alt="[公式]"> 的概率是多少。此时可写成 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741128.svg" alt="[公式]"> ，更严格地，我们也可写成 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741155.svg" alt="[公式]"> 。</li>
-</ul>
-<h2 id="4-2最大似然估计"><a href="#4-2最大似然估计" class="headerlink" title="4.2最大似然估计"></a>4.2最大似然估计</h2><p>最大似然估计的思想在于，对于给定的观测数据 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740952.svg" alt="[公式]"> ，我们希望能从所有的参数 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741192.svg" alt="[公式]"> 中找出能最大概率生成观测数据的参数 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741144.svg" alt="[公式]"> 作为估计结果。</p>
-<p>　　回到前面所说的似然函数，被估计出的参数 <img src="https://www.zhihu.com/equation?tex=%5Ctheta%5E*" alt="[公式]"> 应该满足：</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741188.svg" alt="[公式]"></p>
-<p>那么在实际运算中，我们将待估计的参数 <img src="https://www.zhihu.com/equation?tex=%5Ctheta" alt="[公式]"> 看成是变量，计算得到生成观测数据 <img src="https://www.zhihu.com/equation?tex=x" alt="[公式]"> 的概率函数 <img src="https://www.zhihu.com/equation?tex=p(x%7C%5Ctheta)" alt="[公式]"> ，并找到能最大化概率函数的参数即可：</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741224.svg" alt="[公式]"></p>
-<p>而这最大化的步骤通过求导等于0来解得。</p>
-<p>　　给出维基百科的例子来加深理解：</p>
-<img src="https://pic2.zhimg.com/80/v2-2aa8f8a8ad7d454e9266c1bad5a3a83d_720w.jpg" alt="img" style="zoom: 80%;">
-
-<h2 id="4-3离散型随机变量的最大似然估计"><a href="#4-3离散型随机变量的最大似然估计" class="headerlink" title="4.3离散型随机变量的最大似然估计"></a>4.3离散型随机变量的最大似然估计</h2><p>离散型随机变量：随机变量X可能的取值是有限个或可列无穷多个，则称为离散型随机变量。</p>
-<p>离散型随机变量 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740989.svg" alt="[公式]"> 的分布律为 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741226.svg" alt="[公式]"> ，设 <img src="https://www.zhihu.com/equation?tex=X_1,%E2%8B%AF,X_n" alt="[公式]"> 为来自 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740989.svg" alt="[公式]"> 的样本，<img src="https://www.zhihu.com/equation?tex=x_1,%E2%8B%AF,x_n" alt="[公式]"> 为相应的观察值，<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation.svg" alt="[公式]"> 为待估参数。</p>
-<p>　　在参数 <img src="https://www.zhihu.com/equation?tex=%5Ctheta" alt="[公式]"> 下，分布函数随机取到<img src="https://www.zhihu.com/equation?tex=x_1,%E2%8B%AF,x_n" alt="[公式]"> 的概率为</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741294.svg" alt="[公式]"></p>
-<p>构造似然函数：</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741349.svg" alt="[公式]"></p>
-<p>可知似然函数是一个关于 <img src="https://www.zhihu.com/equation?tex=%5Ctheta" alt="[公式]"> 的函数，要找到最大概率生成 <img src="https://www.zhihu.com/equation?tex=x" alt="[公式]"> 的参数，即找到当 <img src="https://www.zhihu.com/equation?tex=L(%5Ctheta%7Cx)" alt="[公式]"> 取最大值时的 <img src="https://www.zhihu.com/equation?tex=%5Ctheta" alt="[公式]"> 。</p>
-<p>　　求解出最大值，通常的方法就是求导=0：</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741312.svg" alt="[公式]"></p>
-<p>由于式子通常是累乘的形式，我们借助对数函数来简化问题：</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741333.svg" alt="[公式]"></p>
-<p>上式也通常被称作<strong>对数似然方程</strong>。如果 <img src="https://www.zhihu.com/equation?tex=%CE%B8" alt="[公式]"> 包含多个参数 <img src="https://www.zhihu.com/equation?tex=%5Ctheta_1,%E2%8B%AF,%5Ctheta_k" alt="[公式]"> ，可对多个参数分别求偏导来连立方程组。下面举一个例子：</p>
-<img src="https://pic2.zhimg.com/80/v2-b243cbfea33f0fa252eee4720d26018d_720w.jpg" alt="img" style="zoom: 80%;">
-
-<p>补充：上述例题中X<del>b(1,p)为二项分布，如果随机变量X服从参数为n和p的二项分布，记为X</del>B(n,p)或X~b(n,p)。n次试验中正好得到k次成功的概率由概率质量函数给出：</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/810fe5db77e112b4230ce3c0e156a589.svg" alt="img"><br>$$<br>C_{n}^{k} = \frac{n!}{k!(n-k)!}是二项式系数，我们希望有k次成功(p)和n−k次失败(1 −p)，并且，k次成功可以在n次试验的任何地方出现，而把k次成功分布在n次试验中共有C_{n}^{k}个不同的方法。<br>$$</p>
-<h2 id="4-4连续型随机变量的最大似然估计"><a href="#4-4连续型随机变量的最大似然估计" class="headerlink" title="4.4连续型随机变量的最大似然估计"></a>4.4连续型随机变量的最大似然估计</h2><p>连续型随机变量 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740989.svg" alt="[公式]"> 的概率密度为 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741347.svg" alt="[公式]"> ，设 <img src="https://www.zhihu.com/equation?tex=X_1,%E2%8B%AF,X_n" alt="[公式]"> 为来自 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740989.svg" alt="[公式]"> 的样本，<img src="https://www.zhihu.com/equation?tex=x_1,%E2%8B%AF,x_n" alt="[公式]"> 为相应的观察值，同样地，<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation.svg" alt="[公式]"> 为待估参数。</p>
-<p>概率密度的图像与横轴所围成的面积大小代表了概率的大小，当随机变量 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801740989.svg" alt="[公式]"> 取到了某一个值 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741395.svg" alt="[公式]"> ，可看做是选取到了 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741410.svg" alt="[公式]"> 与 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741413.svg" alt="[公式]"> 所围成的小矩形。如图所示：</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/v2-0012043fca529a0c5a88a1425ccf48dc_720w.jpg" alt="img"></p>
-<p>接着与离散型随机变量类似，随机取到观察值 <img src="https://www.zhihu.com/equation?tex=x" alt="[公式]"> 的概率为：</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741449.svg" alt="[公式]"></p>
-<p>构造似然函数：</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741465.svg" alt="[公式]"></p>
-<p>由于 <img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741455.svg" alt="[公式]"> 不随参数变化，故我们选择忽略，似然函数变为：</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/equation-1652801741480.svg" alt="[公式]"></p>
-<p>接着计算步骤和离散型类似，取对数求导等于0。例如：</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/v2-4acb983eefed903c9da719cef00a7745_720w.jpg" alt="img"></p>
+<h2 id="4-1什么是似然函数？"><a href="#4-1什么是似然函数？" class="headerlink" title="4.1什么是似然函数？"></a>4.1什么是似然函数？</h2><p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220613000609.png"></p>
+<h2 id="4-2最大似然估计"><a href="#4-2最大似然估计" class="headerlink" title="4.2最大似然估计"></a>4.2最大似然估计</h2><p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220613000628.png"></p>
+<h2 id="4-3离散型随机变量的最大似然估计"><a href="#4-3离散型随机变量的最大似然估计" class="headerlink" title="4.3离散型随机变量的最大似然估计"></a>4.3离散型随机变量的最大似然估计</h2><p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220613001346.png"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220613001434.png"><br>$$<br>C_{n}^{k} = \frac{n!}{k!(n-k)!}是二项式系数，我们希望有k次成功(p)和n−k次失败(1 −p)，并且，k次成功可以在n次试验的任何地方出现，而把k次成功分布在n次试验中共有C_{n}^{k}个不同的方法。<br>$$</p>
+<h2 id="4-4连续型随机变量的最大似然估计"><a href="#4-4连续型随机变量的最大似然估计" class="headerlink" title="4.4连续型随机变量的最大似然估计"></a>4.4连续型随机变量的最大似然估计</h2><p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220613001521.png"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/v2-0012043fca529a0c5a88a1425ccf48dc_720w.jpg" alt="img"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220613001655.png"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/v2-4acb983eefed903c9da719cef00a7745_720w.jpg" alt="img"></p>
 <h1 id="5、Logistic回归"><a href="#5、Logistic回归" class="headerlink" title="5、Logistic回归"></a>5、Logistic回归</h1><h2 id="5-1Logistic回归"><a href="#5-1Logistic回归" class="headerlink" title="5.1Logistic回归"></a>5.1Logistic回归</h2><p>如下图所示，计算节点值z，再通过激活函数sigmoid()求出a，a为到该节点的输出，如下图。</p>
-<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220401173054150.png" alt="image-20220401173054150" style="zoom: 50%;">
+<img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220401173054150.png" alt="image-20220401173054150" style="zoom: 50%;">
 
 <h2 id="5-2Logistic回归再在神经网络的应用"><a href="#5-2Logistic回归再在神经网络的应用" class="headerlink" title="5.2Logistic回归再在神经网络的应用"></a>5.2Logistic回归再在神经网络的应用</h2><p>神经网络正向传播中执行了很多次类似Logistic回归的操作，如下图所示，每个节点执行了一次Logistic回归，舍弃for循环，通过矩阵运算快速计算出z（用z[1]表示）和a（用a[1]表示）。</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220401174013810.png" alt="image-20220401174013810"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220401174013810.png" alt="image-20220401174013810"></p>
 <p>计算完隐藏层节点的值后，再作为输入计算输出层的值。</p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220401175106812.png" alt="image-20220401175106812"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220401175106812.png" alt="image-20220401175106812"></p>
 <h2 id="5-3推导过程"><a href="#5-3推导过程" class="headerlink" title="5.3推导过程"></a>5.3推导过程</h2><p>见：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1aE411o7qd?p=17">BiliBili讲解</a></p>
-<p><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220330224031997.png" alt="image-20220330224031997"></p>
+<p><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220330224031997.png" alt="image-20220330224031997"></p>
 <p>涉及到0/1的二分类问题，通过Sigmoid函数表示出1和0的发生概率，使用最大似然估计法，最后求导得出使得概率最大的参数值。</p>
 <h1 id="6、激活函数"><a href="#6、激活函数" class="headerlink" title="6、激活函数"></a>6、激活函数</h1><p>在构建神经网络的时候，如何选择激活函数？此过程往往有很多的参数选择，通过测试的方法，找到一个最适合自己的激活函数，调参。</p>
 <h2 id="6-1Sigmoid函数"><a href="#6-1Sigmoid函数" class="headerlink" title="6.1Sigmoid函数"></a>6.1Sigmoid函数</h2><p>除非用在二元分类的输出层，不然绝对不要用。</p>
-<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220401212246481.png" alt="image-20220401212246481" style="zoom: 50%;">
+<img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220401212246481.png" alt="image-20220401212246481" style="zoom: 50%;">
 
 <h2 id="6-2tanh函数"><a href="#6-2tanh函数" class="headerlink" title="6.2tanh函数"></a>6.2tanh函数</h2><p>几乎在所有场合都适用。</p>
-<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220401212426016.png" alt="image-20220401212426016" style="zoom: 50%;">
+<img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220401212426016.png" alt="image-20220401212426016" style="zoom: 50%;">
 
 <h2 id="6-3ReLu函数"><a href="#6-3ReLu函数" class="headerlink" title="6.3ReLu函数"></a>6.3ReLu函数</h2><p>不知道用哪个的时候，用这个</p>
-<img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220401212550526.png" alt="image-20220401212550526" style="zoom:50%;">
+<img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220401212550526.png" alt="image-20220401212550526" style="zoom:50%;">
 
-<h2 id="6-4Leaky-ReLu函数"><a href="#6-4Leaky-ReLu函数" class="headerlink" title="6.4Leaky ReLu函数"></a>6.4Leaky ReLu函数</h2><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20220401212839258.png" alt="image-20220401212839258" style="zoom:50%;">
+<h2 id="6-4Leaky-ReLu函数"><a href="#6-4Leaky-ReLu函数" class="headerlink" title="6.4Leaky ReLu函数"></a>6.4Leaky ReLu函数</h2><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220401212839258.png" alt="image-20220401212839258" style="zoom:50%;">
 
-<h1 id="附：数学公式"><a href="#附：数学公式" class="headerlink" title="附：数学公式"></a>附：数学公式</h1><h2 id="求和公式"><a href="#求和公式" class="headerlink" title="求和公式"></a>求和公式</h2><img src="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/image-20211227103823765.png" alt="image-20211227103823765" style="zoom: 80%;">
+<h1 id="附：数学公式"><a href="#附：数学公式" class="headerlink" title="附：数学公式"></a>附：数学公式</h1><h2 id="求和公式"><a href="#求和公式" class="headerlink" title="求和公式"></a>求和公式</h2><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20211227103823765.png" alt="image-20211227103823765" style="zoom: 80%;">
 
 <h1 id="附：数学符号"><a href="#附：数学符号" class="headerlink" title="附：数学符号"></a>附：数学符号</h1><h2 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h2><ul>
 <li>x：标量</li>
@@ -1556,7 +1505,7 @@ b <span class="token operator">=</span> np<span class="token punctuation">.</spa
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.4k</span>
+                        class="white-color">25.3k</span>
             
             
             
@@ -1774,25 +1723,9 @@ $(function () {
     
 
     <!-- 雪花特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
-            }
-        </script>
     
 
     <!-- 鼠标星星特效 -->
-     
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
-            }
-        </script>
     
 
      
