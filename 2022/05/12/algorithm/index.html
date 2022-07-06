@@ -542,7 +542,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-12
+                    2022-07-06
                 </div>
                 
 
@@ -574,7 +574,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="算法模板"><a href="#算法模板" class="headerlink" title="算法模板"></a>算法模板</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span><span class="token comment">//C++基本函数库</span></span>
+                <h2 id="算法模板"><a href="#算法模板" class="headerlink" title="算法模板"></a>算法模板</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span> <span class="token comment">//万能头 C++版本4.4以上支持</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span><span class="token comment">//C++基本函数库</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;algorithm&gt;</span><span class="token comment">//工具库</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;queue&gt;</span><span class="token comment">//队列</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stack&gt;</span><span class="token comment">//栈</span></span>
@@ -592,7 +593,7 @@
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token comment">//pass</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
@@ -617,8 +618,6 @@
 <span class="token comment">//STL标准容器中，vector, string, deque支持sort，内部本身有序的那种不支持排序</span>
 <span class="token function">lower_bound</span><span class="token punctuation">(</span>first<span class="token punctuation">,</span> last<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//查找数组或容器的[first, last)范围内第一个值大于等于val元素的位置，返回数组指针或容器该位置的迭代器</span>
 <span class="token function">upper_bound</span><span class="token punctuation">(</span>first<span class="token punctuation">,</span> last<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//查找数组或容器的[first, last)范围内第一个值大于val元素的位置，返回数组指针或容器该位置的迭代器</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
 
 <h2 id="queue"><a href="#queue" class="headerlink" title="queue"></a>queue</h2><h3 id="1-queue"><a href="#1-queue" class="headerlink" title="(1)queue"></a>(1)queue</h3><p>实现先进先出（FIFO）的容器，常用于BFS实现；类似的还有双端队列（deque），首尾均可插入和删除；</p>
 <ol>
@@ -849,7 +848,7 @@ string<span class="token operator">:</span>npos<span class="token punctuation">;
   ss<span class="token operator">&lt;&lt;</span>str2<span class="token punctuation">;</span>
   ss<span class="token operator">&gt;&gt;</span>num<span class="token punctuation">;</span>
   cout<span class="token operator">&lt;&lt;</span>num<span class="token punctuation">;</span>
-<span class="token number">2</span>、<span class="token keyword">char</span>与<span class="token keyword">int</span>互转
+<span class="token number">2</span>、<span class="token keyword">char</span>与<span class="token keyword">int</span>互转，string<span class="token punctuation">[</span>index<span class="token punctuation">]</span>是<span class="token keyword">char</span>类型
 <span class="token char">'1'</span><span class="token operator">-</span><span class="token char">'0'</span><span class="token punctuation">(</span>输出<span class="token keyword">int</span>类型的<span class="token number">1</span><span class="token punctuation">)</span>：<span class="token keyword">char</span>转<span class="token keyword">int</span>，使用ASCII码方法
 <span class="token keyword">int</span>转<span class="token keyword">char</span>：
     <span class="token keyword">char</span> z1 <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">+</span><span class="token char">'0'</span><span class="token punctuation">;</span>
@@ -924,10 +923,15 @@ string<span class="token operator">:</span>npos<span class="token punctuation">;
 <span class="token keyword">double</span> <span class="token function">sqrt</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">)</span> 求x的平方根
     <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="cstdio"><a href="#cstdio" class="headerlink" title="cstdio"></a>cstdio</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//格式化输入</span>
+<h2 id="cstdio（C）"><a href="#cstdio（C）" class="headerlink" title="cstdio（C）"></a>cstdio（C）</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//格式化输入</span>
 <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%.2f\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//格式化输出</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h2 id="cstdlib"><a href="#cstdlib" class="headerlink" title="cstdlib"></a>cstdlib</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">atoi</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> str<span class="token punctuation">)</span><span class="token comment">//将一串“字符”转换为int型（注意参数类型是const char*）</span>
+<h2 id="cstdlib（C）"><a href="#cstdlib（C）" class="headerlink" title="cstdlib（C）"></a>cstdlib（C）</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/*
+	C语言中的字符串为char *temp
+	C++为string
+*/</span>
+
+<span class="token function">atoi</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> str<span class="token punctuation">)</span><span class="token comment">//将一串“字符”转换为int型（注意参数类型是const char*）</span>
 <span class="token function">atof</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> str<span class="token punctuation">)</span><span class="token comment">//同上，转换为double型（注意参数类型是const char*）</span>
 string1<span class="token punctuation">.</span><span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span>：string转<span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span>
 <span class="token function">abs</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token comment">//取绝对值</span>
@@ -947,9 +951,9 @@ string1<span class="token punctuation">.</span><span class="token function">c_st
 <span class="token function">isalpha</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//判断一个字符是不是alphabetic，即英文字母</span>
 <span class="token function">isdigit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//判断一个字符是不是数字</span>
 <span class="token function">tolower</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//将大写转换为小写</span>
-<span class="token function">toupper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//将小写转换为大写</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token function">toupper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//将小写转换为大写</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="cstring"><a href="#cstring" class="headerlink" title="cstring"></a>cstring</h2><p>c语言的字符串库</p>
+<h2 id="cstring（C）"><a href="#cstring（C）" class="headerlink" title="cstring（C）"></a>cstring（C）</h2><p>c语言的字符串库</p>
 <h1 id="2、技巧："><a href="#2、技巧：" class="headerlink" title="2、技巧："></a>2、技巧：</h1><p>1、使用循环中使用++i会减少占用内存。</p>
 <p>2、当定义一个新的数据结构的时候，删除元素元素时需要进行判空，不为空才可以进行删除。</p>
 <p>3、遇到关于年月日的问题注意该年数是闰年：非闰年的天数是28天，闰年是29天。</p>
@@ -2073,7 +2077,7 @@ instName<span class="token punctuation">[</span><span class="token number">4</sp
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">25.3k</span>
+                        class="white-color">25.4k</span>
             
             
             
