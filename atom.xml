@@ -6,7 +6,7 @@
   <link href="https://gend-max.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://gend-max.gitee.io/"/>
-  <updated>2022-06-03T15:34:50.222Z</updated>
+  <updated>2022-08-06T18:05:29.451Z</updated>
   <id>https://gend-max.gitee.io/</id>
   
   <author>
@@ -17,11 +17,71 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Docker</title>
+    <link href="https://gend-max.gitee.io/2022/08/07/docker/"/>
+    <id>https://gend-max.gitee.io/2022/08/07/docker/</id>
+    <published>2022-08-06T17:55:29.000Z</published>
+    <updated>2022-08-06T18:05:29.451Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、Docker&quot;&gt;&lt;a href=&quot;#一、Docker&quot; class=&quot;headerlink&quot; title=&quot;一、Docker&quot;&gt;&lt;/a&gt;一、Docker&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Node.js" scheme="https://gend-max.gitee.io/categories/Node-js/"/>
+    
+    
+    <category term="Docker" scheme="https://gend-max.gitee.io/tags/Docker/"/>
+    
+    <category term="Container Virtualization" scheme="https://gend-max.gitee.io/tags/Container-Virtualization/"/>
+    
+    <category term="Linux" scheme="https://gend-max.gitee.io/tags/Linux/"/>
+    
+    <category term="Image" scheme="https://gend-max.gitee.io/tags/Image/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Node.js</title>
+    <link href="https://gend-max.gitee.io/2022/08/07/node/"/>
+    <id>https://gend-max.gitee.io/2022/08/07/node/</id>
+    <published>2022-08-06T17:53:21.000Z</published>
+    <updated>2022-08-06T17:57:14.476Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、Node-js&quot;&gt;&lt;a href=&quot;#一、Node-js&quot; class=&quot;headerlink&quot; title=&quot;一、Node.js&quot;&gt;&lt;/a&gt;一、Node.js&lt;/h1&gt;&lt;h2 id=&quot;（一）常用命令&quot;&gt;&lt;a href=&quot;#（一）常用命令&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Node.js" scheme="https://gend-max.gitee.io/categories/Node-js/"/>
+    
+    
+    <category term="Node.js" scheme="https://gend-max.gitee.io/tags/Node-js/"/>
+    
+    <category term="Node" scheme="https://gend-max.gitee.io/tags/Node/"/>
+    
+    <category term="JavaScript" scheme="https://gend-max.gitee.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>linux</title>
     <link href="https://gend-max.gitee.io/2022/05/17/linux/"/>
     <id>https://gend-max.gitee.io/2022/05/17/linux/</id>
     <published>2022-05-17T15:40:12.000Z</published>
-    <updated>2022-06-03T15:34:50.222Z</updated>
+    <updated>2022-08-06T17:57:35.051Z</updated>
     
     
       
@@ -40,8 +100,6 @@
     <category term="linux" scheme="https://gend-max.gitee.io/tags/linux/"/>
     
     <category term="raspberry command" scheme="https://gend-max.gitee.io/tags/raspberry-command/"/>
-    
-    <category term="node command" scheme="https://gend-max.gitee.io/tags/node-command/"/>
     
   </entry>
   
