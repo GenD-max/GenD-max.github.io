@@ -41,9 +41,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.2">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Gendml" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Gendml" type="application/atom+xml">
 </head>
 
 
@@ -553,14 +553,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -603,6 +603,9 @@ yum -y（安装时自动选择yes） update<span aria-hidden="true" class="line-
 <h3 id="从容器创建一个新的镜像"><a href="#从容器创建一个新的镜像" class="headerlink" title="从容器创建一个新的镜像"></a>从容器创建一个新的镜像</h3><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">docker commit -a "作者名称" -m "携带消息" &lt;容器名&gt; centos（镜像）:ssh（标签）
 eg:docker commit -a "Gendml" -m "已配置ssh的CentOS7镜像" Gendml_Centos7 centos:ssh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
+<h3 id="容器与主机之间的数据拷贝"><a href="#容器与主机之间的数据拷贝" class="headerlink" title="容器与主机之间的数据拷贝"></a>容器与主机之间的数据拷贝</h3><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">docker cp /www/runoob 96f7f14e99ab:/www
+docker cp  96f7f14e99ab:/www /tmp/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <h3 id="容器与宿主映射添加容器卷"><a href="#容器与宿主映射添加容器卷" class="headerlink" title="容器与宿主映射添加容器卷"></a>容器与宿主映射添加容器卷</h3><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">docker run -itd --privileged=true --name 容器名称 -v /宿主机绝对路径目录:/容器内目录 -p 端口映射 镜像名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ul>
@@ -614,6 +617,10 @@ eg:docker commit -a "Gendml" -m "已配置ssh的CentOS7镜像" Gendml_Centos7 ce
 <li>效果：容器之间卷数据映射，无论容器是否运行，实时卷同步</li>
 </ul>
 <pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">docker run-it --privileged=true --volumes-from 父类 --name u2 ubuntu<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="Docker导出容器作为tar归档文件"><a href="#Docker导出容器作为tar归档文件" class="headerlink" title="Docker导出容器作为tar归档文件"></a>Docker导出容器作为tar归档文件</h3><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">docker export -o xxx.tar &lt;容器名称&gt; bash（不加会出bug）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="Docker从归档文件中导入镜像"><a href="#Docker从归档文件中导入镜像" class="headerlink" title="Docker从归档文件中导入镜像"></a>Docker从归档文件中导入镜像</h3><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">docker import  xxx.tar 镜像名称:标签<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="Docker挂载主机目录访问如果出现cannot-open-directory-Permission-denied"><a href="#Docker挂载主机目录访问如果出现cannot-open-directory-Permission-denied" class="headerlink" title="Docker挂载主机目录访问如果出现cannot open directory .: Permission denied"></a>Docker挂载主机目录访问如果出现cannot open directory .: Permission denied</h3><ul>
 <li>解决办法：在挂载目录后多加一个–privileged=true参数即可</li>
@@ -670,9 +677,13 @@ apt install -y net-tools<span aria-hidden="true" class="line-numbers-rows"><span
 
 <h3 id="Docker配置Jetty容器"><a href="#Docker配置Jetty容器" class="headerlink" title="Docker配置Jetty容器"></a>Docker配置Jetty容器</h3><h4 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h4><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">docker run -itd --name gendml_jetty --privileged=true --network gendml_net -p 50001:8080 -v /usr/Docker/jetty/webapps:/var/lib/jetty/webapps jetty:9.4.48-jdk8<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="Docker配置Nginx容器"><a href="#Docker配置Nginx容器" class="headerlink" title="Docker配置Nginx容器"></a>Docker配置Nginx容器</h3><h4 id="创建容器-1"><a href="#创建容器-1" class="headerlink" title="创建容器"></a>创建容器</h4><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">docker run -itd --name gendml_nginx --privileged=true --network gendml_net -p 50004:9000 -v /usr/Docker/nginx/config/nginx.conf:/etc/nginx/nginx.conf -v /usr/Docker/nginx/html:/usr/share/nginx/html nginx:1.20.1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="Docker配置Nginx容器"><a href="#Docker配置Nginx容器" class="headerlink" title="Docker配置Nginx容器"></a>Docker配置Nginx容器</h3><h4 id="创建容器-1"><a href="#创建容器-1" class="headerlink" title="创建容器"></a>创建容器</h4><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">docker run -itd --name gendml_nginx_student --privileged=true --network gendml_net -p 50004:9000 -v /usr/Docker/nginx_student/config/nginx.conf:/etc/nginx/nginx.conf -v /usr/Docker/nginx_student/html:/usr/share/nginx/html nginx:1.20.1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="Docker配置JDK18容器"><a href="#Docker配置JDK18容器" class="headerlink" title="Docker配置JDK18容器"></a>Docker配置JDK18容器</h3><h4 id="创建容器-2"><a href="#创建容器-2" class="headerlink" title="创建容器"></a>创建容器</h4><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">docker run -itd --name gendml_java --privileged=true --network host -v /usr/Docker/java:/usr/java/project openjdk:jdk-oraclelinux8<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="查看防火墙状态"><a href="#查看防火墙状态" class="headerlink" title="查看防火墙状态"></a>查看防火墙状态</h4><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">systemctl status firewalld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="开机关闭防火墙"><a href="#开机关闭防火墙" class="headerlink" title="开机关闭防火墙"></a>开机关闭防火墙</h4><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">systemctl disable firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h4 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h4><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">systemctl stop firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -688,7 +699,7 @@ apt install -y net-tools<span aria-hidden="true" class="line-numbers-rows"><span
 -v /usr/Docker/mysql/conf:/etc/mysql/conf.d # 资源共享
 mysql:5.6.51 # 使用对应镜像创建容器
 
-docker run -itd --name gendml_mysql --privileged=true --network gendml_net -p 50002:3306 -e MYSQL_ROOT_PASSWORD=dml666 -v /usr/Docker/mysql/log:/var/log/mysql -v /usr/Docker/mysql/data:/cvar/lib/mysql -v /usr/Docker/mysql/conf:/etc/mysql/conf.d mysql:5.6.51 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+docker run -itd --name gendml_mysql --privileged=true --network gendml_net -p 3306:3306 -e MYSQL_ROOT_PASSWORD=dml666 -v /usr/Docker/mysql/log:/var/log/mysql -v /usr/Docker/mysql/data:/cvar/lib/mysql -v /usr/Docker/mysql/conf:/etc/mysql/conf.d mysql:5.6.51 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="解决中文乱码"><a href="#解决中文乱码" class="headerlink" title="解决中文乱码"></a>解决中文乱码</h4><pre class="line-numbers language-linux" data-language="linux"><code class="language-linux">cd /usr/Docker/mysql/conf
 # 在conf文件夹内创建my.cnf
@@ -1524,7 +1535,7 @@ docker restart gendml_mysql<span aria-hidden="true" class="line-numbers-rows"><s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">27k</span>
+                        class="white-color">27.1k</span>
             
             
             
