@@ -10,7 +10,7 @@
   <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
   <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
   <link rel='dns-prefetch' href='//unpkg.com'>
-
+  <link rel="shortcut icon" href="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/photo.png">
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -21,10 +21,33 @@
   <title>数据结构与算法 - Gendml</title>
 
   
-  <meta name="description" content="算法模板#include&lt;bits/stdc++.h&gt; //万能头 C++版本4.4以上支持
-#include &lt;iostream&gt;//C++基本函数库
-#include &lt;algorithm&gt;//工具库
-#include &lt;queue&gt;//队列...">
+    <meta name="description" content="数据结构与算法笔记，含有C++ STL常用API，算法模板，相关知识点等等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构与算法">
+<meta property="og:url" content="https://gend-max.gitee.io/2022/05/12/algorithm/index.html">
+<meta property="og:site_name" content="Gendml">
+<meta property="og:description" content="数据结构与算法笔记，含有C++ STL常用API，算法模板，相关知识点等等。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220105174805802.png">
+<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220712214810.png">
+<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220716221803.png">
+<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220716221433.png">
+<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20200429125611101.jpg">
+<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20200429125706860.jpg">
+<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220307212205463.jpg">
+<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220310170013400.jpg">
+<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220310165946094.jpg">
+<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/ad27531bbe762c0cf408a1e80f6468800d3e4ee2d6318963276b9ed923dd2c54-file_1561712388097.jfif">
+<meta property="article:published_time" content="2022-05-12T02:24:01.000Z">
+<meta property="article:modified_time" content="2022-08-18T17:12:56.929Z">
+<meta property="article:author" content="Gendml">
+<meta property="article:tag" content="C++ STL">
+<meta property="article:tag" content="LeetCode">
+<meta property="article:tag" content="Algorithm">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220105174805802.png">
+  
+  
 
   <!-- feed -->
   
@@ -38,6 +61,10 @@
   
 
   
+
+  
+    
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/highlightjs/cdn-release@11.5.0/build/styles/atom-one-dark.min.css">
 
   
 
@@ -63,15 +90,15 @@
 <header class="header">
 
 <div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/photo.jpg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">MrGendml</div><div class="sub cap">Gendml的博客空间</div></a></div>
-<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki">专栏</a><a class="nav-item" href="/note/">便笺</a><a class="nav-item" href="/about/">关于我</a></nav></header>
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki">专栏</a><a class="nav-item" href="/note">便笺</a><a class="nav-item" href="/about">关于我</a></nav></header>
 
 <div class="widgets">
 
-<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF"><span class="toc-text">算法模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Algorithm"><span class="toc-text">Algorithm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#queue"><span class="toc-text">queue</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-queue"><span class="toc-text">(1)queue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-priority-queue%EF%BC%88%E4%BA%8C%E5%8F%89%E5%A0%86%EF%BC%89"><span class="toc-text">(2)priority_queue（二叉堆）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sta"><span class="toc-text">sta</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#utility"><span class="toc-text">utility</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vector"><span class="toc-text">vector</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#string"><span class="toc-text">string</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#map"><span class="toc-text">map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#set"><span class="toc-text">set</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cmath"><span class="toc-text">cmath</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cstdio%EF%BC%88C%EF%BC%89"><span class="toc-text">cstdio（C）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cstdlib%EF%BC%88C%EF%BC%89"><span class="toc-text">cstdlib（C）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cstring%EF%BC%88C%EF%BC%89"><span class="toc-text">cstring（C）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E6%A0%91"><span class="toc-text">3.1树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1%E3%80%81%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-text">3.1.1、三种遍历方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2%E3%80%81DFS%E7%AE%97%E6%B3%95%EF%BC%9A%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95"><span class="toc-text">3.1.2、DFS算法：深度优先搜索算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3%E3%80%81BFS%E7%AE%97%E6%B3%95%EF%BC%9A%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E9%81%8D%E5%8E%86"><span class="toc-text">3.1.3、BFS算法：广度优先搜索遍历</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2Map"><span class="toc-text">3.2Map</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3%E5%9B%BE"><span class="toc-text">3.3图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1%E3%80%81%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95DFS"><span class="toc-text">3.3.1、深度优先算法DFS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2%E3%80%81%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95BFS"><span class="toc-text">3.3.2、广度优先算法BFS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1%E4%BA%8C%E5%88%86%E6%B3%95"><span class="toc-text">5.1二分法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F"><span class="toc-text">6.1计数排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-text">6.2快速排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3%E6%A1%B6%E6%8E%92%E5%BA%8F"><span class="toc-text">6.3桶排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1%E5%88%86%E9%85%8D%E9%97%AE%E9%A2%98"><span class="toc-text">7.1分配问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98"><span class="toc-text">7.2区间问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C"><span class="toc-text">8.1两数之和</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2%E5%BD%92%E5%B9%B6%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84"><span class="toc-text">8.2归并有序数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88"><span class="toc-text">8.3快慢指针</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="toc-text">8.4滑动窗口</span></a></li></ol></div></div></div>
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%AE%97%E6%B3%95%E5%B8%B8%E7%94%A8%E6%A8%A1%E6%9D%BF"><span class="toc-text">1、算法常用模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81algorithm-%E6%A0%87%E5%87%86%E7%AE%97%E6%B3%95%E5%BA%93"><span class="toc-text">2、algorithm&#x2F;&#x2F;标准算法库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81queue-%E9%98%9F%E5%88%97"><span class="toc-text">3、queue&#x2F;&#x2F;队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-queue"><span class="toc-text">(1)queue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-priority-queue-%E4%BA%8C%E5%8F%89%E5%A0%86"><span class="toc-text">(2)priority_queue&#x2F;&#x2F;二叉堆</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81stack-%E6%A0%88"><span class="toc-text">4、stack&#x2F;&#x2F;栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81utility"><span class="toc-text">5、utility</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81vector-%E6%95%B0%E7%BB%84"><span class="toc-text">6、vector&#x2F;&#x2F;数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81string-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">7、string&#x2F;&#x2F;字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81map-%E6%98%A0%E5%B0%84"><span class="toc-text">8、map&#x2F;&#x2F;映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81set-%E9%9B%86%E5%90%88"><span class="toc-text">9、set&#x2F;&#x2F;集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81cmath-%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0%E5%BA%93"><span class="toc-text">10、cmath&#x2F;&#x2F;数学函数库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81cstdio-IO%EF%BC%88C%EF%BC%89"><span class="toc-text">11、cstdio&#x2F;&#x2F;IO（C）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81cstdlib-%E5%B7%A5%E5%85%B7%E5%BA%93%EF%BC%88C%EF%BC%89"><span class="toc-text">12、cstdlib&#x2F;&#x2F;工具库（C）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81cstring%EF%BC%88C%EF%BC%89"><span class="toc-text">13、cstring（C）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95"><span class="toc-text">1、基础算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E9%80%89%E6%8B%A9"><span class="toc-text">快速选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="toc-text">归并排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E6%A0%91"><span class="toc-text">3.1树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1%E3%80%81%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-text">3.1.1、三种遍历方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2%E3%80%81DFS%E7%AE%97%E6%B3%95%EF%BC%9A%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95"><span class="toc-text">3.1.2、DFS算法：深度优先搜索算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3%E3%80%81BFS%E7%AE%97%E6%B3%95%EF%BC%9A%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E9%81%8D%E5%8E%86"><span class="toc-text">3.1.3、BFS算法：广度优先搜索遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1%E3%80%81%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95DFS"><span class="toc-text">3.3.1、深度优先算法DFS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2%E3%80%81%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95BFS"><span class="toc-text">3.3.2、广度优先算法BFS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1%E4%BA%8C%E5%88%86%E6%B3%95"><span class="toc-text">5.1二分法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F"><span class="toc-text">6.1计数排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-text">6.2快速排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3%E6%A1%B6%E6%8E%92%E5%BA%8F"><span class="toc-text">6.3桶排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1%E5%88%86%E9%85%8D%E9%97%AE%E9%A2%98"><span class="toc-text">7.1分配问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98"><span class="toc-text">7.2区间问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C"><span class="toc-text">8.1两数之和</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2%E5%BD%92%E5%B9%B6%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84"><span class="toc-text">8.2归并有序数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88"><span class="toc-text">8.3快慢指针</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="toc-text">8.4滑动窗口</span></a></li></ol></div></div></div>
 
-
+<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022/05/17/git/">Git V2.0</a></div><div class="more-item"><a class="title" href="/2022/05/17/springboot/">SpringBoot</a></div><div class="more-item"><a class="title" href="/2022/05/17/springmvc/">SpringMVC</a></div><div class="more-item"><a class="title" href="/2022/05/12/algorithm/">数据结构与算法</a></div><div class="more-item"><a class="title" href="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/">深度学习与神经网络</a></div></div></div>
 </div>
-
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/GenD-max" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/></a><a class="social" href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2457870242" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/QQ.svg"/></a><a class="social" href="mailto:dmlgg0425@gmail.com" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/a1b00e20f425d.svg"/></a></div></footer>
 
     </aside>
     <div class='l_main'>
@@ -80,234 +107,244 @@
       
 
     
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+      </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+            tex2jax: {
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+          });
+      </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+              var all = MathJax.Hub.getAllJax(), i;
+              for(i=0; i < all.length; i += 1) {
+                  all[i].SourceElement().parentNode.className += ' has-jax';
+              }
+          });
+      </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/algorithm/">algorithm</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-05-12T02:24:01.000Z">2022-05-12</time></div></div>
 
-<article class='content md post'>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Algorithm/">Algorithm</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-05-12T02:24:01.000Z">2022-05-12</time></div></div>
+
+<article class='content md post reveal'>
 <h1 class="article-title"><span>数据结构与算法</span></h1>
-<h2 id="算法模板"><a href="#算法模板" class="headerlink" title="算法模板"></a>算法模板</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span> <span class="token comment">//万能头 C++版本4.4以上支持</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span><span class="token comment">//C++基本函数库</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;algorithm&gt;</span><span class="token comment">//工具库</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;queue&gt;</span><span class="token comment">//队列</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stack&gt;</span><span class="token comment">//栈</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span><span class="token comment">//数组</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span><span class="token comment">//字符串</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;map&gt;</span><span class="token comment">//映射</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;set&gt;</span><span class="token comment">//集合</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cmath&gt;</span><span class="token comment">//数学函数库</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdio&gt;</span><span class="token comment">//C</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib&gt;</span><span class="token comment">//</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstring&gt;</span><span class="token comment">//C字符串库</span></span>
+<h1 id="一、C-STL-API"><a href="#一、C-STL-API" class="headerlink" title="一、C++STL API"></a>一、C++STL API</h1><h2 id="1、算法常用模板"><a href="#1、算法常用模板" class="headerlink" title="1、算法常用模板"></a>1、算法常用模板</h2><pre><code class="hljs c++">include&lt;bits/stdc++.h&gt; <span class="hljs-comment">//万能头 C++版本4.4以上支持</span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span>
 
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment">//pass</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-comment">//pass</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
 
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;algorithm&gt;</span></span>
 
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token comment">//pass</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="2、algorithm-标准算法库"><a href="#2、algorithm-标准算法库" class="headerlink" title="2、algorithm//标准算法库"></a>2、algorithm//标准算法库</h2><pre><code class="hljs cpp"><span class="hljs-built_in">min</span>(x, y); 
+<span class="hljs-built_in">max</span>(x, y);
+<span class="hljs-built_in">abs</span>(x); <span class="hljs-comment">//求绝对值</span>
+<span class="hljs-built_in">swap</span>(x, y); <span class="hljs-comment">//交换x和y的值</span>
+<span class="hljs-built_in">reverse</span>(it2, it2); <span class="hljs-comment">//将数组指针或容器迭代器在[it1,it2)范围内的元素进行翻转</span>
+<span class="hljs-built_in">next_permutation</span>(); <span class="hljs-comment">//给出序列在全排列中的下一个序列</span>
+<span class="hljs-built_in">fill</span>(a,b,<span class="hljs-number">1</span>); <span class="hljs-comment">//对数组或容器中某段区间赋值为某个相同的值，样例区间为[a,b)赋值为1</span>
+<span class="hljs-built_in">sort</span>(首地址, 尾元素下一个地址, 比较函数(optional)); <span class="hljs-comment">//比较函数为空时默认递增排序</span>
+<span class="hljs-comment">//实现比较函数的tip: 当cmp(a,b)为true时a放在b之前</span>
+<span class="hljs-comment">//STL标准容器中，vector, string, deque支持sort，内部本身有序的那种不支持排序</span>
+<span class="hljs-built_in">lower_bound</span>(first, last, val); <span class="hljs-comment">//查找数组或容器的[first, last)范围内第一个值大于等于val元素的位置，返回数组指针或容器该位置的迭代器</span>
+<span class="hljs-built_in">upper_bound</span>(first, last, val);<span class="hljs-comment">//查找数组或容器的[first, last)范围内第一个值大于val元素的位置，返回数组指针或容器该位置的迭代器</span></code></pre>
 
-<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">min</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token function">max</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">abs</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//求绝对值</span>
-<span class="token function">swap</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//交换x和y的值</span>
-<span class="token function">reverse</span><span class="token punctuation">(</span>it2<span class="token punctuation">,</span> it2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//将数组指针或容器迭代器在[it1,it2)范围内的元素进行翻转</span>
-<span class="token function">next_permutation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//给出序列在全排列中的下一个序列</span>
-<span class="token function">fill</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//对数组或容器中某段区间赋值为某个相同的值，样例区间为[a,b)赋值为1</span>
-<span class="token function">sort</span><span class="token punctuation">(</span>首地址<span class="token punctuation">,</span> 尾元素下一个地址<span class="token punctuation">,</span> 比较函数<span class="token punctuation">(</span>optional<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//比较函数为空时默认递增排序</span>
-<span class="token comment">//实现比较函数的tip: 当cmp(a,b)为true时a放在b之前</span>
-<span class="token comment">//STL标准容器中，vector, string, deque支持sort，内部本身有序的那种不支持排序</span>
-<span class="token function">lower_bound</span><span class="token punctuation">(</span>first<span class="token punctuation">,</span> last<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//查找数组或容器的[first, last)范围内第一个值大于等于val元素的位置，返回数组指针或容器该位置的迭代器</span>
-<span class="token function">upper_bound</span><span class="token punctuation">(</span>first<span class="token punctuation">,</span> last<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//查找数组或容器的[first, last)范围内第一个值大于val元素的位置，返回数组指针或容器该位置的迭代器</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="queue"><a href="#queue" class="headerlink" title="queue"></a>queue</h2><h3 id="1-queue"><a href="#1-queue" class="headerlink" title="(1)queue"></a>(1)queue</h3><p>实现先进先出（FIFO）的容器，常用于BFS实现；类似的还有双端队列（deque），首尾均可插入和删除；</p>
+<h2 id="3、queue-队列"><a href="#3、queue-队列" class="headerlink" title="3、queue//队列"></a>3、queue//队列</h2><h3 id="1-queue"><a href="#1-queue" class="headerlink" title="(1)queue"></a>(1)queue</h3><p>实现先进先出（FIFO）的容器，常用于BFS实现；类似的还有双端队列（deque），首尾均可插入和删除；</p>
 <ol>
 <li>定义</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">queue<span class="token operator">&lt;</span><span class="token keyword">typename</span><span class="token operator">&gt;</span> instName<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="hljs cpp">queue&lt;<span class="hljs-keyword">typename</span>&gt; instName;</code></pre>
 
 <ol start="2">
 <li>访问</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//访问队首元素</span>
-<span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//访问队尾元素</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-built_in">front</span>(); <span class="hljs-comment">//访问队首元素</span>
+<span class="hljs-built_in">back</span>(); <span class="hljs-comment">//访问队尾元素</span></code></pre>
 
 <ol start="3">
 <li>常用函数</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//入队，复杂度O(1)</span>
-<span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//出队，复杂度O(1)</span>
-<span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//判空，复杂度O(1)</span>
-<span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取元素个数，复杂度O(1)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-built_in">push</span>(); <span class="hljs-comment">//入队，复杂度O(1)</span>
+<span class="hljs-built_in">pop</span>(); <span class="hljs-comment">//出队，复杂度O(1)</span>
+<span class="hljs-built_in">empty</span>(); <span class="hljs-comment">//判空，复杂度O(1)</span>
+<span class="hljs-built_in">size</span>(); <span class="hljs-comment">//获取元素个数，复杂度O(1)</span></code></pre>
 
 <ol start="4">
 <li>常用函数</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">push_front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//队尾||首入队，复杂度O(1)</span>
-<span class="token function">pop_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">pop_front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//队尾||首出队，复杂度O(1)</span>
-<span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//访问队首、队尾</span>
-<span class="token keyword">operator</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">(</span>size_type n<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//访问，复杂度O(1)</span>
-<span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//判空，复杂度O(1)</span>
-<span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取元素个数，复杂度O(1)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-built_in">push_back</span>(); <span class="hljs-built_in">push_front</span>(); <span class="hljs-comment">//队尾||首入队，复杂度O(1)</span>
+<span class="hljs-built_in">pop_back</span>(); <span class="hljs-built_in">pop_front</span>(); <span class="hljs-comment">//队尾||首出队，复杂度O(1)</span>
+<span class="hljs-built_in">front</span>(); <span class="hljs-built_in">back</span>(); <span class="hljs-comment">//访问队首、队尾</span>
+<span class="hljs-keyword">operator</span>[] (size_type n); <span class="hljs-comment">//访问，复杂度O(1)</span>
+<span class="hljs-built_in">empty</span>(); <span class="hljs-comment">//判空，复杂度O(1)</span>
+<span class="hljs-built_in">size</span>(); <span class="hljs-comment">//获取元素个数，复杂度O(1)</span></code></pre>
 
-<h3 id="2-priority-queue（二叉堆）"><a href="#2-priority-queue（二叉堆）" class="headerlink" title="(2)priority_queue（二叉堆）"></a>(2)priority_queue（二叉堆）</h3><p>常用：求数组第k个值，</p>
+<h3 id="2-priority-queue-二叉堆"><a href="#2-priority-queue-二叉堆" class="headerlink" title="(2)priority_queue//二叉堆"></a>(2)priority_queue//二叉堆</h3><p>常用：求数组第k个值，</p>
 <p>1、二叉堆：</p>
 <p>大顶堆：less<typename>或自定义用＜操作符￼<br>小于号&lt;规定了优先级，表示优先队列后面的元素都要小于优先队列前面的元素，因为优先队列队首的元素优先级最高，优先队列队尾元素的优先级最低，所以小于号&lt;就规定了优先队列后面的元素都要小于优先队列前面的元素（尾部优先级小于首部优先级），也就是形成一个大根堆，降序排序，每次权值最大的会被弹出来。</typename></p>
 <p>小顶堆：greater<typename>或自定义用＞操作符<br>这里的大于号&gt;规定了优先级，表示优先队列后面的元素都要大于优先队列前面的元素，因为优先队列队首的元素优先级最高，优先队列队尾元素的优先级最低，所以大于号&gt;就规定了优先队列后面的元素都要大于优先队列前面的元素（尾部优先级小于首部优先级），也就是形成一个小根堆，升序排序，每次权值最小的会被弹出来。</typename></p>
 <p><strong>每当插入一个数后，优先队列会根据优先级自动调整好结构。</strong></p>
 <p>2、默认是以数字大为优先级</p>
 <p>3、可设置优先级</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">priority_queue<span class="token operator">&lt;</span><span class="token keyword">typename</span><span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">typename</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> cmp_fn<span class="token operator">&gt;</span> instName<span class="token punctuation">;</span>
-cmp_fn 可使用 le￼ss<span class="token operator">&lt;</span><span class="token keyword">typename</span><span class="token operator">&gt;</span><span class="token operator">:</span> 设置大顶堆，以及greater<span class="token operator">&lt;</span><span class="token keyword">typename</span><span class="token operator">&gt;</span><span class="token operator">:</span> 设置小顶堆
-<span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//push(x)，将x入队，复杂度O(logN)</span>
-<span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//队首元素出队，复杂度O(logN)</span>
-<span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//判空，复杂度O(1)</span>
-<span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//返回元素个数，复杂度O(1)</span>
-<span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//返回顶部元素</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp">priority_queue&lt;<span class="hljs-keyword">typename</span>, vector&lt;<span class="hljs-keyword">typename</span>&gt;, cmp_fn&gt; instName;
+cmp_fn 可使用 le￼ss&lt;<span class="hljs-keyword">typename</span>&gt;: 设置大顶堆，以及greater&lt;<span class="hljs-keyword">typename</span>&gt;: 设置小顶堆
+<span class="hljs-built_in">push</span>(); <span class="hljs-comment">//push(x)，将x入队，复杂度O(logN)</span>
+<span class="hljs-built_in">pop</span>(); <span class="hljs-comment">//队首元素出队，复杂度O(logN)</span>
+<span class="hljs-built_in">empty</span>(); <span class="hljs-comment">//判空，复杂度O(1)</span>
+<span class="hljs-built_in">size</span>(); <span class="hljs-comment">//返回元素个数，复杂度O(1)</span>
+<span class="hljs-built_in">top</span>();<span class="hljs-comment">//返回顶部元素</span></code></pre>
 
 <p>4、自定义队列的比较方式</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">myComparison</span><span class="token punctuation">{</span><span class="token comment">//创建结构体</span>
-     <span class="token keyword">bool</span> <span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span>p1<span class="token punctuation">,</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span>p2<span class="token punctuation">)</span><span class="token punctuation">{</span>
-           <span class="token keyword">return</span> p1<span class="token punctuation">.</span>second<span class="token operator">&gt;</span>p2<span class="token punctuation">.</span>second<span class="token punctuation">;</span><span class="token comment">//小顶堆是大于号</span>
-        <span class="token punctuation">}</span>
-     <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token comment">//创建优先队列</span>
-priority_queue<span class="token operator">&lt;</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">,</span>vector<span class="token operator">&lt;</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span><span class="token keyword">int</span><span class="token operator">&gt;&gt;</span><span class="token punctuation">,</span>myComparison<span class="token operator">&gt;</span> q<span class="token punctuation">;</span><span class="token comment">//最后一个参数放入结构体</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">myComparison</span>{<span class="hljs-comment">//创建结构体</span>
+     <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">operator</span><span class="hljs-params">()</span><span class="hljs-params">(pair&lt;<span class="hljs-type">int</span>,<span class="hljs-type">int</span>&gt;&amp;p1,pair&lt;<span class="hljs-type">int</span>,<span class="hljs-type">int</span>&gt;&amp;p2)</span></span>{
+           <span class="hljs-keyword">return</span> p1.second&gt;p2.second;<span class="hljs-comment">//小顶堆是大于号</span>
+        }
+     };
+<span class="hljs-comment">//创建优先队列</span>
+priority_queue&lt;pair&lt;<span class="hljs-type">int</span>,<span class="hljs-type">int</span>&gt;,vector&lt;pair&lt;<span class="hljs-type">int</span>,<span class="hljs-type">int</span>&gt;&gt;,myComparison&gt; q;<span class="hljs-comment">//最后一个参数放入结构体</span></code></pre>
 
 
 
-<h2 id="sta"><a href="#sta" class="headerlink" title="sta"></a>sta</h2><p>后进先出的容器，</p>
+<h2 id="4、stack-栈"><a href="#4、stack-栈" class="headerlink" title="4、stack//栈"></a>4、stack//栈</h2><p>后进先出的容器，</p>
 <ol>
 <li>基本定义方式：</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">stack<span class="token operator">&lt;</span><span class="token keyword">typename</span><span class="token operator">&gt;</span> instName<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="hljs cpp">stack&lt;<span class="hljs-keyword">typename</span>&gt; instName;</code></pre>
 
 <p>​    2.常用函数</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//元素入栈，复杂度O(1)</span>
-<span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获得栈顶元素，复杂度O(1)</span>
-<span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//弹出栈顶元素，复杂度O(1)</span>
-<span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//判空，复杂度O(1)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-built_in">push</span>(); <span class="hljs-comment">//元素入栈，复杂度O(1)</span>
+<span class="hljs-built_in">top</span>(); <span class="hljs-comment">//获得栈顶元素，复杂度O(1)</span>
+<span class="hljs-built_in">pop</span>(); <span class="hljs-comment">//弹出栈顶元素，复杂度O(1)</span>
+<span class="hljs-built_in">empty</span>(); <span class="hljs-comment">//判空，复杂度O(1)</span></code></pre>
 
-<h2 id="utility"><a href="#utility" class="headerlink" title="utility"></a>utility</h2><p>常用于将两个元素捆绑成为合成元素，以及用于构造map的键值对；</p>
+<h2 id="5、utility"><a href="#5、utility" class="headerlink" title="5、utility"></a>5、utility</h2><p>常用于将两个元素捆绑成为合成元素，以及用于构造map的键值对；</p>
 <ol>
 <li>定义</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">pair<span class="token operator">&lt;</span>typename1<span class="token punctuation">,</span> typename2<span class="token operator">&gt;</span> instName<span class="token punctuation">;</span>
-<span class="token comment">//example1: </span>
-pair<span class="token operator">&lt;</span>string<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">p</span><span class="token punctuation">(</span><span class="token string">"example"</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//example2: </span>
-<span class="token function">make_pair</span><span class="token punctuation">(</span><span class="token string">"example"</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp">pair&lt;typename1, typename2&gt; instName;
+<span class="hljs-comment">//example1: </span>
+<span class="hljs-function">pair&lt;string, <span class="hljs-type">int</span>&gt; <span class="hljs-title">p</span><span class="hljs-params">(<span class="hljs-string">"example"</span>,<span class="hljs-number">0</span>)</span></span>;
+<span class="hljs-comment">//example2: </span>
+<span class="hljs-built_in">make_pair</span>(<span class="hljs-string">"example"</span>,<span class="hljs-number">0</span>);</code></pre>
 
 <ol start="2">
 <li>常用函数</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">//比较操作数&lt;=、&gt;=等，pair可以直接比较，默认先以first大小作为标准，当fisrt相等时使用second;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-comment">//比较操作数&lt;=、&gt;=等，pair可以直接比较，默认先以first大小作为标准，当fisrt相等时使用second;</span></code></pre>
 
-<h2 id="vector"><a href="#vector" class="headerlink" title="vector"></a>vector</h2><p>相当于Java的ArrayList数据结构，可加入泛型。</p>
+<h2 id="6、vector-数组"><a href="#6、vector-数组" class="headerlink" title="6、vector//数组"></a>6、vector//数组</h2><p>相当于Java的ArrayList数据结构，可加入泛型。</p>
 <p>URL :<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/150118797">https://zhuanlan.zhihu.com/p/150118797</a></p>
 <p>1、初始化</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">一维使用：vector<span class="token operator">&lt;</span>type<span class="token operator">&gt;</span> name
+<pre><code class="hljs cpp">一维使用：vector&lt;type&gt; name
 
-直接赋值（C<span class="token operator">++</span><span class="token number">11</span>支持）：vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> name <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment">//返回数组</span>
+直接赋值（C++<span class="hljs-number">11</span>支持）：vector&lt;<span class="hljs-type">int</span>&gt; name = {<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>};
+<span class="hljs-keyword">return</span> {<span class="hljs-number">-1</span>,<span class="hljs-number">-1</span>};<span class="hljs-comment">//返回数组</span>
 
 直接赋值：利用数组，初始化成vector容器
-<span class="token keyword">int</span> i<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">ii</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="hljs-type">int</span> i[<span class="hljs-number">2</span>] = {<span class="hljs-number">0</span>,<span class="hljs-number">1</span>};
+<span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">ii</span><span class="hljs-params">(i,i+<span class="hljs-number">2</span>)</span></span>;
 
-一维使用并且开空间赋初值：vctor<span class="token operator">&lt;</span>type<span class="token operator">&gt;</span> <span class="token function">name</span><span class="token punctuation">(</span>size<span class="token punctuation">,</span>initValue<span class="token punctuation">)</span>
+一维使用并且开空间赋初值：<span class="hljs-function">vctor&lt;type&gt; <span class="hljs-title">name</span><span class="hljs-params">(size,initValue)</span></span>
+<span class="hljs-function"></span>
+<span class="hljs-function">二维使用：vector&lt;vector&lt;type&gt;&gt; name</span>
+<span class="hljs-function"></span>
+<span class="hljs-function">初始化开空间：vector.<span class="hljs-title">resize</span><span class="hljs-params">(capacity)</span></span>
+<span class="hljs-function"></span>
+<span class="hljs-function">对于二维数组：</span>
+<span class="hljs-function"></span>
+<span class="hljs-function">​    vector.<span class="hljs-title">resize</span><span class="hljs-params">(capacity)</span> <span class="hljs-comment">//初始化一维空间</span></span>
+<span class="hljs-function"></span>
+<span class="hljs-function">​    <span class="hljs-title">for</span><span class="hljs-params">(<span class="hljs-type">int</span> i =<span class="hljs-number">0</span>; i&lt;n;i++)</span></span>{<span class="hljs-comment">//初始化二维空间</span>
 
-二维使用：vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span>type<span class="token operator">&gt;&gt;</span> name
+​      order[i].<span class="hljs-built_in">resize</span>(capacity);
 
-初始化开空间：vector<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>capacity<span class="token punctuation">)</span>
-
-对于二维数组：
-
-​	vector<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>capacity<span class="token punctuation">)</span> <span class="token comment">//初始化一维空间</span>
-
-​    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">//初始化二维空间</span>
-
-​      order<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>capacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-​    <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+​    }
+</code></pre>
 
 <p>2、函数方法</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">长度：vector<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<pre><code class="hljs cpp">长度：vector.<span class="hljs-built_in">size</span>()
 
-<span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">rbegin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">rend</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//返回迭代器，r为reversed的缩写</span>
+<span class="hljs-built_in">begin</span>(); <span class="hljs-built_in">end</span>(); <span class="hljs-built_in">rbegin</span>(); <span class="hljs-built_in">rend</span>(); <span class="hljs-comment">//返回迭代器，r为reversed的缩写</span>
 
-<span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//判空</span>
+<span class="hljs-built_in">empty</span>(); <span class="hljs-comment">//判空</span>
 
-<span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//返回vector的首/尾值</span>
+<span class="hljs-built_in">front</span>(); <span class="hljs-built_in">back</span>(); <span class="hljs-comment">//返回vector的首/尾值</span>
 
-<span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//尾部添加元素，复杂度O(1)</span>
+<span class="hljs-built_in">push_back</span>(); <span class="hljs-comment">//尾部添加元素，复杂度O(1)</span>
 
-<span class="token function">pop_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//尾部删除元素，复杂度O(1)</span>
+<span class="hljs-built_in">pop_back</span>(); <span class="hljs-comment">//尾部删除元素，复杂度O(1)</span>
 
-<span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取元素个数</span>
+<span class="hljs-built_in">size</span>(); <span class="hljs-comment">//获取元素个数</span>
 
-<span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//清空所有元素，复杂度O(N)</span>
+<span class="hljs-built_in">clear</span>(); <span class="hljs-comment">//清空所有元素，复杂度O(N)</span>
 
-<span class="token function">insert</span><span class="token punctuation">(</span>it<span class="token punctuation">,</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//向任意迭代器it处插入一个元素value, 复杂度O(N)，功能同emplace()</span>
+<span class="hljs-built_in">insert</span>(it,value); <span class="hljs-comment">//向任意迭代器it处插入一个元素value, 复杂度O(N)，功能同emplace()</span>
 
-<span class="token function">erase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//可删除单个元素:erase(it)，或删除区间[first, larst)内所有元素:erase(first_it, last_it)</span>
+<span class="hljs-built_in">erase</span>(); <span class="hljs-comment">//可删除单个元素:erase(it)，或删除区间[first, larst)内所有元素:erase(first_it, last_it)</span>
 
-<span class="token function">swap</span><span class="token punctuation">(</span>vector<span class="token operator">&amp;</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//与另外一个vector container交换数据</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="hljs-built_in">swap</span>(vector&amp; x); <span class="hljs-comment">//与另外一个vector container交换数据</span></code></pre>
 
 <p>3、排序</p>
 <p>自定义排序（顺序）：</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token number">1</span>、直接使用lambda表达式
+<pre><code class="hljs cpp"><span class="hljs-number">1</span>、直接使用lambda表达式
 自定义按照二维数组
-<span class="token function">sort</span><span class="token punctuation">(</span>courses<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>courses<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> o1<span class="token punctuation">,</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> o2<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment">//lambda表达式</span>
-  	<span class="token keyword">return</span> o1<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&gt;</span> o2<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//根据vector[][1]降序排序，大于号 表示数组前面的元素要大于后面的元素。</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token number">2</span>、自定义函数（降序排序）
-<span class="token keyword">bool</span> <span class="token function">cmp_max</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> y<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">return</span> x <span class="token operator">&gt;</span> y<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<span class="hljs-built_in">sort</span>(courses.<span class="hljs-built_in">begin</span>(),courses.<span class="hljs-built_in">end</span>(),[](vector&lt;<span class="hljs-type">int</span>&gt;&amp; o1,vector&lt;<span class="hljs-type">int</span>&gt;&amp; o2){<span class="hljs-comment">//lambda表达式</span>
+      <span class="hljs-keyword">return</span> o1[<span class="hljs-number">1</span>] &gt; o2[<span class="hljs-number">1</span>];<span class="hljs-comment">//根据vector[][1]降序排序，大于号 表示数组前面的元素要大于后面的元素。</span>
+  });
+<span class="hljs-number">2</span>、自定义函数（降序排序）
+<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">cmp_max</span><span class="hljs-params">(<span class="hljs-type">int</span> x,<span class="hljs-type">int</span> y)</span></span>{
+    <span class="hljs-keyword">return</span> x &gt; y;
+}
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> a<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">arr</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> a<span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">sort</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>arr<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>cmp_max<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span>arr<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        cout <span class="token operator">&lt;&lt;</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> <span class="token number">0</span> <span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-output：<span class="token number">9</span> <span class="token number">8</span> <span class="token number">6</span> <span class="token number">3</span> <span class="token number">2</span>
-<span class="token number">3</span>、vector局部排序
-<span class="token keyword">bool</span> <span class="token function">cmp_max</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> y<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">return</span> x <span class="token operator">&gt;</span> y<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> array <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token function">sort</span><span class="token punctuation">(</span>array<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>array<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">3</span><span class="token punctuation">,</span>cmp<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//对[0,3)下标之间进行逆序排序</span>
-output<span class="token operator">:</span><span class="token number">3</span> <span class="token number">2</span> <span class="token number">1</span> <span class="token number">4</span> <span class="token number">5</span>
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-type">int</span> a[] = {<span class="hljs-number">8</span>,<span class="hljs-number">6</span>,<span class="hljs-number">2</span>,<span class="hljs-number">9</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">1</span>,<span class="hljs-number">7</span>,<span class="hljs-number">10</span>};
+    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">arr</span><span class="hljs-params">(a, a+<span class="hljs-number">5</span>)</span></span>;
+    <span class="hljs-built_in">sort</span>(arr.<span class="hljs-built_in">begin</span>(),arr.<span class="hljs-built_in">end</span>(),cmp_max);
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;arr.<span class="hljs-built_in">size</span>(); ++i){
+        cout &lt;&lt;arr[i] &lt;&lt; <span class="hljs-string">" "</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> ;
+}
+output：<span class="hljs-number">9</span> <span class="hljs-number">8</span> <span class="hljs-number">6</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span>
+<span class="hljs-number">3</span>、vector局部排序
+<span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">cmp_max</span><span class="hljs-params">(<span class="hljs-type">int</span> x,<span class="hljs-type">int</span> y)</span></span>{
+    <span class="hljs-keyword">return</span> x &gt; y;
+}
+vector&lt;<span class="hljs-type">int</span>&gt; array = {<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>};
+<span class="hljs-built_in">sort</span>(array.<span class="hljs-built_in">begin</span>(),array.<span class="hljs-built_in">begin</span>()+<span class="hljs-number">3</span>,cmp);<span class="hljs-comment">//对[0,3)下标之间进行逆序排序</span>
+output:<span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span>
     
-<span class="token function">sort</span><span class="token punctuation">(</span>array<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span>array<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">,</span>cmp<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//对[1,5)下标之间进行逆序排序</span>
-output<span class="token operator">:</span><span class="token number">1</span> <span class="token number">5</span> <span class="token number">4</span> <span class="token number">3</span> <span class="token number">2</span>
+<span class="hljs-built_in">sort</span>(array.<span class="hljs-built_in">begin</span>()+<span class="hljs-number">1</span>,array.<span class="hljs-built_in">begin</span>()+<span class="hljs-number">5</span>,cmp);<span class="hljs-comment">//对[1,5)下标之间进行逆序排序</span>
+output:<span class="hljs-number">1</span> <span class="hljs-number">5</span> <span class="hljs-number">4</span> <span class="hljs-number">3</span> <span class="hljs-number">2</span>
     
-<span class="token function">sort</span><span class="token punctuation">(</span>array<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>array<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span>cmp<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//对[0,2)下标之间进行逆序排序</span>
-output<span class="token operator">:</span><span class="token number">3</span> <span class="token number">2</span> <span class="token number">1</span> <span class="token number">4</span> <span class="token number">5</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="hljs-built_in">sort</span>(array.<span class="hljs-built_in">begin</span>(),array.<span class="hljs-built_in">end</span>()<span class="hljs-number">-2</span>,cmp);<span class="hljs-comment">//对[0,2)下标之间进行逆序排序</span>
+output:<span class="hljs-number">3</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span></code></pre>
 
-<h2 id="string"><a href="#string" class="headerlink" title="string"></a>string</h2><ol>
+<h2 id="7、string-字符串"><a href="#7、string-字符串" class="headerlink" title="7、string//字符串"></a>7、string//字符串</h2><ol>
 <li>定义：</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">string str<span class="token punctuation">;</span>
-string str <span class="token operator">=</span> <span class="token string">"example string"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp">string str;
+string str = <span class="hljs-string">"example string"</span>;</code></pre>
 
 <ol start="2">
 <li><p>访问：可通过下标或迭代器，与vector基本类似</p>
@@ -315,62 +352,62 @@ string str <span class="token operator">=</span> <span class="token string">"exa
 <li><p>常用函数：</p>
 </li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">append</span><span class="token punctuation">(</span><span class="token punctuation">)</span>：从后方插入字符串
+<pre><code class="hljs cpp"><span class="hljs-built_in">append</span>()：从后方插入字符串
 直接字符串相加：
-    string a <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">;</span>
-    string b <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        a <span class="token operator">=</span> b <span class="token operator">+</span> a<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token comment">//operator+=, 用于字符串拼接</span>
-<span class="token comment">//compare operator: ==、!=、&lt;=、&gt;=等，基于字典序比较大小</span>
-<span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//返回string长度</span>
-<span class="token function">insert</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//插入字符串，复杂度O(N)</span>
-<span class="token comment">//insert(pos, string)--&gt;在pos未知插入字符串string</span>
-<span class="token comment">//insert(it, it2, it3)--&gt;迭代器指示的string it位置上插入串[it2,it3]</span>
-<span class="token function">erase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//删除单个或区间内元素，与vector中erase用法基本一致，复杂度O(N)</span>
-<span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//清空，复杂度O(1)</span>
-<span class="token function">substr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//substr(pos, len)返回pos位置开始长度为len的字串，复杂度O(len)</span>
-<span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token comment">//str.find(str2), 当str2是str的字串时，返回其在str中第一次出现的位置，否则返回string:npos</span>
-<span class="token comment">//str.dinf(pos, str2), 从str的pos位置开始匹配, 复杂度O(mn), m、n为str和str2的长度</span>
-string<span class="token operator">:</span>npos<span class="token punctuation">;</span> <span class="token comment">//常数(=-1, or 4294967295, max value of unsigned_int)，一般作为find函数失配时的返回值</span>
-<span class="token function">replace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//replace(pos, len, str2), 把str从pos号位开始长度为len的字串替换为str2; </span>
-<span class="token comment">//replace(it1, it2, str2), 把str的迭代器[it1, it2)范围的字串替换为str2; 复杂度为O(str.length())</span>
+    string a = <span class="hljs-string">"hello"</span>;
+    string b = <span class="hljs-string">"hello"</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; ++i)
+    {
+        a = b + a;
+    }
+<span class="hljs-comment">//operator+=, 用于字符串拼接</span>
+<span class="hljs-comment">//compare operator: ==、!=、&lt;=、&gt;=等，基于字典序比较大小</span>
+<span class="hljs-built_in">length</span>()/<span class="hljs-built_in">size</span>(); <span class="hljs-comment">//返回string长度</span>
+<span class="hljs-built_in">insert</span>(); <span class="hljs-comment">//插入字符串，复杂度O(N)</span>
+<span class="hljs-comment">//insert(pos, string)--&gt;在pos未知插入字符串string</span>
+<span class="hljs-comment">//insert(it, it2, it3)--&gt;迭代器指示的string it位置上插入串[it2,it3]</span>
+<span class="hljs-built_in">erase</span>(); <span class="hljs-comment">//删除单个或区间内元素，与vector中erase用法基本一致，复杂度O(N)</span>
+<span class="hljs-built_in">clear</span>(); <span class="hljs-comment">//清空，复杂度O(1)</span>
+<span class="hljs-built_in">substr</span>(); <span class="hljs-comment">//substr(pos, len)返回pos位置开始长度为len的字串，复杂度O(len)</span>
+<span class="hljs-built_in">find</span>(); 
+<span class="hljs-comment">//str.find(str2), 当str2是str的字串时，返回其在str中第一次出现的位置，否则返回string:npos</span>
+<span class="hljs-comment">//str.dinf(pos, str2), 从str的pos位置开始匹配, 复杂度O(mn), m、n为str和str2的长度</span>
+string:npos; <span class="hljs-comment">//常数(=-1, or 4294967295, max value of unsigned_int)，一般作为find函数失配时的返回值</span>
+<span class="hljs-built_in">replace</span>(); <span class="hljs-comment">//replace(pos, len, str2), 把str从pos号位开始长度为len的字串替换为str2; </span>
+<span class="hljs-comment">//replace(it1, it2, str2), 把str的迭代器[it1, it2)范围的字串替换为str2; 复杂度为O(str.length())</span>
 
-<span class="token number">1</span>、string与<span class="token keyword">int</span>互转<span class="token punctuation">(</span>C<span class="token operator">++</span><span class="token number">11</span>不支持<span class="token punctuation">)</span>
-<span class="token function">stoi</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//将字符串 str 从 0 位置开始到末尾的 2 位置转换为十进制</span>
-<span class="token function">stoi</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//将“字符串”转为十进制</span>
-<span class="token function">stod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//“字符串”转换为double</span>
-<span class="token function">to_string</span><span class="token punctuation">(</span><span class="token keyword">char</span> c<span class="token punctuation">)</span><span class="token comment">//重载方法，将一些整形，浮点型等转换为string类型字符串</span>
-<span class="token number">2</span>、string与<span class="token keyword">int</span>互转
-<span class="token comment">// int 转 string</span>
-  <span class="token keyword">int</span> number <span class="token operator">=</span> <span class="token number">12</span><span class="token punctuation">;</span>
-  string str<span class="token punctuation">;</span>
-  stringstream ss<span class="token punctuation">;</span>
-  ss<span class="token operator">&lt;&lt;</span>number<span class="token punctuation">;</span>
-  ss<span class="token operator">&gt;&gt;</span>str<span class="token punctuation">;</span>
-  cout<span class="token operator">&lt;&lt;</span>str<span class="token punctuation">;</span>
- <span class="token comment">//注意，此时这个流中还留有之前流入的数据。</span>
- ss<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//清楚这个流中残留的数据</span>
+<span class="hljs-number">1</span>、string与<span class="hljs-type">int</span>互转(C++<span class="hljs-number">11</span>不支持)
+<span class="hljs-built_in">stoi</span>(str, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>); <span class="hljs-comment">//将字符串 str 从 0 位置开始到末尾的 2 位置转换为十进制</span>
+<span class="hljs-built_in">stoi</span>(str);<span class="hljs-comment">//将“字符串”转为十进制</span>
+<span class="hljs-built_in">stod</span>()<span class="hljs-comment">//“字符串”转换为double</span>
+<span class="hljs-built_in">to_string</span>(<span class="hljs-type">char</span> c)<span class="hljs-comment">//重载方法，将一些整形，浮点型等转换为string类型字符串</span>
+<span class="hljs-number">2</span>、string与<span class="hljs-type">int</span>互转
+<span class="hljs-comment">// int 转 string</span>
+  <span class="hljs-type">int</span> number = <span class="hljs-number">12</span>;
+  string str;
+  stringstream ss;
+  ss&lt;&lt;number;
+  ss&gt;&gt;str;
+  cout&lt;&lt;str;
+ <span class="hljs-comment">//注意，此时这个流中还留有之前流入的数据。</span>
+ ss.<span class="hljs-built_in">clear</span>();  <span class="hljs-comment">//清楚这个流中残留的数据</span>
 
- <span class="token comment">//string 转 int</span>
-  string str2 <span class="token operator">=</span> <span class="token string">"13"</span><span class="token punctuation">;</span>
-  <span class="token keyword">int</span> num<span class="token punctuation">;</span>
-  ss<span class="token operator">&lt;&lt;</span>str2<span class="token punctuation">;</span>
-  ss<span class="token operator">&gt;&gt;</span>num<span class="token punctuation">;</span>
-  cout<span class="token operator">&lt;&lt;</span>num<span class="token punctuation">;</span>
-<span class="token number">2</span>、<span class="token keyword">char</span>与<span class="token keyword">int</span>互转，string<span class="token punctuation">[</span>index<span class="token punctuation">]</span>是<span class="token keyword">char</span>类型
-<span class="token char">'1'</span><span class="token operator">-</span><span class="token char">'0'</span><span class="token punctuation">(</span>输出<span class="token keyword">int</span>类型的<span class="token number">1</span><span class="token punctuation">)</span>：<span class="token keyword">char</span>转<span class="token keyword">int</span>，使用ASCII码方法
-<span class="token keyword">int</span>转<span class="token keyword">char</span>：
-    <span class="token keyword">char</span> z1 <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">+</span><span class="token char">'0'</span><span class="token punctuation">;</span>
-    cout<span class="token operator">&lt;&lt;</span>z1<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span><span class="token comment">//'1'</span>
-	cout<span class="token operator">&lt;&lt;</span><span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span><span class="token char">'0'</span><span class="token punctuation">)</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span><span class="token comment">//'1'</span>
-    cout<span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">+</span><span class="token char">'0'</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span><span class="token comment">//'49'，此处输出的是1的ASCII值，而不是字符</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ <span class="hljs-comment">//string 转 int</span>
+  string str2 = <span class="hljs-string">"13"</span>;
+  <span class="hljs-type">int</span> num;
+  ss&lt;&lt;str2;
+  ss&gt;&gt;num;
+  cout&lt;&lt;num;
+<span class="hljs-number">2</span>、<span class="hljs-type">char</span>与<span class="hljs-type">int</span>互转，string[index]是<span class="hljs-type">char</span>类型
+<span class="hljs-string">'1'</span>-<span class="hljs-string">'0'</span>(输出<span class="hljs-type">int</span>类型的<span class="hljs-number">1</span>)：<span class="hljs-type">char</span>转<span class="hljs-type">int</span>，使用ASCII码方法
+<span class="hljs-type">int</span>转<span class="hljs-type">char</span>：
+    <span class="hljs-type">char</span> z1 = <span class="hljs-number">1</span> +<span class="hljs-string">'0'</span>;
+    cout&lt;&lt;z1&lt;&lt;endl;<span class="hljs-comment">//'1'</span>
+    cout&lt;&lt;<span class="hljs-built_in">char</span>(<span class="hljs-number">1</span> +<span class="hljs-string">'0'</span>)&lt;&lt;endl;<span class="hljs-comment">//'1'</span>
+    cout&lt;&lt; <span class="hljs-number">1</span> +<span class="hljs-string">'0'</span>&lt;&lt;endl;<span class="hljs-comment">//'49'，此处输出的是1的ASCII值，而不是字符</span>
+</code></pre>
 
-<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p>映射，可以将任何基本类型映射到任何基本类型（包含STL容器）；内部由红黑树实现，因此建立映射过程中自动有序（从小到大）；若需要一个key对应多个值，可以使用multimap；C++11中增加了散列实现的unordered_map，速度比红黑树实现的map要快很多.</p>
+<h2 id="8、map-映射"><a href="#8、map-映射" class="headerlink" title="8、map//映射"></a>8、map//映射</h2><p>映射，可以将任何基本类型映射到任何基本类型（包含STL容器）；内部由红黑树实现，因此建立映射过程中自动有序（从小到大）；若需要一个key对应多个值，可以使用multimap；C++11中增加了散列实现的unordered_map，速度比红黑树实现的map要快很多.</p>
 <p>常用用途为：</p>
 <ol>
 <li><p>需要建立字符串与整数/字符串间的映射；</p>
@@ -381,7 +418,7 @@ string<span class="token operator">:</span>npos<span class="token punctuation">;
 <ol>
 <li>定义</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">map<span class="token operator">&lt;</span>typename1<span class="token punctuation">,</span> typename2<span class="token operator">&gt;</span> instName<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="hljs cpp">map&lt;typename1, typename2&gt; instName;</code></pre>
 
 <ol start="2">
 <li>访问：通过下标或迭代器</li>
@@ -390,166 +427,267 @@ string<span class="token operator">:</span>npos<span class="token punctuation">;
 <ol start="3">
 <li>常用函数</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">//[]复杂度O(logN)，等价于(*((this-&gt;insert(make_pair(k,mapped_type()))).first)).second</span>
-<span class="token keyword">operator</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">(</span><span class="token keyword">const</span> key_type<span class="token operator">&amp;</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//当key k存在时返回value的reference，否则构造新的k-v对，并初始化v</span>
-<span class="token function">insert</span><span class="token punctuation">(</span><span class="token keyword">const</span> value_type<span class="token operator">&amp;</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//插入新k-v pair，一般需要通过std::pair构造，如: std::pair&lt;char,int&gt;('a',100)</span>
-<span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">const</span> key_type<span class="token operator">&amp;</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//find(key)返回键为key的映射迭代器，时间复杂度O(logN)</span>
-<span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">const</span> key_type<span class="token operator">&amp;</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//只能为1或者0，功能等价于find();</span>
-<span class="token function">erase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//可删除单个元素:erase(it)，复杂度O(1);erase(key),删除键为key的键值对，复杂度O(logN)</span>
-<span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取元素个数，复杂度O(1)</span>
-<span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//判空</span>
-<span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//清空元素，复杂度O(N)</span>
-<span class="token function">lower_bound</span> <span class="token punctuation">(</span><span class="token keyword">const</span> value_type<span class="token operator">&amp;</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//参考https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo头文件下常用函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-comment">//[]复杂度O(logN)，等价于(*((this-&gt;insert(make_pair(k,mapped_type()))).first)).second</span>
+<span class="hljs-keyword">operator</span>[] (<span class="hljs-type">const</span> key_type&amp; k); <span class="hljs-comment">//当key k存在时返回value的reference，否则构造新的k-v对，并初始化v</span>
+<span class="hljs-built_in">insert</span>(<span class="hljs-type">const</span> value_type&amp; val); <span class="hljs-comment">//插入新k-v pair，一般需要通过std::pair构造，如: std::pair&lt;char,int&gt;('a',100)</span>
+<span class="hljs-built_in">find</span>(<span class="hljs-type">const</span> key_type&amp; k); <span class="hljs-comment">//find(key)返回键为key的映射迭代器，时间复杂度O(logN)</span>
+<span class="hljs-built_in">count</span>(<span class="hljs-type">const</span> key_type&amp; k); <span class="hljs-comment">//只能为1或者0，功能等价于find();</span>
+<span class="hljs-built_in">erase</span>(); <span class="hljs-comment">//可删除单个元素:erase(it)，复杂度O(1);erase(key),删除键为key的键值对，复杂度O(logN)</span>
+<span class="hljs-built_in">size</span>(); <span class="hljs-comment">//获取元素个数，复杂度O(1)</span>
+<span class="hljs-built_in">empty</span>(); <span class="hljs-comment">//判空</span>
+<span class="hljs-built_in">clear</span>(); <span class="hljs-comment">//清空元素，复杂度O(N)</span>
+<span class="hljs-built_in">lower_bound</span> (<span class="hljs-type">const</span> value_type&amp; val); <span class="hljs-comment">//参考https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo头文件下常用函数</span></code></pre>
 
-<h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p>set，集合，为内部自动有序(note: 增序)且不含重复元素的容器，内部由红黑树实现。相似的容器为multiset，内部可以允许有重复元素；unordered_set，可以去重但是无序，内部由散列实现，速度比set要快很多。</p>
+<h2 id="9、set-集合"><a href="#9、set-集合" class="headerlink" title="9、set//集合"></a>9、set//集合</h2><p>set，集合，为内部自动有序(note: 增序)且不含重复元素的容器，内部由红黑树实现。相似的容器为multiset，内部可以允许有重复元素；unordered_set，可以去重但是无序，内部由散列实现，速度比set要快很多。</p>
 <ol>
 <li>定义：</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">set<span class="token operator">&lt;</span><span class="token keyword">typename</span><span class="token operator">&gt;</span> instName<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="hljs cpp">set&lt;<span class="hljs-keyword">typename</span>&gt; instName;</code></pre>
 
 <ol start="2">
 <li>访问：一般通过迭代器访问</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">set<span class="token operator">&lt;</span><span class="token keyword">typename</span><span class="token operator">&gt;</span><span class="token double-colon punctuation">::</span>iterator it<span class="token punctuation">;</span> <span class="token comment">//通过*it访问set的元素，但注意只能使用for-loop枚举，不支持*(it+i)的方式访问</span>
-<span class="token comment">//NOTE: 只有vector和string支持*(it+i)的访问方式</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp">set&lt;<span class="hljs-keyword">typename</span>&gt;::iterator it; <span class="hljs-comment">//通过*it访问set的元素，但注意只能使用for-loop枚举，不支持*(it+i)的方式访问</span>
+<span class="hljs-comment">//<span class="hljs-doctag">NOTE:</span> 只有vector和string支持*(it+i)的访问方式</span></code></pre>
 
 <ol start="3">
 <li>常用函数：</li>
 </ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">rbegin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">rend</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//返回迭代器，r为reversed的缩写</span>
-<span class="token comment">// Capacity</span>
-<span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取set内元素个数，复杂度O(1)</span>
-<span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//判空</span>
-<span class="token comment">// Modifiers</span>
-<span class="token function">insert</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//insert(x)将x插入容器中，时间复杂度O(logN)</span>
-<span class="token function">erase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//可删除单个元素:erase(it)，复杂度O(1);或删除区间[first, larst)内所有元素:erase(first_it, last_it),复杂度O(logN)</span>
-<span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//清空set中所有元素，复杂度O(N)</span>
-<span class="token comment">// Operations</span>
-<span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//返回set中对应值为value的迭代器，时间复杂度O(logN)</span>
-<span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Count elements with a specific value</span>
-<span class="token function">lower_bound</span> <span class="token punctuation">(</span><span class="token keyword">const</span> value_type<span class="token operator">&amp;</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//参考https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo头文件下常用函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-built_in">begin</span>(); <span class="hljs-built_in">end</span>(); <span class="hljs-built_in">rbegin</span>(); <span class="hljs-built_in">rend</span>(); <span class="hljs-comment">//返回迭代器，r为reversed的缩写</span>
+<span class="hljs-comment">// Capacity</span>
+<span class="hljs-built_in">size</span>(); <span class="hljs-comment">//获取set内元素个数，复杂度O(1)</span>
+<span class="hljs-built_in">empty</span>(); <span class="hljs-comment">//判空</span>
+<span class="hljs-comment">// Modifiers</span>
+<span class="hljs-built_in">insert</span>(); <span class="hljs-comment">//insert(x)将x插入容器中，时间复杂度O(logN)</span>
+<span class="hljs-built_in">erase</span>(); <span class="hljs-comment">//可删除单个元素:erase(it)，复杂度O(1);或删除区间[first, larst)内所有元素:erase(first_it, last_it),复杂度O(logN)</span>
+<span class="hljs-built_in">clear</span>(); <span class="hljs-comment">//清空set中所有元素，复杂度O(N)</span>
+<span class="hljs-comment">// Operations</span>
+<span class="hljs-built_in">find</span>(); <span class="hljs-comment">//返回set中对应值为value的迭代器，时间复杂度O(logN)</span>
+<span class="hljs-built_in">count</span>(); <span class="hljs-comment">//Count elements with a specific value</span>
+<span class="hljs-built_in">lower_bound</span> (<span class="hljs-type">const</span> value_type&amp; val); <span class="hljs-comment">//参考https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo头文件下常用函数</span></code></pre>
 
-<h2 id="cmath"><a href="#cmath" class="headerlink" title="cmath"></a>cmath</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">abs</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> 求n的绝对值
-<span class="token keyword">double</span> cos<span class="token operator">/</span>sin<span class="token operator">/</span><span class="token function">tan</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">)</span> 求x的三角函数值（x为弧度值）
-<span class="token keyword">double</span> <span class="token function">exp</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">)</span> 求e的x次方
-<span class="token keyword">double</span> <span class="token function">pow</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">,</span><span class="token keyword">double</span> y<span class="token punctuation">)</span> 求x的y次方
-<span class="token keyword">double</span> <span class="token function">sqrt</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">)</span> 求x的平方根
-    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="10、cmath-数学函数库"><a href="#10、cmath-数学函数库" class="headerlink" title="10、cmath//数学函数库"></a>10、cmath//数学函数库</h2><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">abs</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> 求n的绝对值</span>
+<span class="hljs-function"><span class="hljs-type">double</span> cos/sin/<span class="hljs-title">tan</span><span class="hljs-params">(<span class="hljs-type">double</span> x)</span> 求x的三角函数值（x为弧度值）</span>
+<span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">exp</span><span class="hljs-params">(<span class="hljs-type">double</span> x)</span> 求e的x次方</span>
+<span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">pow</span><span class="hljs-params">(<span class="hljs-type">double</span> x,<span class="hljs-type">double</span> y)</span> 求x的y次方</span>
+<span class="hljs-function"><span class="hljs-type">double</span> <span class="hljs-title">sqrt</span><span class="hljs-params">(<span class="hljs-type">double</span> x)</span> 求x的平方根</span>
+<span class="hljs-function">    </span></code></pre>
 
-<h2 id="cstdio（C）"><a href="#cstdio（C）" class="headerlink" title="cstdio（C）"></a>cstdio（C）</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//格式化输入</span>
-<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%.2f\n"</span><span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//格式化输出</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="11、cstdio-IO（C）"><a href="#11、cstdio-IO（C）" class="headerlink" title="11、cstdio//IO（C）"></a>11、cstdio//IO（C）</h2><pre><code class="hljs cpp"><span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;a);<span class="hljs-comment">//格式化输入</span>
+<span class="hljs-built_in">printf</span>(<span class="hljs-string">"%.2f\n"</span>, b);<span class="hljs-comment">//格式化输出</span></code></pre>
 
-<h2 id="cstdlib（C）"><a href="#cstdlib（C）" class="headerlink" title="cstdlib（C）"></a>cstdlib（C）</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/*
-	C语言中的字符串为char *temp
-	C++为string
-*/</span>
+<h2 id="12、cstdlib-工具库（C）"><a href="#12、cstdlib-工具库（C）" class="headerlink" title="12、cstdlib//工具库（C）"></a>12、cstdlib//工具库（C）</h2><pre><code class="hljs cpp"><span class="hljs-comment">/*</span>
+<span class="hljs-comment">    C语言中的字符串为char *temp</span>
+<span class="hljs-comment">    C++为string</span>
+<span class="hljs-comment">*/</span>
 
-<span class="token function">atoi</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> str<span class="token punctuation">)</span><span class="token comment">//将一串“字符”转换为int型（注意参数类型是const char*）</span>
-<span class="token function">atof</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> str<span class="token punctuation">)</span><span class="token comment">//同上，转换为double型（注意参数类型是const char*）</span>
-string1<span class="token punctuation">.</span><span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span>：string转<span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span>
-<span class="token function">abs</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token comment">//取绝对值</span>
-<span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//区域赋值</span>
-<span class="token comment">/*    int a[10];
-      vector&lt;int&gt; vt;
-      fill(a, a+10, 100000);
-      fill(vt.begin(), vt.end(), -100000);
-*/</span>
-<span class="token function">sort</span><span class="token punctuation">(</span>vt<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> vt<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cmp<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//时间复杂度n*log(n)的排序算法，默认升序</span>
-<span class="token function">max</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token comment">//取最大值</span>
-<span class="token function">min</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token comment">//取最小值</span>
-<span class="token function">strcmp</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span> str1<span class="token punctuation">,</span> <span class="token keyword">char</span><span class="token operator">*</span> str2<span class="token punctuation">)</span><span class="token comment">//比较两个字符串，前一个小返回&lt;0，前一个大返回&gt;0，否则返回0</span>
-<span class="token function">strcpy</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span> destination<span class="token punctuation">,</span> <span class="token keyword">char</span><span class="token operator">*</span> source<span class="token punctuation">)</span><span class="token comment">//将后一个字符串拷贝到前一个字符串</span>
-<span class="token function">strlen</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span> str<span class="token punctuation">)</span><span class="token comment">//返回字符串str的有效长度</span>
-<span class="token function">isalnum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//判断一个字符是不是alphanumeric，即大小写英文字母或是数字</span>
-<span class="token function">isalpha</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//判断一个字符是不是alphabetic，即英文字母</span>
-<span class="token function">isdigit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//判断一个字符是不是数字</span>
-<span class="token function">tolower</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//将大写转换为小写</span>
-<span class="token function">toupper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">//将小写转换为大写</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="hljs-built_in">atoi</span>(<span class="hljs-type">const</span> <span class="hljs-type">char</span>* str)<span class="hljs-comment">//将一串“字符”转换为int型（注意参数类型是const char*）</span>
+<span class="hljs-built_in">atof</span>(<span class="hljs-type">const</span> <span class="hljs-type">char</span>* str)<span class="hljs-comment">//同上，转换为double型（注意参数类型是const char*）</span>
+string1.<span class="hljs-built_in">c_str</span>()：string转<span class="hljs-function"><span class="hljs-type">const</span> <span class="hljs-type">char</span>*</span>
+<span class="hljs-function"><span class="hljs-title">abs</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span><span class="hljs-comment">//取绝对值</span></span>
+<span class="hljs-function"><span class="hljs-title">fill</span><span class="hljs-params">()</span><span class="hljs-comment">//区域赋值</span></span>
+<span class="hljs-function"><span class="hljs-comment">/*    int a[10];</span></span>
+<span class="hljs-comment"><span class="hljs-function">      vector&lt;int&gt; vt;</span></span>
+<span class="hljs-comment"><span class="hljs-function">      fill(a, a+10, 100000);</span></span>
+<span class="hljs-comment"><span class="hljs-function">      fill(vt.begin(), vt.end(), -100000);</span></span>
+<span class="hljs-comment"><span class="hljs-function">*/</span></span>
+<span class="hljs-function"><span class="hljs-title">sort</span><span class="hljs-params">(vt.begin(), vt.end(), cmp)</span></span>;<span class="hljs-comment">//时间复杂度n*log(n)的排序算法，默认升序</span>
+<span class="hljs-built_in">max</span>(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)<span class="hljs-comment">//取最大值</span>
+<span class="hljs-built_in">min</span>(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)<span class="hljs-comment">//取最小值</span>
+<span class="hljs-built_in">strcmp</span>(<span class="hljs-type">char</span>* str1, <span class="hljs-type">char</span>* str2)<span class="hljs-comment">//比较两个字符串，前一个小返回&lt;0，前一个大返回&gt;0，否则返回0</span>
+<span class="hljs-built_in">strcpy</span>(<span class="hljs-type">char</span>* destination, <span class="hljs-type">char</span>* source)<span class="hljs-comment">//将后一个字符串拷贝到前一个字符串</span>
+<span class="hljs-built_in">strlen</span>(<span class="hljs-type">char</span>* str)<span class="hljs-comment">//返回字符串str的有效长度</span>
+<span class="hljs-built_in">isalnum</span>()<span class="hljs-comment">//判断一个字符是不是alphanumeric，即大小写英文字母或是数字</span>
+<span class="hljs-built_in">isalpha</span>()<span class="hljs-comment">//判断一个字符是不是alphabetic，即英文字母</span>
+<span class="hljs-built_in">isdigit</span>()<span class="hljs-comment">//判断一个字符是不是数字</span>
+<span class="hljs-built_in">tolower</span>()<span class="hljs-comment">//将大写转换为小写</span>
+<span class="hljs-built_in">toupper</span>()<span class="hljs-comment">//将小写转换为大写</span></code></pre>
 
-<h2 id="cstring（C）"><a href="#cstring（C）" class="headerlink" title="cstring（C）"></a>cstring（C）</h2><p>c语言的字符串库</p>
-<h1 id="2、技巧："><a href="#2、技巧：" class="headerlink" title="2、技巧："></a>2、技巧：</h1><p>1、使用循环中使用++i会减少占用内存。</p>
+<h2 id="13、cstring（C）"><a href="#13、cstring（C）" class="headerlink" title="13、cstring（C）"></a>13、cstring（C）</h2><p>c语言的字符串库</p>
+<h1 id="二、算法基础"><a href="#二、算法基础" class="headerlink" title="二、算法基础"></a>二、算法基础</h1><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220105174805802.png"></p>
+<h2 id="1、基础算法"><a href="#1、基础算法" class="headerlink" title="1、基础算法"></a>1、基础算法</h2><h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><ul>
+<li><p>平均时间复杂度<strong>O(nlog(n))<strong>，最坏情况是</strong>O(n2)</strong></p>
+</li>
+<li><p>快排主要是<strong>分治思想</strong>，如下所示，下面的<strong>第二步中调整范围是将数组调整成两个区间，使得左边区间的值&lt;=x，右边区间的值&gt;=x，其中x位置不一定在图上标注的位置</strong>。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220712214810.png"></p>
+</li>
+</ul>
+<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">1e5</span> + <span class="hljs-number">10</span>;<span class="hljs-comment">//给数组开辟空间，题目中数组个数&lt;10万，所以1e5+10</span>
+
+<span class="hljs-type">int</span> n;
+<span class="hljs-type">int</span> q[N];
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">quick_sort</span><span class="hljs-params">(<span class="hljs-type">int</span> q[], <span class="hljs-type">int</span> l , <span class="hljs-type">int</span> r)</span></span>{
+    <span class="hljs-keyword">if</span>(l &gt;= r) <span class="hljs-keyword">return</span>;<span class="hljs-comment">//递归暂停条件</span>
+    <span class="hljs-comment">//通常使用中间值作为分界点、i和j表示区间边界各向外扩一格，下面迭代第一步会++回到边界位置</span>
+    <span class="hljs-type">int</span> x = q[l + r &gt;&gt; <span class="hljs-number">1</span>], i = l - <span class="hljs-number">1</span>, j = r + <span class="hljs-number">1</span>;
+    <span class="hljs-comment">//调整区间</span>
+    <span class="hljs-keyword">while</span>(i &lt; j){
+        <span class="hljs-keyword">do</span> i++;<span class="hljs-keyword">while</span>(q[i] &lt; x);<span class="hljs-comment">//区间向右搜索，直到左侧指针找到 &gt; 边界值x的点</span>
+        <span class="hljs-keyword">do</span> j--;<span class="hljs-keyword">while</span>(q[j] &gt; x);<span class="hljs-comment">//区间向左搜索，直到右侧指针找到 &lt; 边界值x的点</span>
+        <span class="hljs-keyword">if</span>(i &lt; j) <span class="hljs-built_in">swap</span>(q[i] , q[j]);<span class="hljs-comment">//找到后，交换位置</span>
+    }
+    <span class="hljs-comment">//注意，上述迭代的最后一次的if一定不执行，所以显然迭代完成后i &gt;= j</span>
+    <span class="hljs-built_in">quick_sort</span>(q , l , j);<span class="hljs-comment">//递归，j &lt;= i，所以j作为区间右边界</span>
+    <span class="hljs-built_in">quick_sort</span>(q , j + <span class="hljs-number">1</span>, r);<span class="hljs-comment">//递归，j &lt;= i，所以j+1作为区间左边界</span>
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    cin &gt;&gt; n;
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n;++i){
+        cin &gt;&gt; q[i];
+    }
+    <span class="hljs-built_in">quick_sort</span>(q , <span class="hljs-number">0</span> , n<span class="hljs-number">-1</span>);
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n;++i){
+        cout &lt;&lt; q[i] &lt;&lt; <span class="hljs-string">" "</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+
+<h3 id="快速选择"><a href="#快速选择" class="headerlink" title="快速选择"></a>快速选择</h3><ul>
+<li><p>时间复杂度O(n)</p>
+<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220716221803.png" style="zoom:50%;"></li>
+<li><p>快速选择类似与快排，只是<strong>在递归区间上进行选择</strong>。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220716221433.png"></p>
+</li>
+</ul>
+<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
+
+<span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">1e3</span> + <span class="hljs-number">5</span>;
+
+<span class="hljs-type">int</span> n,k,q[N];
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">quick_choose</span><span class="hljs-params">(<span class="hljs-type">int</span> l,<span class="hljs-type">int</span> r,<span class="hljs-type">int</span> k)</span></span>{
+    <span class="hljs-keyword">if</span>(l == r) <span class="hljs-keyword">return</span> q[l];<span class="hljs-comment">//当区间等于1的时候，那么这个数肯定是k，直接返回这个数</span>
+    
+    <span class="hljs-type">int</span> x = q[l + r &gt;&gt; <span class="hljs-number">1</span>], i = l - <span class="hljs-number">1</span>,j = r + <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">while</span>(i &lt; j){
+        <span class="hljs-keyword">do</span> ++i;<span class="hljs-keyword">while</span>(q[i] &lt; x);
+        <span class="hljs-keyword">do</span> --j;<span class="hljs-keyword">while</span>(q[j] &gt; x);
+        <span class="hljs-keyword">if</span>(i &lt; j) <span class="hljs-built_in">swap</span>(q[i],q[j]);
+    }
+    
+    <span class="hljs-type">int</span> sl = j - l + <span class="hljs-number">1</span>;<span class="hljs-comment">//左边区间的元素的个数（记住：区间边界相减后的区间初始下标为0）</span>
+    <span class="hljs-keyword">if</span>(k &lt;= sl){<span class="hljs-comment">//如果k小于左区间元素个数，那么递归左区间</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">quick_choose</span>(l,j,k);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">quick_choose</span>(j+<span class="hljs-number">1</span>,r,k-sl);<span class="hljs-comment">//如果k大于左区间元素个数，那么递归右区间，这里不是找第k个数，而是找右区间第(k-sl)个数</span>
+}
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    cin &gt;&gt; n &gt;&gt; k;
+    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;= n;++i){
+        cin &gt;&gt; q[i];
+    }
+    cout &lt;&lt; <span class="hljs-built_in">quick_choose</span>(<span class="hljs-number">0</span>,n,k) &lt;&lt; <span class="hljs-string">" "</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><ul>
+<li>时间复杂度：O(n)，因为每个元素只被比较一次</li>
+<li></li>
+</ul>
+<h1 id="三、经验小结"><a href="#三、经验小结" class="headerlink" title="三、经验小结"></a>三、经验小结</h1><p>1、使用循环中使用++i会减少占用内存。</p>
 <p>2、当定义一个新的数据结构的时候，删除元素元素时需要进行判空，不为空才可以进行删除。</p>
 <p>3、遇到关于年月日的问题注意该年数是闰年：非闰年的天数是28天，闰年是29天。</p>
 <p>如果是闰年，那么二月份会多出一天。</p>
 <p>闰年的判定方法为：year 是 400的倍数，或者 year 是 4的倍数且不是 100 的倍数。</p>
 <p>4、const类型是表示常量。auto类型是自动类型。</p>
 <p>5、当遍历数组，使用当前元素的下一个或者前一个元素时，初始下标和结尾下标需要进行限制，否则会数组越界。</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre><code class="hljs cpp"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; array.<span class="hljs-built_in">size</span>()<span class="hljs-number">-2</span>;++i){
 
-​      <span class="token keyword">if</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> first <span class="token operator">&amp;&amp;</span> array<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">==</span> second<span class="token punctuation">)</span><span class="token punctuation">{</span>
+​      <span class="hljs-keyword">if</span>(array[i] == first &amp;&amp; array[i+<span class="hljs-number">1</span>]== second){
 
-​        result<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+​        result.<span class="hljs-built_in">push_back</span>(array[i+<span class="hljs-number">2</span>]);
 
-​      <span class="token punctuation">}</span>
+​      }
 
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+}</code></pre>
 
 <p>6、求前缀和</p>
 <p>给定一个数组，把其前i项和放入新的数组，新数组的第i项表示原数组前i项之和。</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> nums<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">,</span><span class="token number">110</span><span class="token punctuation">,</span><span class="token number">120</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> preSum<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-preSum<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">//赋初值</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length <span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span> 
-    preSum<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> preSum<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>  
-<span class="token punctuation">}</span>
-<span class="token comment">/*
-	递推公式：nums[i](原数组第i项) = preSum[i] - preSum[i-1];
-	所以 preSum[i] = preSum[i-1]+nums[i]
-*/</span>
-<span class="token comment">//结果：</span>
-<span class="token number">20</span>
-<span class="token number">50</span>
-<span class="token number">150</span>
-<span class="token number">260</span>
-<span class="token number">380</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-type">int</span> nums[] = {<span class="hljs-number">20</span>,<span class="hljs-number">30</span>,<span class="hljs-number">100</span>,<span class="hljs-number">110</span>,<span class="hljs-number">120</span>};
+<span class="hljs-type">int</span> preSum[] = <span class="hljs-keyword">new</span> <span class="hljs-type">int</span>[<span class="hljs-number">5</span>];
+preSum[<span class="hljs-number">0</span>] = nums[<span class="hljs-number">0</span>];<span class="hljs-comment">//赋初值</span>
+<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; nums.length ;++i){ 
+    preSum[i] = preSum[i<span class="hljs-number">-1</span>]+nums[i];  
+}
+<span class="hljs-comment">/*</span>
+<span class="hljs-comment">    递推公式：nums[i](原数组第i项) = preSum[i] - preSum[i-1];</span>
+<span class="hljs-comment">    所以 preSum[i] = preSum[i-1]+nums[i]</span>
+<span class="hljs-comment">*/</span>
+<span class="hljs-comment">//结果：</span>
+<span class="hljs-number">20</span>
+<span class="hljs-number">50</span>
+<span class="hljs-number">150</span>
+<span class="hljs-number">260</span>
+<span class="hljs-number">380</span></code></pre>
 
 <p>7、力扣报错信息如下：</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">leetcode报错：<span class="token operator">==</span><span class="token number">45</span><span class="token operator">==</span>ERROR<span class="token operator">:</span> AddressSanitizer<span class="token operator">:</span> heap<span class="token operator">-</span>buffer<span class="token operator">-</span>overflow on address <span class="token number">0x602000000018</span> at pc <span class="token number">0x000</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="hljs cpp">leetcode报错：==<span class="hljs-number">45</span>==ERROR: AddressSanitizer: heap-buffer-overflow on address <span class="hljs-number">0x602000000018</span> at pc <span class="hljs-number">0x000</span></code></pre>
 
 <p>可能是数组大小定义问题，导致访问越界异常。</p>
 <p>8、数组快速求和</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> sum <span class="token operator">=</span> <span class="token function">accumulate</span><span class="token punctuation">(</span>vec<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">,</span> vec<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">,</span> <span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">//头两个形参指定要累加的元素范围，第三个形参则是累加的初值。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-type">int</span> sum = <span class="hljs-built_in">accumulate</span>(vec.<span class="hljs-built_in">begin</span>() , vec.<span class="hljs-built_in">end</span>() , <span class="hljs-number">42</span>);
+<span class="hljs-comment">//头两个形参指定要累加的元素范围，第三个形参则是累加的初值。</span></code></pre>
 
 <p>9、溢出报错</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">Line <span class="token number">10</span><span class="token operator">:</span> Char <span class="token number">20</span><span class="token operator">:</span> runtime error<span class="token operator">:</span> <span class="token keyword">signed</span> integer overflow<span class="token operator">:</span> <span class="token number">1073697799</span> <span class="token operator">*</span> <span class="token number">1073697799</span> cannot be represented in type <span class="token char">'int'</span> <span class="token punctuation">(</span>solution<span class="token punctuation">.</span>cpp<span class="token punctuation">)</span>
-SUMMARY<span class="token operator">:</span> UndefinedBehaviorSanitizer<span class="token operator">:</span> undefined<span class="token operator">-</span>behavior prog_joined<span class="token punctuation">.</span>cpp<span class="token operator">:</span><span class="token number">19</span><span class="token operator">:</span><span class="token number">20</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp">Line <span class="hljs-number">10</span>: Char <span class="hljs-number">20</span>: runtime error: <span class="hljs-type">signed</span> integer overflow: <span class="hljs-number">1073697799</span> * <span class="hljs-number">1073697799</span> cannot be represented in type <span class="hljs-string">'int'</span> (solution.cpp)
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior prog_joined.cpp:<span class="hljs-number">19</span>:<span class="hljs-number">20</span></code></pre>
 
 <p>修改标识符类型 扩大位数 long long：64位</p>
 <p>10、<strong>写方法需要更改原变量时</strong></p>
 <p>形参加“&amp;”：引用原变量，方法内对变量的操作会使原变量变化</p>
 <p>不加“&amp;”：不引用原变量，方法内对变量的操作不会使原变量变化，为正常形式参数</p>
-<pre class="line-numbers language-Cpp" data-language="Cpp"><code class="language-Cpp">#include&lt;iostream&gt;
-#include&lt;vector&gt;
+<pre><code class="hljs Cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span>
 
-using namespace std;
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
 
-void printArray(vector&lt;int&gt; nums) {
-    for (int i = 0; i &lt; nums.size(); ++i) {
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; nums)</span> </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-built_in">size</span>(); ++i) {
         cout &lt;&lt; nums[i];
     }
     cout &lt;&lt; endl;
 }
 
-void changeArray(vector&lt;int&gt; nums) {//不加入引用 不操作原数组
-    nums[0] = -1;
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">changeArray</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; nums)</span> </span>{<span class="hljs-comment">//不加入引用 不操作原数组</span>
+    nums[<span class="hljs-number">0</span>] = <span class="hljs-number">-1</span>;
 }
 
-void changeArray2(vector&lt;int&gt; &amp;nums) {//加入引用后 就是操作原数组
-    nums[0] = -1;
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">changeArray2</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; &amp;nums)</span> </span>{<span class="hljs-comment">//加入引用后 就是操作原数组</span>
+    nums[<span class="hljs-number">0</span>] = <span class="hljs-number">-1</span>;
 }
 
-int main() {
-    vector&lt;int&gt; nums = {0, 0, 0, 0, 0};
-    changeArray(nums);
-    printArray(nums);
-    changeArray2(nums);
-    printArray(nums);
-    return 0;
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    vector&lt;<span class="hljs-type">int</span>&gt; nums = {<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>};
+    <span class="hljs-built_in">changeArray</span>(nums);
+    <span class="hljs-built_in">printArray</span>(nums);
+    <span class="hljs-built_in">changeArray2</span>(nums);
+    <span class="hljs-built_in">printArray</span>(nums);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
 
 <p>结果：<br>00000<br>-10000</p>
 <p>11、在定义变量的时候需要进行初始化，否则在dev-c++虽然能运行，但是程序不能跑</p>
+<p>12、在C++中使用scanf(“%d”,&amp;n);代替cin&gt;&gt;n，scanf比cin要快</p>
+<p>13、在java中使用BufferReader代替Scanner</p>
+<pre><code class="hljs java"><span class="hljs-type">BufferedReader</span>&nbsp;<span class="hljs-variable">bufferReader</span>&nbsp;<span class="hljs-operator">=</span>&nbsp;<span class="hljs-keyword">new</span>&nbsp;<span class="hljs-title class_">BufferedReader</span>(<span class="hljs-keyword">new</span>&nbsp;<span class="hljs-title class_">InputStreamReader</span>(System.in));
+bufferReader.readLine()</code></pre>
+
+<p>14、对于除法可以使用<strong>位运算符&gt;&gt;<strong>替代除法符号，且</strong>位运算符优先级小于算术运算符</strong></p>
+<pre><code class="hljs plaintext">&gt;&gt;1//除以2
+&gt;&gt;2//除以4
+&gt;&gt;3//除以8
+&gt;&gt;n//除以2的n次方</code></pre>
+
+<p>15、<strong>区间边界相减后的区间初始下标为0</strong>，如果需要<strong>统计区间元素个数，则需要+1</strong></p>
 <h1 id="3、C-STL"><a href="#3、C-STL" class="headerlink" title="3、C++ STL"></a>3、C++ STL</h1><h2 id="3-1树"><a href="#3-1树" class="headerlink" title="3.1树"></a>3.1树</h2><h3 id="3-1-1、三种遍历方式"><a href="#3-1-1、三种遍历方式" class="headerlink" title="3.1.1、三种遍历方式"></a>3.1.1、三种遍历方式</h3><p>先序遍历 中序遍历 后序遍历</p>
 <p>遍历方式：迭代（栈） 递归</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20200429125611101.jpg" alt="image"></p>
@@ -568,181 +706,137 @@ int main() {
 <p>有时我们可能会需要对已经搜索过的节点进行标记，以防止在遍历时重复搜索某个节点，这</p>
 <p>种做法叫做状态记录或记忆化（memoization）。</p>
 <h3 id="3-1-3、BFS算法：广度优先搜索遍历"><a href="#3-1-3、BFS算法：广度优先搜索遍历" class="headerlink" title="3.1.3、BFS算法：广度优先搜索遍历"></a>3.1.3、BFS算法：广度优先搜索遍历</h3><p>（二叉树）</p>
-<h2 id="3-2Map"><a href="#3-2Map" class="headerlink" title="3.2Map"></a>3.2Map</h2><p>映射，可以将任何基本类型映射到任何基本类型（包含STL容器）；内部由红黑树实现，因此建立映射过程中自动有序（从小到大）；若需要一个key对应多个值，可以使用multimap；C++11中增加了散列实现的<strong>unordered_map，速度比红黑树实现的map要快很多</strong>.</p>
-<p>1、初始化</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">unordered_map<span class="token operator">&lt;</span>typename1<span class="token punctuation">,</span> typename2<span class="token operator">&gt;</span> instName<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>2、访问</p>
-<p>通过迭代器访问时，”<strong>.first</strong>“用来访问key,   “ <strong>.second</strong>“用来访问value</p>
-<p>3、常用函数</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">//[]复杂度O(logN)，等价于(*((this-&gt;insert(make_pair(k,mapped_type()))).first)).second</span>
-<span class="token keyword">operator</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">(</span><span class="token keyword">const</span> key_type<span class="token operator">&amp;</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//当key k存在时返回value的reference，否则构造新的k-v对，并初始化v</span>
-
-<span class="token function">insert</span><span class="token punctuation">(</span><span class="token keyword">const</span> value_type<span class="token operator">&amp;</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//插入新k-v pair，一般需要通过std::pair构造，如: std::pair&lt;char,int&gt;('a',100)</span>
-instName<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"banana"</span><span class="token punctuation">;</span><span class="token comment">//插入{4,"banana"}</span>
-
-<span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">const</span> key_type<span class="token operator">&amp;</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//find(key)返回键为key的映射迭代器，时间复杂度O(logN)</span>
-<span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">const</span> key_type<span class="token operator">&amp;</span> k<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//只能为1或者0，功能等价于find();</span>
-<span class="token function">erase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//可删除单个元素:erase(it)，复杂度O(1);erase(key),删除键为key的键值对，复杂度O(logN)</span>
-<span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//获取元素个数，复杂度O(1)</span>
-<span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//判空</span>
-<span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//清空元素，复杂度O(N)</span>
-<span class="token function">lower_bound</span> <span class="token punctuation">(</span><span class="token keyword">const</span> value_type<span class="token operator">&amp;</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//参考https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo头文件下常用函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="3-3图"><a href="#3-3图" class="headerlink" title="3.3图"></a>3.3图</h2><p>一般使用递归写</p>
 <h3 id="3-3-1、深度优先算法DFS"><a href="#3-3-1、深度优先算法DFS" class="headerlink" title="3.3.1、深度优先算法DFS"></a>3.3.1、深度优先算法DFS</h3><p>以“深度”为第一关键词，每次都沿路径到不能再前进时才退回到最近的岔路口</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220310170013400.jpg" alt="image-20220310170013400"></p>
 <h3 id="3-3-2、广度优先算法BFS"><a href="#3-3-2、广度优先算法BFS" class="headerlink" title="3.3.2、广度优先算法BFS"></a>3.3.2、广度优先算法BFS</h3><p>以“广度”为第一关键词，每次以扩散的方式向外访问顶点</p>
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220310165946094.jpg" alt="image-20220310165946094"></p>
-<h1 id="4、题目分类"><a href="#4、题目分类" class="headerlink" title="4、题目分类"></a>4、题目分类</h1><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220105174805802.png"></p>
 <h1 id="5、查找法"><a href="#5、查找法" class="headerlink" title="5、查找法"></a>5、查找法</h1><h2 id="5-1二分法"><a href="#5-1二分法" class="headerlink" title="5.1二分法"></a>5.1二分法</h2><p>1、二分法（基础写法 左闭右闭）：</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> arr<span class="token punctuation">,</span><span class="token keyword">int</span> key<span class="token punctuation">)</span><span class="token punctuation">{</span>
-	<span class="token keyword">int</span> low<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//数组最小索引值</span>
-	<span class="token keyword">int</span> high<span class="token operator">=</span>arr<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">//数组最大索引值</span>
-	<span class="token keyword">while</span><span class="token punctuation">(</span>low<span class="token operator">&lt;</span>high<span class="token punctuation">)</span><span class="token punctuation">{</span>
-		<span class="token keyword">int</span> mid<span class="token operator">==</span>low <span class="token operator">+</span> <span class="token punctuation">(</span>high <span class="token operator">-</span> low<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">;</span><span class="token comment">//避免乘法溢出</span>
-		<span class="token keyword">if</span><span class="token punctuation">(</span>key<span class="token operator">==</span>arr<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-			<span class="token keyword">return</span> mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
-		<span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>key<span class="token operator">&gt;</span>arr<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-			low<span class="token operator">=</span>mid<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
-		<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-			high<span class="token operator">=</span>mid<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment">//因为是搜索值，arr[mid]已经被搜索，故要去[mid+1,high]或[low,mid-1]区间搜索</span>
-		<span class="token punctuation">}</span>
-	<span class="token punctuation">}</span>
-	<span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment">//没有找到</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">binarySearch</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; arr,<span class="hljs-type">int</span> key)</span></span>{
+    <span class="hljs-type">int</span> low=<span class="hljs-number">0</span>; <span class="hljs-comment">//数组最小索引值</span>
+    <span class="hljs-type">int</span> high=arr.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span>; <span class="hljs-comment">//数组最大索引值</span>
+    <span class="hljs-keyword">while</span>(low&lt;high){
+        <span class="hljs-type">int</span> mid==low + (high - low)/<span class="hljs-number">2</span>;<span class="hljs-comment">//避免乘法溢出</span>
+        <span class="hljs-keyword">if</span>(key==arr[mid]){
+            <span class="hljs-keyword">return</span> mid+<span class="hljs-number">1</span>;
+        }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(key&gt;arr[mid]){
+            low=mid+<span class="hljs-number">1</span>;
+        }<span class="hljs-keyword">else</span>{
+            high=mid<span class="hljs-number">-1</span>;<span class="hljs-comment">//因为是搜索值，arr[mid]已经被搜索，故要去[mid+1,high]或[low,mid-1]区间搜索</span>
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<span class="hljs-comment">//没有找到</span>
+}</code></pre>
 
 <p>2、二分查找（左闭右开）：用于搜索左边界</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">left_bound</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> right <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> <span class="token comment">// 注意：因为 right = nums.length 而不是 nums.length - 1。因此每次循环的「搜索区间」是 [left, right) 左闭右开</span>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">left_bound</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> target)</span> </span>{
+    <span class="hljs-keyword">if</span> (nums.length == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>;
+    <span class="hljs-type">int</span> right = nums.length; <span class="hljs-comment">// 注意：因为 right = nums.length 而不是 nums.length - 1。因此每次循环的「搜索区间」是 [left, right) 左闭右开</span>
     
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 注意：while(left &lt; right) 终止的条件是 left == right，此时搜索区间 [left, left) 为空，所以可以正确终止</span>
-        <span class="token keyword">int</span> mid <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            right <span class="token operator">=</span> mid<span class="token punctuation">;</span> <span class="token comment">// 注意：找到 target 时不要立即返回，而是缩小「搜索区间」的上界 right，在区间 [left, mid) 中继续搜索，即不断向左收缩，达到锁定左侧边界的目的。</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&gt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            right <span class="token operator">=</span> mid<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> left<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="hljs-keyword">while</span> (left &lt; right) { <span class="hljs-comment">// 注意：while(left &lt; right) 终止的条件是 left == right，此时搜索区间 [left, left) 为空，所以可以正确终止</span>
+        <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (nums[mid] == target) {
+            right = mid; <span class="hljs-comment">// 注意：找到 target 时不要立即返回，而是缩小「搜索区间」的上界 right，在区间 [left, mid) 中继续搜索，即不断向左收缩，达到锁定左侧边界的目的。</span>
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &lt; target) {
+            left = mid + <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target) {
+            right = mid;
+        }
+    }
+    <span class="hljs-keyword">return</span> left;
+}</code></pre>
 
 <p>3、二分查找（左开右闭）：用于搜索右边界</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">right_bound</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> right <span class="token operator">=</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">right_bound</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> target)</span> </span>{
+    <span class="hljs-keyword">if</span> (nums.length == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>, right = nums.length;
     
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> mid <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 注意：当 nums[mid] == target 时，不要立即返回，而是增大「搜索区间」的下界 left，使得区间不断向右收缩，达到锁定右侧边界的目的。</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&gt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            right <span class="token operator">=</span> mid<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> left <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">// 注意：因为我们对 left 的更新必须是 left = mid + 1，就是说 while 循环结束时，nums[left] 一定不等于 target 了，而 nums[left-1] 可能是 target</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="hljs-keyword">while</span> (left &lt; right) {
+        <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (nums[mid] == target) {
+            left = mid + <span class="hljs-number">1</span>; <span class="hljs-comment">// 注意：当 nums[mid] == target 时，不要立即返回，而是增大「搜索区间」的下界 left，使得区间不断向右收缩，达到锁定右侧边界的目的。</span>
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &lt; target) {
+            left = mid + <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target) {
+            right = mid;
+        }
+    }
+    <span class="hljs-keyword">return</span> left - <span class="hljs-number">1</span>; <span class="hljs-comment">// 注意：因为我们对 left 的更新必须是 left = mid + 1，就是说 while 循环结束时，nums[left] 一定不等于 target 了，而 nums[left-1] 可能是 target</span>
+}
+</code></pre>
 
 <p><strong>4、三种方式统一写成左闭右闭：</strong></p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">//搜索某个值</span>
-<span class="token keyword">int</span> <span class="token function">binary_search</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> right <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> 
-    <span class="token keyword">while</span><span class="token punctuation">(</span>left <span class="token operator">&lt;=</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> mid <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&gt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            right <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> 
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">// 直接返回</span>
-            <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token comment">// 直接返回</span>
-    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment">//搜索左边界</span>
-<span class="token keyword">int</span> <span class="token function">left_bound</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> right <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;=</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> mid <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&gt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            right <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">// 别返回，锁定左侧边界</span>
-            right <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token comment">// 最后要检查 left 越界的情况</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>left <span class="token operator">&gt;=</span> nums<span class="token punctuation">.</span>length <span class="token operator">||</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">!=</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> left<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment">//搜索右边界</span>
-<span class="token keyword">int</span> <span class="token function">right_bound</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> left <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> right <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;=</span> right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> mid <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&gt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            right <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment">// 别返回，锁定右侧边界</span>
-            left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    <span class="token comment">// 最后要检查 right 越界的情况</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>right <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">!=</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> right<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-comment">//搜索某个值</span>
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">binary_search</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> target)</span> </span>{
+    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>, right = nums.length - <span class="hljs-number">1</span>; 
+    <span class="hljs-keyword">while</span>(left &lt;= right) {
+        <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (nums[mid] &lt; target) {
+            left = mid + <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target) {
+            right = mid - <span class="hljs-number">1</span>; 
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(nums[mid] == target) {
+            <span class="hljs-comment">// 直接返回</span>
+            <span class="hljs-keyword">return</span> mid;
+        }
+    }
+    <span class="hljs-comment">// 直接返回</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+}
+<span class="hljs-comment">//搜索左边界</span>
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">left_bound</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> target)</span> </span>{
+    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>, right = nums.length - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">while</span> (left &lt;= right) {
+        <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (nums[mid] &lt; target) {
+            left = mid + <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target) {
+            right = mid - <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] == target) {
+            <span class="hljs-comment">// 别返回，锁定左侧边界</span>
+            right = mid - <span class="hljs-number">1</span>;
+        }
+    }
+    <span class="hljs-comment">// 最后要检查 left 越界的情况</span>
+    <span class="hljs-keyword">if</span> (left &gt;= nums.length || nums[left] != target) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    }
+    <span class="hljs-keyword">return</span> left;
+}
+<span class="hljs-comment">//搜索右边界</span>
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">right_bound</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> target)</span> </span>{
+    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>, right = nums.length - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">while</span> (left &lt;= right) {
+        <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (nums[mid] &lt; target) {
+            left = mid + <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target) {
+            right = mid - <span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] == target) {
+            <span class="hljs-comment">// 别返回，锁定右侧边界</span>
+            left = mid + <span class="hljs-number">1</span>;
+        }
+    }
+    <span class="hljs-comment">// 最后要检查 right 越界的情况</span>
+    <span class="hljs-keyword">if</span> (right &lt; <span class="hljs-number">0</span> || nums[right] != target) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    }
+    <span class="hljs-keyword">return</span> right;
+}</code></pre>
 
 
 
 <h1 id="6、排序法"><a href="#6、排序法" class="headerlink" title="6、排序法"></a>6、排序法</h1><h2 id="6-1计数排序"><a href="#6-1计数排序" class="headerlink" title="6.1计数排序"></a>6.1计数排序</h2><p><strong>用于目标数量大，但是取值范围小的情况。</strong></p>
 <p>例如，高考考生，总数50w，但是总分只有750，这时候使用计数排序，对0-749分数之间的人数进行统计，这时的数组下标即为分数，值为人数。</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">countArray</span><span class="token punctuation">(</span><span class="token number">121</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> age <span class="token operator">:</span> ages<span class="token punctuation">)</span><span class="token punctuation">{</span>
-     countArray<span class="token punctuation">[</span>age<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">countArray</span><span class="hljs-params">(<span class="hljs-number">121</span>)</span></span>;
+<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> age : ages){
+     countArray[age]++;
+}</code></pre>
 
-<h2 id="6-2快速排序"><a href="#6-2快速排序" class="headerlink" title="6.2快速排序"></a>6.2快速排序</h2><p>快速选择：LeetCode215</p>
-<p>与快排相似，不过只需要找到第k个枢，k左方都小于k，右方都大于k，此时k位置为第k大元素。</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 辅函数 - 快速选择</span>
-<span class="token keyword">int</span> <span class="token function">quickSelection</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> nums<span class="token punctuation">,</span> <span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> i <span class="token operator">=</span> l <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> j <span class="token operator">=</span> r<span class="token punctuation">;</span><span class="token comment">//首先将第一个元素l位置为枢，更新其位置</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> r <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> nums<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token operator">++</span>i<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token comment">//等待左方出现大于l位置的元素</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>l <span class="token operator">&lt;</span> j <span class="token operator">&amp;&amp;</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> nums<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token operator">--</span>j<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token comment">//等待右方出现小于l位置的元素</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&gt;=</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token comment">//终止条件</span>
-        <span class="token punctuation">}</span>
-        <span class="token function">swap</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//交换位置</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">swap</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//将l位置与上述算法找到的临界位置交换</span>
-    <span class="token keyword">return</span> j<span class="token punctuation">;</span><span class="token comment">//返回临界位置索引</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="6-3桶排序"><a href="#6-3桶排序" class="headerlink" title="6.3桶排序"></a>6.3桶排序</h2><p><strong>力扣347</strong>：常用统计数字<strong>频率</strong>，输出</p>
+<h2 id="6-2快速排序"><a href="#6-2快速排序" class="headerlink" title="6.2快速排序"></a>6.2快速排序</h2><h2 id="6-3桶排序"><a href="#6-3桶排序" class="headerlink" title="6.3桶排序"></a>6.3桶排序</h2><p><strong>力扣347</strong>：常用统计数字<strong>频率</strong>，输出</p>
 <p>顾名思义，桶排序的意思是为每个值设立一个桶，桶内记录这个值出现的次数（或其它属</p>
 <p>性），然后对桶进行排序。</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">unordered_map</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span>type<span class="token punctuation">)</span> mapname<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-built_in">unordered_map</span>(type,type) mapname;</code></pre>
 
 <p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/ad27531bbe762c0cf408a1e80f6468800d3e4ee2d6318963276b9ed923dd2c54-file_1561712388097.jfif" alt="img"></p>
 <h1 id="7、贪心算法"><a href="#7、贪心算法" class="headerlink" title="7、贪心算法"></a>7、贪心算法</h1><p>​    顾名思义，贪心算法或贪心思想采用贪心的策略，保证每次操作都是局部最优的，从而使最</p>
@@ -760,16 +854,16 @@ instName<span class="token punctuation">[</span><span class="token number">4</sp
 <p>​    如果两个指针指向元素的和等于给定值，那么它们就是我们要的结果。如果两个指针指向元</p>
 <p>素的和小于给定值，我们把左边的指针右移一位，使得当前的和增加一点。如果两个指针指向元</p>
 <p>素的和大于给定值，我们把右边的指针左移一位，使得当前的和减少一点。0222.</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">twoSum</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> numbers<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-	<span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> r <span class="token operator">=</span> numbers<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> sum<span class="token punctuation">;</span><span class="token comment">//定义双指针</span>
-	<span class="token keyword">while</span> <span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-		sum <span class="token operator">=</span> numbers<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">+</span> numbers<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token punctuation">;</span>
-		<span class="token keyword">if</span> <span class="token punctuation">(</span>sum <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
-		<span class="token keyword">if</span> <span class="token punctuation">(</span>sum <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> <span class="token operator">++</span>l<span class="token punctuation">;</span>
-		<span class="token keyword">else</span> <span class="token operator">--</span>r<span class="token punctuation">;</span>
-	<span class="token punctuation">}</span>
-	<span class="token keyword">return</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>l <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> r <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code class="hljs cpp"><span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">twoSum</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; numbers, <span class="hljs-type">int</span> target)</span> </span>{
+    <span class="hljs-type">int</span> l = <span class="hljs-number">0</span>, r = numbers.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>, sum;<span class="hljs-comment">//定义双指针</span>
+    <span class="hljs-keyword">while</span> (l &lt; r) {
+        sum = numbers[l] + numbers[r];
+        <span class="hljs-keyword">if</span> (sum == target) <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">if</span> (sum &lt; target) ++l;
+        <span class="hljs-keyword">else</span> --r;
+    }
+    <span class="hljs-keyword">return</span> vector&lt;<span class="hljs-type">int</span>&gt;{l + <span class="hljs-number">1</span>, r + <span class="hljs-number">1</span>};
+}</code></pre>
 
 <h2 id="8-2归并有序数组"><a href="#8-2归并有序数组" class="headerlink" title="8.2归并有序数组"></a>8.2归并有序数组</h2><p>力扣88：</p>
 <h2 id="8-3快慢指针"><a href="#8-3快慢指针" class="headerlink" title="8.3快慢指针"></a>8.3快慢指针</h2><p>​    对于链表找环路的问题，有一个通用的解法——<strong>快慢指针</strong>（<strong>Floyd （弗洛伊德）判圈法</strong>）。给定两个指针，</p>
@@ -785,14 +879,14 @@ instName<span class="token punctuation">[</span><span class="token number">4</sp
 
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div></section></div>
+</div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://gend-max.gitee.io/2022/05/12/algorithm/" /></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/b32ef3da1162a.svg"/></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://gend-max.gitee.io/2022/05/12/algorithm/&title=数据结构与算法 - Gendml&summary=数据结构与算法笔记，含有C++ STL常用API，算法模板，相关知识点等等。"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/80c07e4dbb303.svg"/></a><a class="social share-item email" href="mailto:?subject=数据结构与算法 - Gendml&amp;body=https://gend-max.gitee.io/2022/05/12/algorithm/"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/a1b00e20f425d.svg"/></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/8411ed322ced6.svg"/></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://gend-max.gitee.io/2022/05/12/algorithm/index.html"/></div></div></section></div>
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><div class="line"></div><a id="prev" href="/2022/05/12/fitness/">Gendml的健身指导手册<span class="note">较新</span></a></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><div class="line"></div><a id="prev" href="/2022/05/12/fitness/">健身手册<span class="note">较新</span></a></section></div>
 
 
-
+<div class="related-wrap reveal" id="related-posts"></div>
 
 
 
@@ -813,7 +907,7 @@ instName<span class="token punctuation">[</span><span class="token number">4</sp
 
 
       
-<footer class="page-footer reveal fs12"><hr><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">文章</a><a href="/wiki">专栏</a><a href="/note">便笺</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/about">留言板</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about">关于我</a><a target="_blank" rel="noopener" href="https://github.com/GenD-max">GitHub</a></div></div><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 <p>本站由 <a href="https://gend-max.gitee.io/">@Gendml</a> 创建，使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.8.0" title="v1.8.0">Stellar</a> 作为主题。</p>
 </div></footer>
 
@@ -943,8 +1037,8 @@ instName<span class="token punctuation">[</span><span class="token number">4</sp
   if ('true' == 'true') {
     stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
   }
-  if ('' == 'true') {
-    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  if ('true' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
   }
   if ('true' == 'true') {
     stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://fastly.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://fastly.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
@@ -998,7 +1092,17 @@ instName<span class="token punctuation">[</span><span class="token number">4</sp
 
 <!-- inject -->
 
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" type="text/javascript"></script> <script src="https://myhkw.cn/api/player/1660897650126" id="myhk" key="1660897650126" m="1"></script> <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script> <script>hljs.highlightAll();hljs.initLineNumbersOnLoad();</script>
+  
+
 
   </div>
-</body>
+<script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
