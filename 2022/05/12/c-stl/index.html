@@ -18,34 +18,23 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>数据结构与算法 - Gendml</title>
+  <title>C++ STL - Gendml</title>
 
   
-    <meta name="description" content="数据结构与算法笔记，含有C++ STL常用API，算法模板，相关知识点等等。">
+    <meta name="description" content="包含常用API，算法模板。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构与算法">
-<meta property="og:url" content="https://gend-max.gitee.io/2022/05/12/algorithm/index.html">
+<meta property="og:title" content="C++ STL">
+<meta property="og:url" content="https://gend-max.gitee.io/2022/05/12/c-stl/index.html">
 <meta property="og:site_name" content="Gendml">
-<meta property="og:description" content="数据结构与算法笔记，含有C++ STL常用API，算法模板，相关知识点等等。">
+<meta property="og:description" content="包含常用API，算法模板。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220105174805802.png">
-<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220712214810.png">
-<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220716221803.png">
-<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220716221433.png">
-<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20200429125611101.jpg">
-<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20200429125706860.jpg">
-<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220307212205463.jpg">
-<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220310170013400.jpg">
-<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220310165946094.jpg">
-<meta property="og:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/ad27531bbe762c0cf408a1e80f6468800d3e4ee2d6318963276b9ed923dd2c54-file_1561712388097.jfif">
 <meta property="article:published_time" content="2022-05-12T02:24:01.000Z">
-<meta property="article:modified_time" content="2022-08-18T17:12:56.929Z">
+<meta property="article:modified_time" content="2022-08-19T14:18:04.224Z">
 <meta property="article:author" content="Gendml">
 <meta property="article:tag" content="C++ STL">
 <meta property="article:tag" content="LeetCode">
 <meta property="article:tag" content="Algorithm">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220105174805802.png">
   
   
 
@@ -94,9 +83,9 @@
 
 <div class="widgets">
 
-<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%AE%97%E6%B3%95%E5%B8%B8%E7%94%A8%E6%A8%A1%E6%9D%BF"><span class="toc-text">1、算法常用模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81algorithm-%E6%A0%87%E5%87%86%E7%AE%97%E6%B3%95%E5%BA%93"><span class="toc-text">2、algorithm&#x2F;&#x2F;标准算法库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81queue-%E9%98%9F%E5%88%97"><span class="toc-text">3、queue&#x2F;&#x2F;队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-queue"><span class="toc-text">(1)queue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-priority-queue-%E4%BA%8C%E5%8F%89%E5%A0%86"><span class="toc-text">(2)priority_queue&#x2F;&#x2F;二叉堆</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81stack-%E6%A0%88"><span class="toc-text">4、stack&#x2F;&#x2F;栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81utility"><span class="toc-text">5、utility</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81vector-%E6%95%B0%E7%BB%84"><span class="toc-text">6、vector&#x2F;&#x2F;数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81string-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">7、string&#x2F;&#x2F;字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81map-%E6%98%A0%E5%B0%84"><span class="toc-text">8、map&#x2F;&#x2F;映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81set-%E9%9B%86%E5%90%88"><span class="toc-text">9、set&#x2F;&#x2F;集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81cmath-%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0%E5%BA%93"><span class="toc-text">10、cmath&#x2F;&#x2F;数学函数库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81cstdio-IO%EF%BC%88C%EF%BC%89"><span class="toc-text">11、cstdio&#x2F;&#x2F;IO（C）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81cstdlib-%E5%B7%A5%E5%85%B7%E5%BA%93%EF%BC%88C%EF%BC%89"><span class="toc-text">12、cstdlib&#x2F;&#x2F;工具库（C）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81cstring%EF%BC%88C%EF%BC%89"><span class="toc-text">13、cstring（C）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95"><span class="toc-text">1、基础算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E9%80%89%E6%8B%A9"><span class="toc-text">快速选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F"><span class="toc-text">归并排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1%E6%A0%91"><span class="toc-text">3.1树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1%E3%80%81%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="toc-text">3.1.1、三种遍历方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2%E3%80%81DFS%E7%AE%97%E6%B3%95%EF%BC%9A%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95"><span class="toc-text">3.1.2、DFS算法：深度优先搜索算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3%E3%80%81BFS%E7%AE%97%E6%B3%95%EF%BC%9A%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%E9%81%8D%E5%8E%86"><span class="toc-text">3.1.3、BFS算法：广度优先搜索遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1%E3%80%81%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95DFS"><span class="toc-text">3.3.1、深度优先算法DFS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2%E3%80%81%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E7%AE%97%E6%B3%95BFS"><span class="toc-text">3.3.2、广度优先算法BFS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1%E4%BA%8C%E5%88%86%E6%B3%95"><span class="toc-text">5.1二分法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F"><span class="toc-text">6.1计数排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-text">6.2快速排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3%E6%A1%B6%E6%8E%92%E5%BA%8F"><span class="toc-text">6.3桶排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1%E5%88%86%E9%85%8D%E9%97%AE%E9%A2%98"><span class="toc-text">7.1分配问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2%E5%8C%BA%E9%97%B4%E9%97%AE%E9%A2%98"><span class="toc-text">7.2区间问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C"><span class="toc-text">8.1两数之和</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2%E5%BD%92%E5%B9%B6%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84"><span class="toc-text">8.2归并有序数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88"><span class="toc-text">8.3快慢指针</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="toc-text">8.4滑动窗口</span></a></li></ol></div></div></div>
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%AE%97%E6%B3%95%E5%B8%B8%E7%94%A8%E6%A8%A1%E6%9D%BF"><span class="toc-text">1、算法常用模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81algorithm-%E6%A0%87%E5%87%86%E7%AE%97%E6%B3%95%E5%BA%93"><span class="toc-text">2、algorithm&#x2F;&#x2F;标准算法库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81queue-%E9%98%9F%E5%88%97"><span class="toc-text">3、queue&#x2F;&#x2F;队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-queue"><span class="toc-text">(1)queue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-priority-queue-%E4%BA%8C%E5%8F%89%E5%A0%86"><span class="toc-text">(2)priority_queue&#x2F;&#x2F;二叉堆</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81stack-%E6%A0%88"><span class="toc-text">4、stack&#x2F;&#x2F;栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81utility"><span class="toc-text">5、utility</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81vector-%E6%95%B0%E7%BB%84"><span class="toc-text">6、vector&#x2F;&#x2F;数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E3%80%81string-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">7、string&#x2F;&#x2F;字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8%E3%80%81map-%E6%98%A0%E5%B0%84"><span class="toc-text">8、map&#x2F;&#x2F;映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9%E3%80%81set-%E9%9B%86%E5%90%88"><span class="toc-text">9、set&#x2F;&#x2F;集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10%E3%80%81cmath-%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0%E5%BA%93"><span class="toc-text">10、cmath&#x2F;&#x2F;数学函数库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11%E3%80%81cstdio-IO%EF%BC%88C%EF%BC%89"><span class="toc-text">11、cstdio&#x2F;&#x2F;IO（C）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12%E3%80%81cstdlib-%E5%B7%A5%E5%85%B7%E5%BA%93%EF%BC%88C%EF%BC%89"><span class="toc-text">12、cstdlib&#x2F;&#x2F;工具库（C）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13%E3%80%81cstring%EF%BC%88C%EF%BC%89"><span class="toc-text">13、cstring（C）</span></a></li></ol></div></div></div>
 
-<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022/05/17/git/">Git V2.0</a></div><div class="more-item"><a class="title" href="/2022/05/17/springboot/">SpringBoot</a></div><div class="more-item"><a class="title" href="/2022/05/17/springmvc/">SpringMVC</a></div><div class="more-item"><a class="title" href="/2022/05/12/algorithm/">数据结构与算法</a></div><div class="more-item"><a class="title" href="/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/">深度学习与神经网络</a></div></div></div>
+<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022/05/17/shu-mei-pai-chang-yong-ming-ling/">树莓派常用命令</a></div><div class="more-item"><a class="title" href="/2022/05/17/springmvc/">SpringMVC</a></div><div class="more-item"><a class="title" href="/2022/05/17/springboot/">SpringBoot</a></div><div class="more-item"><a class="title" href="/2022/05/17/linux/">Linux</a></div><div class="more-item"><a class="title" href="/2022/05/17/git/">Git V2.0</a></div></div></div>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/GenD-max" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/></a><a class="social" href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2457870242" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/QQ.svg"/></a><a class="social" href="mailto:dmlgg0425@gmail.com" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/a1b00e20f425d.svg"/></a></div></footer>
 
@@ -138,10 +127,10 @@
 
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Algorithm/">Algorithm</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-05-12T02:24:01.000Z">2022-05-12</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/c/">c++</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-05-12T02:24:01.000Z">2022-05-12</time></div></div>
 
 <article class='content md post reveal'>
-<h1 class="article-title"><span>数据结构与算法</span></h1>
+<h1 class="article-title"><span>C++ STL</span></h1>
 <h1 id="一、C-STL-API"><a href="#一、C-STL-API" class="headerlink" title="一、C++STL API"></a>一、C++STL API</h1><h2 id="1、算法常用模板"><a href="#1、算法常用模板" class="headerlink" title="1、算法常用模板"></a>1、算法常用模板</h2><pre><code class="hljs c++">include&lt;bits/stdc++.h&gt; <span class="hljs-comment">//万能头 C++版本4.4以上支持</span>
 <span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
 <span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span>
@@ -504,386 +493,14 @@ string1.<span class="hljs-built_in">c_str</span>()：string转<span class="hljs-
 <span class="hljs-built_in">toupper</span>()<span class="hljs-comment">//将小写转换为大写</span></code></pre>
 
 <h2 id="13、cstring（C）"><a href="#13、cstring（C）" class="headerlink" title="13、cstring（C）"></a>13、cstring（C）</h2><p>c语言的字符串库</p>
-<h1 id="二、算法基础"><a href="#二、算法基础" class="headerlink" title="二、算法基础"></a>二、算法基础</h1><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220105174805802.png"></p>
-<h2 id="1、基础算法"><a href="#1、基础算法" class="headerlink" title="1、基础算法"></a>1、基础算法</h2><h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><ul>
-<li><p>平均时间复杂度<strong>O(nlog(n))<strong>，最坏情况是</strong>O(n2)</strong></p>
-</li>
-<li><p>快排主要是<strong>分治思想</strong>，如下所示，下面的<strong>第二步中调整范围是将数组调整成两个区间，使得左边区间的值&lt;=x，右边区间的值&gt;=x，其中x位置不一定在图上标注的位置</strong>。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220712214810.png"></p>
-</li>
-</ul>
-<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span>
-
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
-
-<span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">1e5</span> + <span class="hljs-number">10</span>;<span class="hljs-comment">//给数组开辟空间，题目中数组个数&lt;10万，所以1e5+10</span>
-
-<span class="hljs-type">int</span> n;
-<span class="hljs-type">int</span> q[N];
-
-<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">quick_sort</span><span class="hljs-params">(<span class="hljs-type">int</span> q[], <span class="hljs-type">int</span> l , <span class="hljs-type">int</span> r)</span></span>{
-    <span class="hljs-keyword">if</span>(l &gt;= r) <span class="hljs-keyword">return</span>;<span class="hljs-comment">//递归暂停条件</span>
-    <span class="hljs-comment">//通常使用中间值作为分界点、i和j表示区间边界各向外扩一格，下面迭代第一步会++回到边界位置</span>
-    <span class="hljs-type">int</span> x = q[l + r &gt;&gt; <span class="hljs-number">1</span>], i = l - <span class="hljs-number">1</span>, j = r + <span class="hljs-number">1</span>;
-    <span class="hljs-comment">//调整区间</span>
-    <span class="hljs-keyword">while</span>(i &lt; j){
-        <span class="hljs-keyword">do</span> i++;<span class="hljs-keyword">while</span>(q[i] &lt; x);<span class="hljs-comment">//区间向右搜索，直到左侧指针找到 &gt; 边界值x的点</span>
-        <span class="hljs-keyword">do</span> j--;<span class="hljs-keyword">while</span>(q[j] &gt; x);<span class="hljs-comment">//区间向左搜索，直到右侧指针找到 &lt; 边界值x的点</span>
-        <span class="hljs-keyword">if</span>(i &lt; j) <span class="hljs-built_in">swap</span>(q[i] , q[j]);<span class="hljs-comment">//找到后，交换位置</span>
-    }
-    <span class="hljs-comment">//注意，上述迭代的最后一次的if一定不执行，所以显然迭代完成后i &gt;= j</span>
-    <span class="hljs-built_in">quick_sort</span>(q , l , j);<span class="hljs-comment">//递归，j &lt;= i，所以j作为区间右边界</span>
-    <span class="hljs-built_in">quick_sort</span>(q , j + <span class="hljs-number">1</span>, r);<span class="hljs-comment">//递归，j &lt;= i，所以j+1作为区间左边界</span>
-}
-
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
-    cin &gt;&gt; n;
-    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n;++i){
-        cin &gt;&gt; q[i];
-    }
-    <span class="hljs-built_in">quick_sort</span>(q , <span class="hljs-number">0</span> , n<span class="hljs-number">-1</span>);
-    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n;++i){
-        cout &lt;&lt; q[i] &lt;&lt; <span class="hljs-string">" "</span>;
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}</code></pre>
-
-<h3 id="快速选择"><a href="#快速选择" class="headerlink" title="快速选择"></a>快速选择</h3><ul>
-<li><p>时间复杂度O(n)</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220716221803.png" style="zoom:50%;"></li>
-<li><p>快速选择类似与快排，只是<strong>在递归区间上进行选择</strong>。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220716221433.png"></p>
-</li>
-</ul>
-<pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span>
-
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
-
-<span class="hljs-type">const</span> <span class="hljs-type">int</span> N = <span class="hljs-number">1e3</span> + <span class="hljs-number">5</span>;
-
-<span class="hljs-type">int</span> n,k,q[N];
-
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">quick_choose</span><span class="hljs-params">(<span class="hljs-type">int</span> l,<span class="hljs-type">int</span> r,<span class="hljs-type">int</span> k)</span></span>{
-    <span class="hljs-keyword">if</span>(l == r) <span class="hljs-keyword">return</span> q[l];<span class="hljs-comment">//当区间等于1的时候，那么这个数肯定是k，直接返回这个数</span>
-    
-    <span class="hljs-type">int</span> x = q[l + r &gt;&gt; <span class="hljs-number">1</span>], i = l - <span class="hljs-number">1</span>,j = r + <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">while</span>(i &lt; j){
-        <span class="hljs-keyword">do</span> ++i;<span class="hljs-keyword">while</span>(q[i] &lt; x);
-        <span class="hljs-keyword">do</span> --j;<span class="hljs-keyword">while</span>(q[j] &gt; x);
-        <span class="hljs-keyword">if</span>(i &lt; j) <span class="hljs-built_in">swap</span>(q[i],q[j]);
-    }
-    
-    <span class="hljs-type">int</span> sl = j - l + <span class="hljs-number">1</span>;<span class="hljs-comment">//左边区间的元素的个数（记住：区间边界相减后的区间初始下标为0）</span>
-    <span class="hljs-keyword">if</span>(k &lt;= sl){<span class="hljs-comment">//如果k小于左区间元素个数，那么递归左区间</span>
-        <span class="hljs-keyword">return</span> <span class="hljs-built_in">quick_choose</span>(l,j,k);
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">quick_choose</span>(j+<span class="hljs-number">1</span>,r,k-sl);<span class="hljs-comment">//如果k大于左区间元素个数，那么递归右区间，这里不是找第k个数，而是找右区间第(k-sl)个数</span>
-}
-
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
-    cin &gt;&gt; n &gt;&gt; k;
-    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt;= n;++i){
-        cin &gt;&gt; q[i];
-    }
-    cout &lt;&lt; <span class="hljs-built_in">quick_choose</span>(<span class="hljs-number">0</span>,n,k) &lt;&lt; <span class="hljs-string">" "</span>;
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}</code></pre>
-
-<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><ul>
-<li>时间复杂度：O(n)，因为每个元素只被比较一次</li>
-<li></li>
-</ul>
-<h1 id="三、经验小结"><a href="#三、经验小结" class="headerlink" title="三、经验小结"></a>三、经验小结</h1><p>1、使用循环中使用++i会减少占用内存。</p>
-<p>2、当定义一个新的数据结构的时候，删除元素元素时需要进行判空，不为空才可以进行删除。</p>
-<p>3、遇到关于年月日的问题注意该年数是闰年：非闰年的天数是28天，闰年是29天。</p>
-<p>如果是闰年，那么二月份会多出一天。</p>
-<p>闰年的判定方法为：year 是 400的倍数，或者 year 是 4的倍数且不是 100 的倍数。</p>
-<p>4、const类型是表示常量。auto类型是自动类型。</p>
-<p>5、当遍历数组，使用当前元素的下一个或者前一个元素时，初始下标和结尾下标需要进行限制，否则会数组越界。</p>
-<pre><code class="hljs cpp"><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; array.<span class="hljs-built_in">size</span>()<span class="hljs-number">-2</span>;++i){
-
-​      <span class="hljs-keyword">if</span>(array[i] == first &amp;&amp; array[i+<span class="hljs-number">1</span>]== second){
-
-​        result.<span class="hljs-built_in">push_back</span>(array[i+<span class="hljs-number">2</span>]);
-
-​      }
-
-}</code></pre>
-
-<p>6、求前缀和</p>
-<p>给定一个数组，把其前i项和放入新的数组，新数组的第i项表示原数组前i项之和。</p>
-<pre><code class="hljs cpp"><span class="hljs-type">int</span> nums[] = {<span class="hljs-number">20</span>,<span class="hljs-number">30</span>,<span class="hljs-number">100</span>,<span class="hljs-number">110</span>,<span class="hljs-number">120</span>};
-<span class="hljs-type">int</span> preSum[] = <span class="hljs-keyword">new</span> <span class="hljs-type">int</span>[<span class="hljs-number">5</span>];
-preSum[<span class="hljs-number">0</span>] = nums[<span class="hljs-number">0</span>];<span class="hljs-comment">//赋初值</span>
-<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt; nums.length ;++i){ 
-    preSum[i] = preSum[i<span class="hljs-number">-1</span>]+nums[i];  
-}
-<span class="hljs-comment">/*</span>
-<span class="hljs-comment">    递推公式：nums[i](原数组第i项) = preSum[i] - preSum[i-1];</span>
-<span class="hljs-comment">    所以 preSum[i] = preSum[i-1]+nums[i]</span>
-<span class="hljs-comment">*/</span>
-<span class="hljs-comment">//结果：</span>
-<span class="hljs-number">20</span>
-<span class="hljs-number">50</span>
-<span class="hljs-number">150</span>
-<span class="hljs-number">260</span>
-<span class="hljs-number">380</span></code></pre>
-
-<p>7、力扣报错信息如下：</p>
-<pre><code class="hljs cpp">leetcode报错：==<span class="hljs-number">45</span>==ERROR: AddressSanitizer: heap-buffer-overflow on address <span class="hljs-number">0x602000000018</span> at pc <span class="hljs-number">0x000</span></code></pre>
-
-<p>可能是数组大小定义问题，导致访问越界异常。</p>
-<p>8、数组快速求和</p>
-<pre><code class="hljs cpp"><span class="hljs-type">int</span> sum = <span class="hljs-built_in">accumulate</span>(vec.<span class="hljs-built_in">begin</span>() , vec.<span class="hljs-built_in">end</span>() , <span class="hljs-number">42</span>);
-<span class="hljs-comment">//头两个形参指定要累加的元素范围，第三个形参则是累加的初值。</span></code></pre>
-
-<p>9、溢出报错</p>
-<pre><code class="hljs cpp">Line <span class="hljs-number">10</span>: Char <span class="hljs-number">20</span>: runtime error: <span class="hljs-type">signed</span> integer overflow: <span class="hljs-number">1073697799</span> * <span class="hljs-number">1073697799</span> cannot be represented in type <span class="hljs-string">'int'</span> (solution.cpp)
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior prog_joined.cpp:<span class="hljs-number">19</span>:<span class="hljs-number">20</span></code></pre>
-
-<p>修改标识符类型 扩大位数 long long：64位</p>
-<p>10、<strong>写方法需要更改原变量时</strong></p>
-<p>形参加“&amp;”：引用原变量，方法内对变量的操作会使原变量变化</p>
-<p>不加“&amp;”：不引用原变量，方法内对变量的操作不会使原变量变化，为正常形式参数</p>
-<pre><code class="hljs Cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;vector&gt;</span></span>
-
-<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;
-
-<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; nums)</span> </span>{
-    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-built_in">size</span>(); ++i) {
-        cout &lt;&lt; nums[i];
-    }
-    cout &lt;&lt; endl;
-}
-
-<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">changeArray</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; nums)</span> </span>{<span class="hljs-comment">//不加入引用 不操作原数组</span>
-    nums[<span class="hljs-number">0</span>] = <span class="hljs-number">-1</span>;
-}
-
-<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">changeArray2</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; &amp;nums)</span> </span>{<span class="hljs-comment">//加入引用后 就是操作原数组</span>
-    nums[<span class="hljs-number">0</span>] = <span class="hljs-number">-1</span>;
-}
-
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
-    vector&lt;<span class="hljs-type">int</span>&gt; nums = {<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>};
-    <span class="hljs-built_in">changeArray</span>(nums);
-    <span class="hljs-built_in">printArray</span>(nums);
-    <span class="hljs-built_in">changeArray2</span>(nums);
-    <span class="hljs-built_in">printArray</span>(nums);
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}</code></pre>
-
-<p>结果：<br>00000<br>-10000</p>
-<p>11、在定义变量的时候需要进行初始化，否则在dev-c++虽然能运行，但是程序不能跑</p>
-<p>12、在C++中使用scanf(“%d”,&amp;n);代替cin&gt;&gt;n，scanf比cin要快</p>
-<p>13、在java中使用BufferReader代替Scanner</p>
-<pre><code class="hljs java"><span class="hljs-type">BufferedReader</span>&nbsp;<span class="hljs-variable">bufferReader</span>&nbsp;<span class="hljs-operator">=</span>&nbsp;<span class="hljs-keyword">new</span>&nbsp;<span class="hljs-title class_">BufferedReader</span>(<span class="hljs-keyword">new</span>&nbsp;<span class="hljs-title class_">InputStreamReader</span>(System.in));
-bufferReader.readLine()</code></pre>
-
-<p>14、对于除法可以使用<strong>位运算符&gt;&gt;<strong>替代除法符号，且</strong>位运算符优先级小于算术运算符</strong></p>
-<pre><code class="hljs plaintext">&gt;&gt;1//除以2
-&gt;&gt;2//除以4
-&gt;&gt;3//除以8
-&gt;&gt;n//除以2的n次方</code></pre>
-
-<p>15、<strong>区间边界相减后的区间初始下标为0</strong>，如果需要<strong>统计区间元素个数，则需要+1</strong></p>
-<h1 id="3、C-STL"><a href="#3、C-STL" class="headerlink" title="3、C++ STL"></a>3、C++ STL</h1><h2 id="3-1树"><a href="#3-1树" class="headerlink" title="3.1树"></a>3.1树</h2><h3 id="3-1-1、三种遍历方式"><a href="#3-1-1、三种遍历方式" class="headerlink" title="3.1.1、三种遍历方式"></a>3.1.1、三种遍历方式</h3><p>先序遍历 中序遍历 后序遍历</p>
-<p>遍历方式：迭代（栈） 递归</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20200429125611101.jpg" alt="image"></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20200429125706860.jpg" alt="image"></p>
-<h3 id="3-1-2、DFS算法：深度优先搜索算法"><a href="#3-1-2、DFS算法：深度优先搜索算法" class="headerlink" title="3.1.2、DFS算法：深度优先搜索算法"></a>3.1.2、DFS算法：<strong>深度</strong>优先搜索算法</h3><p>（二叉树）</p>
-<p>在搜索到一个新的节点时，立即对该新节点进行遍历；因此遍历<strong>需要用先入后出的栈</strong>来实现，<strong>也可以通过与栈等价的递归</strong>来实现。对于树结构而言，由于总是对新节点调用遍历，因此看起来是向着“深”的方向前进。</p>
-<p>考虑如下一颗简单的树。我们从 1 号节点开始遍历，假如遍历顺序是从左子节点到右子节点，</p>
-<p>那么按照优先向着“<strong>深</strong>”的方向前进的策略，假如我们使用递归实现，我们的遍历过程为 1（起</p>
-<p>始节点）-&gt;2（遍历更深一层的左子节点）-&gt;4（遍历更深一层的左子节点）-&gt;2（无子节点，返回</p>
-<p>父结点）-&gt;1（子节点均已完成遍历，返回父结点）-&gt;3（遍历更深一层的右子节点）-&gt;1（无子节</p>
-<p>点，返回父结点）-&gt; 结束程序（子节点均已完成遍历）。如果我们使用栈实现，我们的栈顶元素</p>
-<p>的变化过程为 1-&gt;2-&gt;4-&gt;3。 </p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220307212205463.jpg" alt="image-20220307212205463"></p>
-<p><strong>深度优先搜索也可以用来检测环路</strong>：记录每个遍历过的节点的父节点，<strong>若一个节点被再次遍</strong></p>
-<p><strong>历且父节点不同，则说明有环</strong>。</p>
-<p>有时我们可能会需要对已经搜索过的节点进行标记，以防止在遍历时重复搜索某个节点，这</p>
-<p>种做法叫做状态记录或记忆化（memoization）。</p>
-<h3 id="3-1-3、BFS算法：广度优先搜索遍历"><a href="#3-1-3、BFS算法：广度优先搜索遍历" class="headerlink" title="3.1.3、BFS算法：广度优先搜索遍历"></a>3.1.3、BFS算法：广度优先搜索遍历</h3><p>（二叉树）</p>
-<h3 id="3-3-1、深度优先算法DFS"><a href="#3-3-1、深度优先算法DFS" class="headerlink" title="3.3.1、深度优先算法DFS"></a>3.3.1、深度优先算法DFS</h3><p>以“深度”为第一关键词，每次都沿路径到不能再前进时才退回到最近的岔路口</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220310170013400.jpg" alt="image-20220310170013400"></p>
-<h3 id="3-3-2、广度优先算法BFS"><a href="#3-3-2、广度优先算法BFS" class="headerlink" title="3.3.2、广度优先算法BFS"></a>3.3.2、广度优先算法BFS</h3><p>以“广度”为第一关键词，每次以扩散的方式向外访问顶点</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/image-20220310165946094.jpg" alt="image-20220310165946094"></p>
-<h1 id="5、查找法"><a href="#5、查找法" class="headerlink" title="5、查找法"></a>5、查找法</h1><h2 id="5-1二分法"><a href="#5-1二分法" class="headerlink" title="5.1二分法"></a>5.1二分法</h2><p>1、二分法（基础写法 左闭右闭）：</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">binarySearch</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; arr,<span class="hljs-type">int</span> key)</span></span>{
-    <span class="hljs-type">int</span> low=<span class="hljs-number">0</span>; <span class="hljs-comment">//数组最小索引值</span>
-    <span class="hljs-type">int</span> high=arr.<span class="hljs-built_in">size</span>()<span class="hljs-number">-1</span>; <span class="hljs-comment">//数组最大索引值</span>
-    <span class="hljs-keyword">while</span>(low&lt;high){
-        <span class="hljs-type">int</span> mid==low + (high - low)/<span class="hljs-number">2</span>;<span class="hljs-comment">//避免乘法溢出</span>
-        <span class="hljs-keyword">if</span>(key==arr[mid]){
-            <span class="hljs-keyword">return</span> mid+<span class="hljs-number">1</span>;
-        }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(key&gt;arr[mid]){
-            low=mid+<span class="hljs-number">1</span>;
-        }<span class="hljs-keyword">else</span>{
-            high=mid<span class="hljs-number">-1</span>;<span class="hljs-comment">//因为是搜索值，arr[mid]已经被搜索，故要去[mid+1,high]或[low,mid-1]区间搜索</span>
-        }
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<span class="hljs-comment">//没有找到</span>
-}</code></pre>
-
-<p>2、二分查找（左闭右开）：用于搜索左边界</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">left_bound</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> target)</span> </span>{
-    <span class="hljs-keyword">if</span> (nums.length == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
-    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>;
-    <span class="hljs-type">int</span> right = nums.length; <span class="hljs-comment">// 注意：因为 right = nums.length 而不是 nums.length - 1。因此每次循环的「搜索区间」是 [left, right) 左闭右开</span>
-    
-    <span class="hljs-keyword">while</span> (left &lt; right) { <span class="hljs-comment">// 注意：while(left &lt; right) 终止的条件是 left == right，此时搜索区间 [left, left) 为空，所以可以正确终止</span>
-        <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;
-        <span class="hljs-keyword">if</span> (nums[mid] == target) {
-            right = mid; <span class="hljs-comment">// 注意：找到 target 时不要立即返回，而是缩小「搜索区间」的上界 right，在区间 [left, mid) 中继续搜索，即不断向左收缩，达到锁定左侧边界的目的。</span>
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &lt; target) {
-            left = mid + <span class="hljs-number">1</span>;
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target) {
-            right = mid;
-        }
-    }
-    <span class="hljs-keyword">return</span> left;
-}</code></pre>
-
-<p>3、二分查找（左开右闭）：用于搜索右边界</p>
-<pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">right_bound</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> target)</span> </span>{
-    <span class="hljs-keyword">if</span> (nums.length == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
-    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>, right = nums.length;
-    
-    <span class="hljs-keyword">while</span> (left &lt; right) {
-        <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;
-        <span class="hljs-keyword">if</span> (nums[mid] == target) {
-            left = mid + <span class="hljs-number">1</span>; <span class="hljs-comment">// 注意：当 nums[mid] == target 时，不要立即返回，而是增大「搜索区间」的下界 left，使得区间不断向右收缩，达到锁定右侧边界的目的。</span>
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &lt; target) {
-            left = mid + <span class="hljs-number">1</span>;
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target) {
-            right = mid;
-        }
-    }
-    <span class="hljs-keyword">return</span> left - <span class="hljs-number">1</span>; <span class="hljs-comment">// 注意：因为我们对 left 的更新必须是 left = mid + 1，就是说 while 循环结束时，nums[left] 一定不等于 target 了，而 nums[left-1] 可能是 target</span>
-}
-</code></pre>
-
-<p><strong>4、三种方式统一写成左闭右闭：</strong></p>
-<pre><code class="hljs cpp"><span class="hljs-comment">//搜索某个值</span>
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">binary_search</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> target)</span> </span>{
-    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>, right = nums.length - <span class="hljs-number">1</span>; 
-    <span class="hljs-keyword">while</span>(left &lt;= right) {
-        <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;
-        <span class="hljs-keyword">if</span> (nums[mid] &lt; target) {
-            left = mid + <span class="hljs-number">1</span>;
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target) {
-            right = mid - <span class="hljs-number">1</span>; 
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(nums[mid] == target) {
-            <span class="hljs-comment">// 直接返回</span>
-            <span class="hljs-keyword">return</span> mid;
-        }
-    }
-    <span class="hljs-comment">// 直接返回</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
-}
-<span class="hljs-comment">//搜索左边界</span>
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">left_bound</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> target)</span> </span>{
-    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>, right = nums.length - <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">while</span> (left &lt;= right) {
-        <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;
-        <span class="hljs-keyword">if</span> (nums[mid] &lt; target) {
-            left = mid + <span class="hljs-number">1</span>;
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target) {
-            right = mid - <span class="hljs-number">1</span>;
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] == target) {
-            <span class="hljs-comment">// 别返回，锁定左侧边界</span>
-            right = mid - <span class="hljs-number">1</span>;
-        }
-    }
-    <span class="hljs-comment">// 最后要检查 left 越界的情况</span>
-    <span class="hljs-keyword">if</span> (left &gt;= nums.length || nums[left] != target) {
-        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
-    }
-    <span class="hljs-keyword">return</span> left;
-}
-<span class="hljs-comment">//搜索右边界</span>
-<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">right_bound</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> target)</span> </span>{
-    <span class="hljs-type">int</span> left = <span class="hljs-number">0</span>, right = nums.length - <span class="hljs-number">1</span>;
-    <span class="hljs-keyword">while</span> (left &lt;= right) {
-        <span class="hljs-type">int</span> mid = left + (right - left) / <span class="hljs-number">2</span>;
-        <span class="hljs-keyword">if</span> (nums[mid] &lt; target) {
-            left = mid + <span class="hljs-number">1</span>;
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target) {
-            right = mid - <span class="hljs-number">1</span>;
-        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] == target) {
-            <span class="hljs-comment">// 别返回，锁定右侧边界</span>
-            left = mid + <span class="hljs-number">1</span>;
-        }
-    }
-    <span class="hljs-comment">// 最后要检查 right 越界的情况</span>
-    <span class="hljs-keyword">if</span> (right &lt; <span class="hljs-number">0</span> || nums[right] != target) {
-        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
-    }
-    <span class="hljs-keyword">return</span> right;
-}</code></pre>
-
-
-
-<h1 id="6、排序法"><a href="#6、排序法" class="headerlink" title="6、排序法"></a>6、排序法</h1><h2 id="6-1计数排序"><a href="#6-1计数排序" class="headerlink" title="6.1计数排序"></a>6.1计数排序</h2><p><strong>用于目标数量大，但是取值范围小的情况。</strong></p>
-<p>例如，高考考生，总数50w，但是总分只有750，这时候使用计数排序，对0-749分数之间的人数进行统计，这时的数组下标即为分数，值为人数。</p>
-<pre><code class="hljs cpp"><span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">countArray</span><span class="hljs-params">(<span class="hljs-number">121</span>)</span></span>;
-<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> age : ages){
-     countArray[age]++;
-}</code></pre>
-
-<h2 id="6-2快速排序"><a href="#6-2快速排序" class="headerlink" title="6.2快速排序"></a>6.2快速排序</h2><h2 id="6-3桶排序"><a href="#6-3桶排序" class="headerlink" title="6.3桶排序"></a>6.3桶排序</h2><p><strong>力扣347</strong>：常用统计数字<strong>频率</strong>，输出</p>
-<p>顾名思义，桶排序的意思是为每个值设立一个桶，桶内记录这个值出现的次数（或其它属</p>
-<p>性），然后对桶进行排序。</p>
-<pre><code class="hljs cpp"><span class="hljs-built_in">unordered_map</span>(type,type) mapname;</code></pre>
-
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/ad27531bbe762c0cf408a1e80f6468800d3e4ee2d6318963276b9ed923dd2c54-file_1561712388097.jfif" alt="img"></p>
-<h1 id="7、贪心算法"><a href="#7、贪心算法" class="headerlink" title="7、贪心算法"></a>7、贪心算法</h1><p>​    顾名思义，贪心算法或贪心思想采用贪心的策略，保证每次操作都是局部最优的，从而使最</p>
-<p>后得到的结果是全局最优的。</p>
-<h2 id="7-1分配问题"><a href="#7-1分配问题" class="headerlink" title="7.1分配问题"></a>7.1分配问题</h2><h2 id="7-2区间问题"><a href="#7-2区间问题" class="headerlink" title="7.2区间问题"></a>7.2区间问题</h2><p>优先保留区间小并且不相交的区间</p>
-<h1 id="8、双指针"><a href="#8、双指针" class="headerlink" title="8、双指针"></a>8、双指针</h1><p>​    <strong>双指针主要用于遍历数组</strong>，两个指针指向不同的元素，从而协同完成任务。也可以延伸到多</p>
-<p>个数组的多个指针。</p>
-<p>​    若两个指针指向同一数组，遍历方向相同且不会相交，则也称为滑动窗口（两个指针包围的</p>
-<p>区域即为当前的窗口），经常用于<strong>区间搜索</strong>。</p>
-<p>​    若两个指针指向同一数组，但是遍历方向相反，则可以用来进行搜索，待搜索的数组往往是</p>
-<p>排好序的。</p>
-<h2 id="8-1两数之和"><a href="#8-1两数之和" class="headerlink" title="8.1两数之和"></a>8.1两数之和</h2><p>力扣167：</p>
-<p>​    思路：因为数组已经排好序，我们可以采用方向相反的双指针来寻找这两个数字，一个初始指向最</p>
-<p>小的元素，即数组最左边，向右遍历；一个初始指向最大的元素，即数组最右边，向左遍历。</p>
-<p>​    如果两个指针指向元素的和等于给定值，那么它们就是我们要的结果。如果两个指针指向元</p>
-<p>素的和小于给定值，我们把左边的指针右移一位，使得当前的和增加一点。如果两个指针指向元</p>
-<p>素的和大于给定值，我们把右边的指针左移一位，使得当前的和减少一点。0222.</p>
-<pre><code class="hljs cpp"><span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">twoSum</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; numbers, <span class="hljs-type">int</span> target)</span> </span>{
-    <span class="hljs-type">int</span> l = <span class="hljs-number">0</span>, r = numbers.<span class="hljs-built_in">size</span>() - <span class="hljs-number">1</span>, sum;<span class="hljs-comment">//定义双指针</span>
-    <span class="hljs-keyword">while</span> (l &lt; r) {
-        sum = numbers[l] + numbers[r];
-        <span class="hljs-keyword">if</span> (sum == target) <span class="hljs-keyword">break</span>;
-        <span class="hljs-keyword">if</span> (sum &lt; target) ++l;
-        <span class="hljs-keyword">else</span> --r;
-    }
-    <span class="hljs-keyword">return</span> vector&lt;<span class="hljs-type">int</span>&gt;{l + <span class="hljs-number">1</span>, r + <span class="hljs-number">1</span>};
-}</code></pre>
-
-<h2 id="8-2归并有序数组"><a href="#8-2归并有序数组" class="headerlink" title="8.2归并有序数组"></a>8.2归并有序数组</h2><p>力扣88：</p>
-<h2 id="8-3快慢指针"><a href="#8-3快慢指针" class="headerlink" title="8.3快慢指针"></a>8.3快慢指针</h2><p>​    对于链表找环路的问题，有一个通用的解法——<strong>快慢指针</strong>（<strong>Floyd （弗洛伊德）判圈法</strong>）。给定两个指针，</p>
-<p>分别命名为 slow 和 fast，起始位置在链表的开头。每次 fast 前进两步，slow 前进一步。如果 fast</p>
-<p>可以走到尽头，那么说明没有环路；如果 fast 可以无限走下去，那么说明一定有环路，且一定存</p>
-<p>在一个时刻 slow 和 fast 相遇。当 slow 和 fast 第一次相遇时，我们将 fast 重新移动到链表开头，并</p>
-<p>让 slow 和 fast 每次都前进一步。当 slow 和 fast 第二次相遇时，相遇的节点即为环路的开始点。</p>
-<p>​    <strong>Floyd 判圈法</strong>：</p>
-<p>计算环的长度：慢指针与快指针第一次相遇后，继续前进，直到快慢指针相遇，经过的路径就是环的长度。</p>
-<p>计算环的起点：如上述。</p>
-<p>力扣142：</p>
-<h2 id="8-4滑动窗口"><a href="#8-4滑动窗口" class="headerlink" title="8.4滑动窗口"></a>8.4滑动窗口</h2><p>力扣76：</p>
 
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://gend-max.gitee.io/2022/05/12/algorithm/" /></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/b32ef3da1162a.svg"/></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://gend-max.gitee.io/2022/05/12/algorithm/&title=数据结构与算法 - Gendml&summary=数据结构与算法笔记，含有C++ STL常用API，算法模板，相关知识点等等。"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/80c07e4dbb303.svg"/></a><a class="social share-item email" href="mailto:?subject=数据结构与算法 - Gendml&amp;body=https://gend-max.gitee.io/2022/05/12/algorithm/"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/a1b00e20f425d.svg"/></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/8411ed322ced6.svg"/></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://gend-max.gitee.io/2022/05/12/algorithm/index.html"/></div></div></section></div>
+</div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://gend-max.gitee.io/2022/05/12/c-stl/" /></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/b32ef3da1162a.svg"/></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://gend-max.gitee.io/2022/05/12/c-stl/&title=C++ STL - Gendml&summary=包含常用API，算法模板。"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/80c07e4dbb303.svg"/></a><a class="social share-item email" href="mailto:?subject=C++ STL - Gendml&amp;body=https://gend-max.gitee.io/2022/05/12/c-stl/"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/a1b00e20f425d.svg"/></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/8411ed322ced6.svg"/></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://gend-max.gitee.io/2022/05/12/c-stl/index.html"/></div></div></section></div>
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><div class="line"></div><a id="prev" href="/2022/05/12/fitness/">健身手册<span class="note">较新</span></a></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><div class="line"></div><a id="prev" href="/2022/05/12/fitness/">健身手册（一）<span class="note">较新</span></a></section></div>
 
 
 <div class="related-wrap reveal" id="related-posts"></div>
