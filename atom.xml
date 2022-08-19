@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Gendml</title>
   
-  <subtitle>Gendml的博客</subtitle>
+  <subtitle>Gendml的博客空间</subtitle>
   <link href="https://gend-max.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://gend-max.gitee.io/"/>
-  <updated>2022-08-07T15:40:08.465Z</updated>
+  <updated>2022-08-18T11:40:20.416Z</updated>
   <id>https://gend-max.gitee.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://gend-max.gitee.io/2022/08/07/docker/"/>
     <id>https://gend-max.gitee.io/2022/08/07/docker/</id>
     <published>2022-08-06T17:55:29.000Z</published>
-    <updated>2022-08-07T15:40:08.465Z</updated>
+    <updated>2022-08-18T11:40:20.416Z</updated>
     
     
       
@@ -34,7 +34,7 @@
     
     
     
-    <category term="Node.js" scheme="https://gend-max.gitee.io/categories/Node-js/"/>
+    <category term="Docker" scheme="https://gend-max.gitee.io/categories/Docker/"/>
     
     
     <category term="Docker" scheme="https://gend-max.gitee.io/tags/Docker/"/>
@@ -42,8 +42,6 @@
     <category term="Container Virtualization" scheme="https://gend-max.gitee.io/tags/Container-Virtualization/"/>
     
     <category term="Linux" scheme="https://gend-max.gitee.io/tags/Linux/"/>
-    
-    <category term="Image" scheme="https://gend-max.gitee.io/tags/Image/"/>
     
   </entry>
   
@@ -217,7 +215,7 @@
     <link href="https://gend-max.gitee.io/2022/05/12/fitness/"/>
     <id>https://gend-max.gitee.io/2022/05/12/fitness/</id>
     <published>2022-05-12T09:11:00.000Z</published>
-    <updated>2022-06-12T16:01:50.953Z</updated>
+    <updated>2022-08-18T11:45:07.640Z</updated>
     
     
       

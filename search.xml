@@ -13,7 +13,7 @@
       
       <categories>
           
-          <category> Node.js </category>
+          <category> Docker </category>
           
       </categories>
       
@@ -25,8 +25,6 @@
             <tag> Container Virtualization </tag>
             
             <tag> Linux </tag>
-            
-            <tag> Image </tag>
             
         </tags>
       
