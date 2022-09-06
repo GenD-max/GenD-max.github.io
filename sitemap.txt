@@ -1,3 +1,4 @@
+https://gend-max.gitee.io/about/index.html
 https://gend-max.gitee.io/2022/08/07/docker/
 https://gend-max.gitee.io/2022/08/07/node/
 https://gend-max.gitee.io/2022/05/17/shu-mei-pai-chang-yong-ming-ling/
@@ -8,7 +9,6 @@ https://gend-max.gitee.io/2022/05/17/git/
 https://gend-max.gitee.io/2022/05/12/c-stl/
 https://gend-max.gitee.io/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/
 https://gend-max.gitee.io/2022/05/12/fitness/
-https://gend-max.gitee.io/about/index.html
 https://gend-max.gitee.io/note/index.html
 https://gend-max.gitee.io/wiki/stellar/index.html
 https://gend-max.gitee.io/tags/index.html
