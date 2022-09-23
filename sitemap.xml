@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gend-max.gitee.io/2022/09/23/ecnuinterview/</loc>
+    
+    <lastmod>2022-09-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://gend-max.gitee.io/2022/09/23/englishinterview/</loc>
     
     <lastmod>2022-09-23</lastmod>
@@ -359,6 +368,13 @@
   
   <url>
     <loc>https://gend-max.gitee.io/tags/TMDocuments/</loc>
+    <lastmod>2022-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gend-max.gitee.io/tags/ECNUInterview/</loc>
     <lastmod>2022-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
