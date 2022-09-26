@@ -36,63 +36,6 @@
   </entry>
   
   <entry>
-    <title>EnglishInterview</title>
-    <link href="https://gend-max.gitee.io/2022/09/23/englishinterview/"/>
-    <id>https://gend-max.gitee.io/2022/09/23/englishinterview/</id>
-    <published>2022-09-23T02:40:41.000Z</published>
-    <updated>2022-09-23T02:45:45.485Z</updated>
-    
-    
-    <summary type="html">英语面试手册</summary>
-    
-    
-    
-    <category term="interview" scheme="https://gend-max.gitee.io/categories/interview/"/>
-    
-    
-    <category term="EnglishInterview" scheme="https://gend-max.gitee.io/tags/EnglishInterview/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TMInterview</title>
-    <link href="https://gend-max.gitee.io/2022/09/23/tminterview/"/>
-    <id>https://gend-max.gitee.io/2022/09/23/tminterview/</id>
-    <published>2022-09-23T02:38:55.000Z</published>
-    <updated>2022-09-25T13:37:48.175Z</updated>
-    
-    
-    <summary type="html">推免面试手册</summary>
-    
-    
-    
-    <category term="interview" scheme="https://gend-max.gitee.io/categories/interview/"/>
-    
-    
-    <category term="TMInterview" scheme="https://gend-max.gitee.io/tags/TMInterview/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TMDocuments</title>
-    <link href="https://gend-max.gitee.io/2022/09/23/tmdocuments/"/>
-    <id>https://gend-max.gitee.io/2022/09/23/tmdocuments/</id>
-    <published>2022-09-23T02:34:51.000Z</published>
-    <updated>2022-09-23T02:43:08.857Z</updated>
-    
-    
-    <summary type="html">我的推免资料</summary>
-    
-    
-    
-    <category term="interview" scheme="https://gend-max.gitee.io/categories/interview/"/>
-    
-    
-    <category term="TMDocuments" scheme="https://gend-max.gitee.io/tags/TMDocuments/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Docker</title>
     <link href="https://gend-max.gitee.io/2022/08/07/docker/"/>
     <id>https://gend-max.gitee.io/2022/08/07/docker/</id>
@@ -296,11 +239,11 @@
     <category term="c++" scheme="https://gend-max.gitee.io/categories/c/"/>
     
     
+    <category term="Algorithm" scheme="https://gend-max.gitee.io/tags/Algorithm/"/>
+    
     <category term="C++ STL" scheme="https://gend-max.gitee.io/tags/C-STL/"/>
     
     <category term="LeetCode" scheme="https://gend-max.gitee.io/tags/LeetCode/"/>
-    
-    <category term="Algorithm" scheme="https://gend-max.gitee.io/tags/Algorithm/"/>
     
   </entry>
   
