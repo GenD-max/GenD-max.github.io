@@ -1,0 +1,85 @@
+{% quot 个人纪念馆 icon:hashtag %}
+
+{% timeline %}
+
+<!-- node 2022 年 9 月 28 日 -->
+
+2022.09.28，**四大天王**全体上岸！{% emoji aru-l 0370 %}
+
+{% tabs active:1 align:center %}
+<!-- tab gendml -->
+
+{% image https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220928133348.png height:200px;float:center %}
+
+<!-- tab zyz -->
+{% image https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220928133532.png  height:200px;float:center %}
+
+<!-- tab bjz -->
+{% image https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220928133633.png  height:200px;float:center %}
+
+<!-- tab yl -->
+{% image https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/9494CE269C7781F01A41AD2C10E461B5.png  height:200px;float:center %}
+
+{% endtabs %}
+
+<!-- node 2022 年 9 月 26 日 -->
+
+推免面试终于面完了，倍感身心疲惫，**开躺ing**。{% emoji aru-l 4041 %}
+
+<!-- node 2022 年 9 月 17 日 -->
+
+{% poetry 登科后 author:孟郊【唐代】 %}
+
+昔日龌龊不足夸，今朝放荡思无涯。
+
+**春风得意马蹄疾，一日看尽长安花。**
+
+{% endpoetry %}
+
+我、bjz和zyz，三个原523寝室小伙伴均获得了**推荐免试研究生资格**！
+
+<!-- node 2022 年 9 月 4 日 -->
+
+参加了**第九届“华为杯”全国大学生物联网设计竞赛**并获得了**国家二等奖**。
+
+<!-- node 2022 年 7 月 30 日 -->
+
+参加了**第十五届中国大学生计算机设计大赛**并获得了**国家一等奖**。
+
+<!-- node 2022 年 6 月 6 日 -->
+
+参加了**“沃得杯”第七届国际大学生智能农业装备创新大赛**并获得了**国家优秀奖**。
+
+<!-- node 2022 年 5 月 21 日 -->
+
+党员预备期已到，我光荣地成为了一名**中国共产党员**。
+
+<!-- node 2021 年 7 月 01 日 -->
+
+参加了**第十四届中国大学生计算机设计大赛**并获得了**国家一等奖**。
+
+<!-- node 2021 年 04 月 21 日 -->
+以**股东**的身份创办了**安徽弘农科技有限责任公司**并运营，为参加创业类比赛奠定基础。
+
+{% image https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220819144508.png  height:60px;float:left   %}
+
+<!-- node 2020 年 12 月 12 日 -->
+学习编程期间，参加了第一个省级赛事，与原室友组队，获得了**安徽省大学生计算机博弈大赛三等奖**。
+
+<!-- node 2020 年 9 月 1 日 -->
+我和原室友进入**安徽省北斗精准农业信息工程实验室**做科研、参加学科竞赛，自此开始了我们的保研之路...
+
+{% image https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220819144217.png   %}
+
+<!-- node 2019 年 12 月 16 日 -->
+武汉疫情爆发，大一下学期在家隔离，上网课。
+
+<!-- node 2019 年 9 月 1 日 -->
+被AHAU录取，CS，走上了IT行业的不归之路。
+{% image https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220819141643.png   height:60px;float:left %}
+
+<!-- node 2019 年 6 月 23 日 -->
+
+高考查分当天，考的是真烂。
+
+{% endtimeline %}
