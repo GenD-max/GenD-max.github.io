@@ -6,7 +6,7 @@
   <link href="https://gend-max.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://gend-max.gitee.io/"/>
-  <updated>2022-09-25T13:38:32.833Z</updated>
+  <updated>2023-02-20T07:46:53.615Z</updated>
   <id>https://gend-max.gitee.io/</id>
   
   <author>
@@ -17,163 +17,113 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ECNUInterview</title>
-    <link href="https://gend-max.gitee.io/2022/09/23/ecnuinterview/"/>
-    <id>https://gend-max.gitee.io/2022/09/23/ecnuinterview/</id>
-    <published>2022-09-23T03:26:02.000Z</published>
-    <updated>2022-09-25T13:38:32.833Z</updated>
-    
-    
-    <summary type="html">华师大数据学院面试手册</summary>
-    
-    
-    
-    <category term="interview" scheme="https://gend-max.gitee.io/categories/interview/"/>
-    
-    
-    <category term="ECNUInterview" scheme="https://gend-max.gitee.io/tags/ECNUInterview/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker</title>
-    <link href="https://gend-max.gitee.io/2022/08/07/docker/"/>
-    <id>https://gend-max.gitee.io/2022/08/07/docker/</id>
+    <title>Docker学习笔记</title>
+    <link href="https://gend-max.gitee.io/2022/08/07/docker-xue-xi-bi-ji/"/>
+    <id>https://gend-max.gitee.io/2022/08/07/docker-xue-xi-bi-ji/</id>
     <published>2022-08-06T17:55:29.000Z</published>
-    <updated>2023-01-07T07:51:14.093Z</updated>
+    <updated>2023-02-20T07:46:53.615Z</updated>
     
     
-    <summary type="html">包括常用命令、常见Bug解决方法、相关容器配置流程等，更新中。</summary>
+    <summary type="html">Docker学习笔记</summary>
     
     
     
-    <category term="Docker" scheme="https://gend-max.gitee.io/categories/Docker/"/>
+    <category term="工具" scheme="https://gend-max.gitee.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="Docker" scheme="https://gend-max.gitee.io/tags/Docker/"/>
     
-    <category term="Container Virtualization" scheme="https://gend-max.gitee.io/tags/Container-Virtualization/"/>
-    
-    <category term="Linux" scheme="https://gend-max.gitee.io/tags/Linux/"/>
-    
   </entry>
   
   <entry>
-    <title>Node.js</title>
-    <link href="https://gend-max.gitee.io/2022/08/07/node/"/>
-    <id>https://gend-max.gitee.io/2022/08/07/node/</id>
+    <title>Node.js基础</title>
+    <link href="https://gend-max.gitee.io/2022/08/07/node.js-ji-chu/"/>
+    <id>https://gend-max.gitee.io/2022/08/07/node.js-ji-chu/</id>
     <published>2022-08-06T17:53:21.000Z</published>
-    <updated>2022-08-19T14:33:59.023Z</updated>
+    <updated>2023-02-20T07:50:55.937Z</updated>
     
     
-    <summary type="html">学习笔记，待更。</summary>
+    <summary type="html">待更新</summary>
     
     
     
-    <category term="node" scheme="https://gend-max.gitee.io/categories/node/"/>
+    <category term="编程语言" scheme="https://gend-max.gitee.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
     
     <category term="Node.js" scheme="https://gend-max.gitee.io/tags/Node-js/"/>
     
-    <category term="JavaScript" scheme="https://gend-max.gitee.io/tags/JavaScript/"/>
+  </entry>
+  
+  <entry>
+    <title>Linux命令大全</title>
+    <link href="https://gend-max.gitee.io/2022/05/17/linux-ming-ling-da-quan/"/>
+    <id>https://gend-max.gitee.io/2022/05/17/linux-ming-ling-da-quan/</id>
+    <published>2022-05-17T15:40:12.000Z</published>
+    <updated>2023-02-20T07:50:50.964Z</updated>
+    
+    
+    <summary type="html">包含Linux常用命令</summary>
+    
+    
+    
+    <category term="操作系统" scheme="https://gend-max.gitee.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="Linux" scheme="https://gend-max.gitee.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
-    <title>Linux</title>
-    <link href="https://gend-max.gitee.io/2022/05/17/linux/"/>
-    <id>https://gend-max.gitee.io/2022/05/17/linux/</id>
+    <title>Raspberry Pi使用总结</title>
+    <link href="https://gend-max.gitee.io/2022/05/17/raspberry-pi-shi-yong-zong-jie/"/>
+    <id>https://gend-max.gitee.io/2022/05/17/raspberry-pi-shi-yong-zong-jie/</id>
     <published>2022-05-17T15:40:12.000Z</published>
-    <updated>2023-01-07T07:45:11.039Z</updated>
+    <updated>2023-02-20T07:51:17.655Z</updated>
     
     
-    <summary type="html">包含Linux常用命令和进阶命令。</summary>
+    <summary type="html">待更新</summary>
     
     
     
-    <category term="linux" scheme="https://gend-max.gitee.io/categories/linux/"/>
+    <category term="单片机" scheme="https://gend-max.gitee.io/categories/%E5%8D%95%E7%89%87%E6%9C%BA/"/>
     
-    
-    <category term="Linux" scheme="https://gend-max.gitee.io/tags/Linux/"/>
     
     <category term="Raspberry Pi" scheme="https://gend-max.gitee.io/tags/Raspberry-Pi/"/>
     
   </entry>
   
   <entry>
-    <title>树莓派常用命令</title>
-    <link href="https://gend-max.gitee.io/2022/05/17/shu-mei-pai-chang-yong-ming-ling/"/>
-    <id>https://gend-max.gitee.io/2022/05/17/shu-mei-pai-chang-yong-ming-ling/</id>
-    <published>2022-05-17T15:40:12.000Z</published>
-    <updated>2022-08-19T14:19:39.710Z</updated>
-    
-    
-    <summary type="html">树莓派系统常用命令，待更。</summary>
-    
-    
-    
-    <category term="linux" scheme="https://gend-max.gitee.io/categories/linux/"/>
-    
-    
-    <category term="Linux" scheme="https://gend-max.gitee.io/tags/Linux/"/>
-    
-    <category term="Raspberry Pi" scheme="https://gend-max.gitee.io/tags/Raspberry-Pi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习与神经网络</title>
-    <link href="https://gend-max.gitee.io/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/"/>
-    <id>https://gend-max.gitee.io/2022/05/17/shen-du-xue-xi-yu-shen-jing-wang-luo/</id>
+    <title>深度学习系列笔记</title>
+    <link href="https://gend-max.gitee.io/2022/05/17/shen-du-xue-xi-xi-lie-bi-ji/"/>
+    <id>https://gend-max.gitee.io/2022/05/17/shen-du-xue-xi-xi-lie-bi-ji/</id>
     <published>2022-05-17T15:35:15.000Z</published>
-    <updated>2022-08-19T14:16:41.199Z</updated>
+    <updated>2023-02-20T07:51:36.652Z</updated>
     
     
-    <summary type="html">学习笔记，待更。</summary>
+    <summary type="html">待更新</summary>
     
     
     
-    <category term="机器学习" scheme="https://gend-max.gitee.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="https://gend-max.gitee.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
     <category term="Deep Learning" scheme="https://gend-max.gitee.io/tags/Deep-Learning/"/>
     
-    <category term="Neural Network" scheme="https://gend-max.gitee.io/tags/Neural-Network/"/>
-    
   </entry>
   
   <entry>
-    <title>SpringBoot</title>
-    <link href="https://gend-max.gitee.io/2022/05/17/springboot/"/>
-    <id>https://gend-max.gitee.io/2022/05/17/springboot/</id>
-    <published>2022-05-17T15:27:35.000Z</published>
-    <updated>2022-08-19T14:19:10.366Z</updated>
-    
-    
-    <summary type="html">转自于尚硅谷教程。</summary>
-    
-    
-    
-    <category term="spring全家桶" scheme="https://gend-max.gitee.io/categories/spring%E5%85%A8%E5%AE%B6%E6%A1%B6/"/>
-    
-    
-    <category term="-SpringBoot" scheme="https://gend-max.gitee.io/tags/SpringBoot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringMVC</title>
-    <link href="https://gend-max.gitee.io/2022/05/17/springmvc/"/>
-    <id>https://gend-max.gitee.io/2022/05/17/springmvc/</id>
+    <title>SpringMVC框架基础</title>
+    <link href="https://gend-max.gitee.io/2022/05/17/springmvc-kuang-jia-ji-chu/"/>
+    <id>https://gend-max.gitee.io/2022/05/17/springmvc-kuang-jia-ji-chu/</id>
     <published>2022-05-17T15:05:07.000Z</published>
-    <updated>2022-08-19T14:19:20.660Z</updated>
+    <updated>2023-02-20T07:51:29.411Z</updated>
     
     
-    <summary type="html">转自于尚硅谷技术课程资料。</summary>
+    <summary type="html">转自于尚硅谷技术课程资料</summary>
     
     
     
-    <category term="spring全家桶" scheme="https://gend-max.gitee.io/categories/spring%E5%85%A8%E5%AE%B6%E6%A1%B6/"/>
+    <category term="Spring全家桶" scheme="https://gend-max.gitee.io/categories/Spring%E5%85%A8%E5%AE%B6%E6%A1%B6/"/>
     
     
     <category term="SpringMVC" scheme="https://gend-max.gitee.io/tags/SpringMVC/"/>
@@ -181,69 +131,59 @@
   </entry>
   
   <entry>
-    <title>Git V2.0</title>
-    <link href="https://gend-max.gitee.io/2022/05/17/git/"/>
-    <id>https://gend-max.gitee.io/2022/05/17/git/</id>
+    <title>Git学习教程</title>
+    <link href="https://gend-max.gitee.io/2022/05/17/git-xue-xi-jiao-cheng/"/>
+    <id>https://gend-max.gitee.io/2022/05/17/git-xue-xi-jiao-cheng/</id>
     <published>2022-05-17T14:44:29.000Z</published>
-    <updated>2022-08-19T14:18:34.386Z</updated>
+    <updated>2023-02-20T07:50:45.977Z</updated>
     
     
-    <summary type="html">转自于尚硅谷技术课程资料。</summary>
+    <summary type="html">转自于尚硅谷技术课程资料</summary>
     
     
     
-    <category term="git" scheme="https://gend-max.gitee.io/categories/git/"/>
+    <category term="工具" scheme="https://gend-max.gitee.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="Git" scheme="https://gend-max.gitee.io/tags/Git/"/>
     
-    <category term="Github" scheme="https://gend-max.gitee.io/tags/Github/"/>
-    
-    <category term="Gitee" scheme="https://gend-max.gitee.io/tags/Gitee/"/>
-    
   </entry>
   
   <entry>
-    <title>健身手册（一）</title>
-    <link href="https://gend-max.gitee.io/2022/05/12/fitness/"/>
-    <id>https://gend-max.gitee.io/2022/05/12/fitness/</id>
+    <title>新手健身笔记</title>
+    <link href="https://gend-max.gitee.io/2022/05/12/xin-shou-jian-shen-bi-ji/"/>
+    <id>https://gend-max.gitee.io/2022/05/12/xin-shou-jian-shen-bi-ji/</id>
     <published>2022-05-12T09:11:00.000Z</published>
-    <updated>2022-08-19T14:05:13.845Z</updated>
+    <updated>2023-02-20T07:51:42.921Z</updated>
     
     
-    <summary type="html">一份摸爬滚打总结的健身指导手册。</summary>
+    <summary type="html">一份摸爬滚打总结的健身笔记</summary>
     
     
     
-    <category term="fitness" scheme="https://gend-max.gitee.io/categories/fitness/"/>
+    <category term="学习之余" scheme="https://gend-max.gitee.io/categories/%E5%AD%A6%E4%B9%A0%E4%B9%8B%E4%BD%99/"/>
     
     
     <category term="健身" scheme="https://gend-max.gitee.io/tags/%E5%81%A5%E8%BA%AB/"/>
     
-    <category term="燃脂" scheme="https://gend-max.gitee.io/tags/%E7%87%83%E8%84%82/"/>
-    
   </entry>
   
   <entry>
-    <title>C++ STL</title>
-    <link href="https://gend-max.gitee.io/2022/05/12/c-stl/"/>
-    <id>https://gend-max.gitee.io/2022/05/12/c-stl/</id>
+    <title>C++ STL学习笔记</title>
+    <link href="https://gend-max.gitee.io/2022/05/12/c-stl-xue-xi-bi-ji/"/>
+    <id>https://gend-max.gitee.io/2022/05/12/c-stl-xue-xi-bi-ji/</id>
     <published>2022-05-12T02:24:01.000Z</published>
-    <updated>2022-08-19T14:18:04.224Z</updated>
+    <updated>2023-02-20T07:46:45.998Z</updated>
     
     
-    <summary type="html">包含常用API，算法模板。</summary>
+    <summary type="html">C++ STL学习笔记</summary>
     
     
     
-    <category term="c++" scheme="https://gend-max.gitee.io/categories/c/"/>
+    <category term="编程语言" scheme="https://gend-max.gitee.io/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
     
-    
-    <category term="Algorithm" scheme="https://gend-max.gitee.io/tags/Algorithm/"/>
     
     <category term="C++ STL" scheme="https://gend-max.gitee.io/tags/C-STL/"/>
-    
-    <category term="LeetCode" scheme="https://gend-max.gitee.io/tags/LeetCode/"/>
     
   </entry>
   
