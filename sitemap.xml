@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://gend-max.gitee.io/2023/09/14/wen-xian-yue-du-delay-aware-and-energy-efficient-computation-offloading-in-mobile-edge-computing-using-deep-reinforcement-learning-ji-yu-shen-du-qiang-hua-xue-xi-de-yi-dong-bian-yuan-ji-suan-de-yan-chi-gan-zhi-he-jie-neng-ji-suan-xie-zai/</loc>
+    <loc>https://gend-max.gitee.io/2023/09/14/wen-xian-yue-du-ji-yu-shen-du-qiang-hua-xue-xi-de-yi-dong-bian-yuan-ji-suan-de-yan-chi-gan-zhi-he-jie-neng-ji-suan-xie-zai/</loc>
     
     <lastmod>2023-09-14</lastmod>
     
@@ -226,6 +226,20 @@
   </url>
   
   <url>
+    <loc>https://gend-max.gitee.io/tags/%E7%A7%BB%E5%8A%A8%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/</loc>
+    <lastmod>2023-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://gend-max.gitee.io/tags/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/</loc>
+    <lastmod>2023-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://gend-max.gitee.io/tags/Node-js/</loc>
     <lastmod>2023-09-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -248,13 +262,6 @@
   
   <url>
     <loc>https://gend-max.gitee.io/tags/SpringMVC/</loc>
-    <lastmod>2023-09-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://gend-max.gitee.io/tags/MEC/</loc>
     <lastmod>2023-09-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

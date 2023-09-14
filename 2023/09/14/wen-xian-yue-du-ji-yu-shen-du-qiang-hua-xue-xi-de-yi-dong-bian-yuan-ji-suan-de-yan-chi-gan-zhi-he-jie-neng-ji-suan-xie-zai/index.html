@@ -18,21 +18,26 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>Git学习教程 - Gendml</title>
+  <title>【文献阅读】Delay-Aware and Energy-Efficient Computation Offloading in Mobile-Edge Computing Using Deep Reinforcement Learning：基于深度强化学习的移动边缘计算的延迟感知和节能计算卸载 - Gendml</title>
 
   
-    <meta name="description" content="转自于尚硅谷技术课程资料">
+    <meta name="description" content="关于移动边缘计算领域的文献阅读">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git学习教程">
-<meta property="og:url" content="https://gend-max.gitee.io/2022/05/17/git-xue-xi-jiao-cheng/index.html">
+<meta property="og:title" content="【文献阅读】Delay-Aware and Energy-Efficient Computation Offloading in Mobile-Edge Computing Using Deep Reinforcement Learning：基于深度强化学习的移动边缘计算的延迟感知和节能计算卸载">
+<meta property="og:url" content="https://gend-max.gitee.io/2023/09/14/wen-xian-yue-du-ji-yu-shen-du-qiang-hua-xue-xi-de-yi-dong-bian-yuan-ji-suan-de-yan-chi-gan-zhi-he-jie-neng-ji-suan-xie-zai/index.html">
 <meta property="og:site_name" content="Gendml">
-<meta property="og:description" content="转自于尚硅谷技术课程资料">
+<meta property="og:description" content="关于移动边缘计算领域的文献阅读">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-17T14:44:29.000Z">
-<meta property="article:modified_time" content="2023-02-20T07:50:45.977Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif">
+<meta property="article:published_time" content="2023-09-14T14:38:49.000Z">
+<meta property="article:modified_time" content="2023-09-14T14:56:17.709Z">
 <meta property="article:author" content="Gendml">
-<meta property="article:tag" content="Git">
-<meta name="twitter:card" content="summary">
+<meta property="article:tag" content="移动边缘计算">
+<meta property="article:tag" content="文献阅读">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif">
   
   
 
@@ -81,9 +86,7 @@
 
 <div class="widgets">
 
-
-<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2023/09/14/wen-xian-yue-du-ji-yu-shen-du-qiang-hua-xue-xi-de-yi-dong-bian-yuan-ji-suan-de-yan-chi-gan-zhi-he-jie-neng-ji-suan-xie-zai/">【文献阅读】Delay-Aware and Energy-Efficient Computation Offloading in Mobile-Edge Computing Using Deep Reinforcement Learning：基于深度强化学习的移动边缘计算的延迟感知和节能计算卸载</a></div><div class="more-item"><a class="title" href="/2022/05/12/xin-shou-jian-shen-bi-ji/">新手健身笔记</a></div><div class="more-item"><a class="title" href="/2022/05/17/shen-du-xue-xi-xi-lie-bi-ji/">深度学习系列笔记</a></div><div class="more-item"><a class="title" href="/2022/05/17/springmvc-kuang-jia-ji-chu/">SpringMVC框架基础</a></div><div class="more-item"><a class="title" href="/2022/05/17/raspberry-pi-shi-yong-zong-jie/">Raspberry Pi使用总结</a></div></div></div>
-
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%BF%99%E7%AF%87%E8%AE%BA%E6%96%87%E8%AF%95%E5%9B%BE%E5%9C%A8%E8%A7%A3%E5%86%B3%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98"><span class="toc-text">1.这篇论文试图在解决什么问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%BF%99%E6%98%AF%E5%90%A6%E6%98%AF%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">2.这是否是一个新的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0%E8%A6%81%E9%AA%8C%E8%AF%81%E4%B8%80%E4%B8%AA%E4%BB%80%E4%B9%88%E7%A7%91%E5%AD%A6%E5%81%87%E8%AE%BE"><span class="toc-text">3.这篇文章要验证一个什么科学假设</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%AE%BA%E6%96%87%E4%B8%AD%E6%8F%90%E5%88%B0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E7%9A%84%E5%85%B3%E9%94%AE%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">4.论文中提到的解决方案的关键是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%AE%BA%E6%96%87%E4%B8%AD%E7%9A%84%E5%AE%9E%E9%AA%8C%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84"><span class="toc-text">5.论文中的实验是如何设计的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%94%A8%E4%BA%8E%E5%AE%9A%E9%87%8F%E8%AF%84%E4%BC%B0%E7%9A%84%E6%95%B0%E6%8D%AE%E9%9B%86%E3%80%81%E6%8C%87%E6%A0%87%EF%BC%8C%E7%AE%97%E6%B3%95%E5%AF%B9%E6%AF%94%EF%BC%8C%E4%BB%A3%E7%A0%81%E6%98%AF%E5%90%A6%E5%BC%80%E6%BA%90"><span class="toc-text">6.用于定量评估的数据集、指标，算法对比，代码是否开源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">数据集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="toc-text">评估指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%AF%94%E7%9A%84%E7%AE%97%E6%B3%95"><span class="toc-text">对比的算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%98%AF%E5%90%A6%E5%BC%80%E6%BA%90"><span class="toc-text">代码是否开源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BC%97-%E8%AE%BA%E6%96%87%E4%B8%AD%E7%9A%84%E5%AE%9E%E9%AA%8C%E5%8F%8A%E7%BB%93%E6%9E%9C%E6%9C%89%E6%B2%A1%E6%9C%89%E5%BE%88%E5%A5%BD%E5%9C%B0%E6%94%AF%E6%8C%81%E9%9C%80%E8%A6%81%E9%AA%8C%E8%AF%81%E7%9A%84%E7%A7%91%E5%AD%A6%E5%81%87%E8%AE%BE"><span class="toc-text">７.论文中的实验及结果有没有很好地支持需要验证的科学假设</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BC%98-%E8%BF%99%E7%AF%87%E8%AE%BA%E6%96%87%E7%9A%84%E8%B4%A1%E7%8C%AE"><span class="toc-text">８.这篇论文的贡献</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BC%99-%E6%9C%AA%E6%9D%A5%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%A6%82%E4%BD%95%E8%BF%9B%E5%B1%95"><span class="toc-text">９.未来的工作如何进展</span></a></li></ol></div></div></div>
 
 <div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2023/09/14/wen-xian-yue-du-ji-yu-shen-du-qiang-hua-xue-xi-de-yi-dong-bian-yuan-ji-suan-de-yan-chi-gan-zhi-he-jie-neng-ji-suan-xie-zai/">【文献阅读】Delay-Aware and Energy-Efficient Computation Offloading in Mobile-Edge Computing Using Deep Reinforcement Learning：基于深度强化学习的移动边缘计算的延迟感知和节能计算卸载</a></div><div class="more-item"><a class="title" href="/2022/05/12/xin-shou-jian-shen-bi-ji/">新手健身笔记</a></div><div class="more-item"><a class="title" href="/2022/05/17/shen-du-xue-xi-xi-lie-bi-ji/">深度学习系列笔记</a></div><div class="more-item"><a class="title" href="/2022/05/17/springmvc-kuang-jia-ji-chu/">SpringMVC框架基础</a></div><div class="more-item"><a class="title" href="/2022/05/17/raspberry-pi-shi-yong-zong-jie/">Raspberry Pi使用总结</a></div></div></div>
 </div>
@@ -127,31 +130,65 @@
 
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-05-17T14:44:29.000Z">2022-05-17</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%A7%BB%E5%8A%A8%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97/">移动边缘计算</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-09-14T14:38:49.000Z">2023-09-14</time></div></div>
 
 <article class='content md post reveal'>
-<h1 class="article-title"><span>Git学习教程</span></h1>
-<div class="row">
-    <embed src="git.pdf" width="100%" height="550" type="application/pdf">
-	</div>
+<h1 class="article-title"><span>【文献阅读】Delay-Aware and Energy-Efficient Computation Offloading in Mobile-Edge Computing Using Deep Reinforcement Learning：基于深度强化学习的移动边缘计算的延迟感知和节能计算卸载</span></h1>
+<blockquote>
+<p>作者：Laha Ale <em>et al.</em></p>
+<p>发表时间：2021年</p>
+<p>来源：IEEE TRANSACTIONS ON COGNITIVE COMMUNICATIONS AND NETWORKING（IF:8.6、Q1）</p>
+<p>关键字：移动边缘计算，深度强化学习，计算卸载，<strong>延迟</strong>，<strong>能量效率</strong></p>
+</blockquote>
+<h2 id="1-这篇论文试图在解决什么问题"><a href="#1-这篇论文试图在解决什么问题" class="headerlink" title="1.这篇论文试图在解决什么问题"></a>1.这篇论文试图在解决什么问题</h2><p>提出一个<strong>联合优化</strong>问题，使用了DQN+<em><strong>ϵ−greedy</strong></em>+<strong>clip奖励</strong>的trick方法，用于在<strong>多个MEC</strong>和<strong>多个用户</strong>的动态MEC网络中实现<strong>延迟感知</strong>和<strong>高效节能</strong>的卸载</p>
+<h2 id="2-这是否是一个新的问题"><a href="#2-这是否是一个新的问题" class="headerlink" title="2.这是否是一个新的问题"></a>2.这是否是一个新的问题</h2><p>否</p>
+<h2 id="3-这篇文章要验证一个什么科学假设"><a href="#3-这篇文章要验证一个什么科学假设" class="headerlink" title="3.这篇文章要验证一个什么科学假设"></a>3.这篇文章要验证一个什么科学假设</h2><p>使用E2W_DRL（端到端的深度强化学习方法，具体是DQN）解决多用户多MEC的动态MEC网络的计算卸载</p>
+<h2 id="4-论文中提到的解决方案的关键是什么"><a href="#4-论文中提到的解决方案的关键是什么" class="headerlink" title="4.论文中提到的解决方案的关键是什么"></a>4.论文中提到的解决方案的关键是什么</h2><p>延迟感知的计算卸载：即MEC网络环境中的任务队列以一定的时间间隙t接收用户的任务 $Ω_{t}$，智能体以时间步长[0,τ]的范围内按照队列顺序执行一次任务，$τ&lt;&lt; t$</p>
+<p>clip奖励的trick：对于一些训练样本的范围大，方差大的特征，可能会影响模型的收敛，所以每次对奖励进行clip可以防止梯度消失和梯度爆炸，有助于提高模型训练的稳定性 </p>
+<p><em><strong>ϵ−greedy</strong></em>：平衡交互和探索，让模型更好地从环境中学习</p>
+<p>DNN（深度神经网络）：DQN-Proposed使用DNN作为非线性函数近似Q函数，用于缩小探索范围</p>
+<h2 id="5-论文中的实验是如何设计的"><a href="#5-论文中的实验是如何设计的" class="headerlink" title="5.论文中的实验是如何设计的"></a>5.论文中的实验是如何设计的</h2><p>系统模型：</p>
+<img src="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif" data-original="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20230914222330.png" style="zoom: 80%;">
 
-
+<p>主要体现在设置优化目标和奖励函数（<strong>联合优化</strong>）设计上</p>
+<p>优化目标：最大化截止时间前任务完成数量和最小化能源（计算+传输）消耗</p>
+<p>优化问题表述：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif" data-original="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20230912000530.png"></p>
+<p>暴露的问题：</p>
+<ol>
+<li>不能保证所有任务满足约束条件1，<strong>Agent需要考虑可行域内无解的情况</strong></li>
+<li><strong>平衡</strong>能量消耗成本和传输消耗成本的<strong>灵活度</strong>不够</li>
+<li>能量消耗成本$E_{τ}^C$公式包含了平方项，其会随着变量增加和问题规模的增加而呈指数型增长</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif" data-original="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20230912001811.png"></p>
+<h2 id="6-用于定量评估的数据集、指标，算法对比，代码是否开源"><a href="#6-用于定量评估的数据集、指标，算法对比，代码是否开源" class="headerlink" title="6.用于定量评估的数据集、指标，算法对比，代码是否开源"></a>6.用于定量评估的数据集、指标，算法对比，代码是否开源</h2><h3 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h3><p>目标网络将已经交互样本存入经验缓冲池，学习网络则批量随机抽取样本学习</p>
+<h3 id="评估指标"><a href="#评估指标" class="headerlink" title="评估指标"></a>评估指标</h3><p>奖励、任务完成数量、平均能量消耗、能量与任务的之比、<em><strong>ϵ−greedy</strong></em>技巧中平衡探索和交互的 <strong>ϵ</strong></p>
+<h3 id="对比的算法"><a href="#对比的算法" class="headerlink" title="对比的算法"></a>对比的算法</h3><p>分别使用了DRL（CVX）方法、贪婪两种方法对本文提出的E2E_DRL（DQN）方法进行对比</p>
+<p>此外，还使用了10个用户和1000个用户对上述三种方法进行对比</p>
+<p><em>注：CVX表示凸优化工具箱CVX，那么它是一个基于Matlab的凸优化工具包，能够解决线性规划，二次规划等优化问题</em></p>
+<h3 id="代码是否开源"><a href="#代码是否开源" class="headerlink" title="代码是否开源"></a>代码是否开源</h3><p>否</p>
+<h2 id="７-论文中的实验及结果有没有很好地支持需要验证的科学假设"><a href="#７-论文中的实验及结果有没有很好地支持需要验证的科学假设" class="headerlink" title="７.论文中的实验及结果有没有很好地支持需要验证的科学假设"></a>７.论文中的实验及结果有没有很好地支持需要验证的科学假设</h2><p>同等条件下，奖励更高、任务完成数更多、但是能源消耗最高；因为DQN探索和交互的时候使用<em><strong>ϵ−greedy</strong></em>消耗了更多的能量。</p>
+<p>同等条件下，使用DRL-CVX能源消耗较低，但是DRL-CVX不会增加完成任务数量；因为DRL-CVX只控制部分的决策变量（相比于DNN，它更简单），它会随着参数数量和搜索范围的增加，计算成本呈指数增长（但是论文未给出验证）</p>
+<h2 id="８-这篇论文的贡献"><a href="#８-这篇论文的贡献" class="headerlink" title="８.这篇论文的贡献"></a>８.这篇论文的贡献</h2><ol>
+<li>研究了动态MEC网络中的计算卸载问题</li>
+<li>提出了一种端到端DRL方法来联合优化边缘服务器的选择和计算能力分配，以最大化按时完成的任务数和同时最小化能量消耗为目标</li>
+<li>该模型可以在不依赖其他优化函数的情况下完成所有决策，从而达到联合优化的目的</li>
+<li>采用经验缓冲区回放和剪辑技术来促进DRL模型的训练过程，可以防止模型出现振荡和发散</li>
+</ol>
+<h2 id="９-未来的工作如何进展"><a href="#９-未来的工作如何进展" class="headerlink" title="９.未来的工作如何进展"></a>９.未来的工作如何进展</h2><ol>
+<li>研究动态卸载中的任务划分，任务可以任意划分，然后卸载到边缘服务器上</li>
+</ol>
 
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://gend-max.gitee.io/2022/05/17/git-xue-xi-jiao-cheng/" /></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/b32ef3da1162a.svg"/></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://gend-max.gitee.io/2022/05/17/git-xue-xi-jiao-cheng/&title=Git学习教程 - Gendml&summary=转自于尚硅谷技术课程资料"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/80c07e4dbb303.svg"/></a><a class="social share-item email" href="mailto:?subject=Git学习教程 - Gendml&amp;body=https://gend-max.gitee.io/2022/05/17/git-xue-xi-jiao-cheng/"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/a1b00e20f425d.svg"/></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/8411ed322ced6.svg"/></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://gend-max.gitee.io/2022/05/17/git-xue-xi-jiao-cheng/index.html"/></div></div></section></div>
+</div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://gend-max.gitee.io/2023/09/14/wen-xian-yue-du-ji-yu-shen-du-qiang-hua-xue-xi-de-yi-dong-bian-yuan-ji-suan-de-yan-chi-gan-zhi-he-jie-neng-ji-suan-xie-zai/" /></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/b32ef3da1162a.svg"/></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://gend-max.gitee.io/2023/09/14/wen-xian-yue-du-ji-yu-shen-du-qiang-hua-xue-xi-de-yi-dong-bian-yuan-ji-suan-de-yan-chi-gan-zhi-he-jie-neng-ji-suan-xie-zai/&title=【文献阅读】Delay-Aware and Energy-Efficient Computation Offloading in Mobile-Edge Computing Using Deep Reinforcement Learning：基于深度强化学习的移动边缘计算的延迟感知和节能计算卸载 - Gendml&summary=关于移动边缘计算领域的文献阅读"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/80c07e4dbb303.svg"/></a><a class="social share-item email" href="mailto:?subject=【文献阅读】Delay-Aware and Energy-Efficient Computation Offloading in Mobile-Edge Computing Using Deep Reinforcement Learning：基于深度强化学习的移动边缘计算的延迟感知和节能计算卸载 - Gendml&amp;body=https://gend-max.gitee.io/2023/09/14/wen-xian-yue-du-ji-yu-shen-du-qiang-hua-xue-xi-de-yi-dong-bian-yuan-ji-suan-de-yan-chi-gan-zhi-he-jie-neng-ji-suan-xie-zai/"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/a1b00e20f425d.svg"/></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/8411ed322ced6.svg"/></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://gend-max.gitee.io/2023/09/14/wen-xian-yue-du-ji-yu-shen-du-qiang-hua-xue-xi-de-yi-dong-bian-yuan-ji-suan-de-yan-chi-gan-zhi-he-jie-neng-ji-suan-xie-zai/index.html"/></div></div></section></div>
 
 </article>
 
-<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/05/12/xin-shou-jian-shen-bi-ji/">新手健身笔记<span class="note">较早</span></a><div class="line"></div><a id="prev" href="/2022/05/17/springmvc-kuang-jia-ji-chu/">SpringMVC框架基础<span class="note">较新</span></a></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/08/07/docker-xue-xi-bi-ji/">Docker学习笔记<span class="note">较早</span></a><div class="line"></div></section></div>
 
 
-<div class="related-wrap reveal" id="related-posts">
-    <section class='header'>
-      <div class='title cap theme'>您可能感兴趣的文章</div>
-    </section>
-    <section class='body'>
-    <div class="related-posts"><a class="item" href="\2022\08\07\docker-xue-xi-bi-ji\" title="Docker学习笔记"><div class="img"><img src="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif" /></div><span class="title">Docker学习笔记</span><span class="excerpt">Docker学习笔记</span></a></div></section></div>
+<div class="related-wrap reveal" id="related-posts"></div>
 
 
 
