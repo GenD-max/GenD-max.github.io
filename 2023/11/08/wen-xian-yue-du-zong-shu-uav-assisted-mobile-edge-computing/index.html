@@ -18,22 +18,24 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>Gendml</title>
+  <title>【文献阅读】【综述】UAV-assisted mobile edge computing - Gendml</title>
 
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Gendml">
-<meta property="og:url" content="https://gend-max.gitee.io/about/index.html">
+    <meta name="description" content="移动边缘计算领域下的文献阅读">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【文献阅读】【综述】UAV-assisted mobile edge computing">
+<meta property="og:url" content="https://gend-max.gitee.io/2023/11/08/wen-xian-yue-du-zong-shu-uav-assisted-mobile-edge-computing/index.html">
 <meta property="og:site_name" content="Gendml">
+<meta property="og:description" content="移动边缘计算领域下的文献阅读">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif">
-<meta property="article:published_time" content="2022-05-12T01:21:48.000Z">
-<meta property="article:modified_time" content="2023-02-20T08:00:38.107Z">
+<meta property="article:published_time" content="2023-11-08T15:22:48.000Z">
+<meta property="article:modified_time" content="2023-11-08T15:22:54.474Z">
 <meta property="article:author" content="Gendml">
-<meta name="twitter:card" content="summary">
+<meta property="article:tag" content="文献阅读-综述">
+<meta property="article:tag" content="无人机辅助MEC">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif">
   
   
@@ -69,8 +71,10 @@
   
 
 
+
+
   <div class='l_body' id='start'>
-    <aside class='l_left' layout='about'>
+    <aside class='l_left' layout='post'>
     
 
 
@@ -80,58 +84,149 @@
 <nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki">专栏</a><a class="nav-item" href="/note">便笺</a><a class="nav-item" href="/about">关于我</a></nav></header>
 
 <div class="widgets">
-<div class="widget-wrap" id="markdown"><div class="widget-header cap dis-select"><span class="name">The man is nobody</span></div><div class="widget-body fs14"><p><strong>时间如流水，往事是沙滩。</strong></p>
-</div></div>
 
-
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF"><span class="toc-text">1、研究背景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%9C%A8%E7%89%A9%E8%81%94%E7%BD%91%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-text">无人机在物联网中的应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%BE%85%E5%8A%A9%E7%A7%BB%E5%8A%A8%E8%BE%B9%E7%BC%98%E8%AE%A1%E7%AE%97"><span class="toc-text">无人机辅助移动边缘计算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E7%A0%94%E7%A9%B6%E7%8E%B0%E7%8A%B6"><span class="toc-text">2、研究现状</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%9C%AA%E6%9D%A5%E6%8C%91%E6%88%98"><span class="toc-text">3、未来挑战</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%9A%84%E8%AE%AD%E7%BB%83%E9%97%AE%E9%A2%98"><span class="toc-text">无人机的训练问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%9A%84%E6%94%B6%E6%95%9B%E9%97%AE%E9%A2%98"><span class="toc-text">无人机的收敛问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%9A%84%E8%B5%84%E6%BA%90%E5%92%8C%E8%83%BD%E6%BA%90%E9%99%90%E5%88%B6%E9%97%AE%E9%A2%98"><span class="toc-text">无人机的资源和能源限制问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E4%BA%BA%E6%9C%BA%E7%9A%84%E5%AE%89%E5%85%A8%E5%92%8C%E9%9A%90%E7%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">无人机的安全和隐私问题</span></a></li></ol></li></ol></div></div></div>
 
 <div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2023/11/08/wen-xian-yue-du-zong-shu-uav-assisted-mobile-edge-computing/">【文献阅读】【综述】UAV-assisted mobile edge computing</a></div><div class="more-item"><a class="title" href="/2022/05/12/xin-shou-jian-shen-bi-ji/">新手健身笔记</a></div><div class="more-item"><a class="title" href="/2022/05/17/shen-du-xue-xi-xi-lie-bi-ji/">深度学习系列笔记</a></div><div class="more-item"><a class="title" href="/2022/05/17/springmvc-kuang-jia-ji-chu/">SpringMVC框架基础</a></div><div class="more-item"><a class="title" href="/2022/05/17/raspberry-pi-shi-yong-zong-jie/">Raspberry Pi使用总结</a></div></div></div>
-
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/GenD-max" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/></a><a class="social" href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2457870242" target="_blank" rel="external nofollow noopener noreferrer"><img src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/QQ.svg"/></a><a class="social" href="mailto:dmlgg0425@gmail.com" rel="noopener noreferrer"><img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/a1b00e20f425d.svg"/></a></div></footer>
 
     </aside>
     <div class='l_main'>
       
-  
-
-<header class="header mobile-only">
-
-<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/photo.jpg" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">MrGendml</div><div class="sub cap">Gendml的博客空间</div></a></div>
-</header>
-
-
 
       
 
-  
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+      </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+            tex2jax: {
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+          });
+      </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+              var all = MathJax.Hub.getAllJax(), i;
+              for(i=0; i < all.length; i += 1) {
+                  all[i].SourceElement().parentNode.className += ' has-jax';
+              }
+          });
+      </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
-  <article class='content md about reveal'>
-  
-  
-    <div class="tag-plugin about"><div class="about-header"><img src="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif" data-original="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/6E1.jpg"></div><div class="about-body fs14"><div class="tag-plugin tabs" align="left" id="tab_1" "=""><ul class="nav-tabs"><li class="tab active"><a href="#tab_1-1">简介</a></li><li class="tab"><a href="#tab_1-2">音乐</a></li><li class="tab"><a href="#tab_1-3">兴趣</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_1-1"><p>人生太闲，则别念窃生；太忙，则真性不见。人总要有点事做，工作也好，旅行也罢，恰到好处，不慌不忙，内心充实。人生就是边努力边快乐着，平淡且真并有所期待。</p></div><div class="tab-pane" id="tab_1-2"><p>比较热爱音乐，喜欢电子乐、摇滚和吉他乐，尤其喜欢 <a target="_blank" rel="noopener" href="https://music.163.com/#/artist?id=893484">The Chainsmokers</a> 、<a target="_blank" rel="noopener" href="https://music.163.com/#/artist?id=11370">丢火车乐队</a> 和 <a target="_blank" rel="noopener" href="https://music.163.com/#/artist?id=224360">陈亮</a> 的歌曲。</p></div><div class="tab-pane" id="tab_1-3"><p>喜欢指弹，自学过一年，可惜现在已经荒废了。</p></div></div></div><div class="tag-plugin navbar"><nav class="cap"><a href="/">文章</a><a target="_blank" rel="noopener" href="https://github.com/GenD-max">GitHub</a><a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=2457870242">QQ</a><a href="#comments">留言</a></nav></div></div></div>
 
 
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB-%E7%BB%BC%E8%BF%B0-%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%BE%85%E5%8A%A9MEC/">文献阅读-综述-无人机辅助MEC</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-11-08T15:22:48.000Z">2023-11-08</time></div></div>
 
-<p class="tag-plugin quot" type="icon"><img class="icon prefix" src="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif" data-original="https://s2.loli.net/2022/01/04/UvHcsa73jQPnobq.png">个人信息</p>
-
+<article class='content md post reveal'>
+<h1 class="article-title"><span>【文献阅读】【综述】UAV-assisted mobile edge computing</span></h1>
+<h1 id="《Aerial-Edge-Computing-A-Survey》"><a href="#《Aerial-Edge-Computing-A-Survey》" class="headerlink" title="《Aerial Edge Computing A Survey》"></a>《Aerial Edge Computing A Survey》</h1><blockquote>
+<p>作者：Qinglou Zhang et al.</p>
+<p>发表时间：2023年8月</p>
+<p>来源：IEEE INTERNET OF THINGS JOURNAL（JCR Q1）（Top）（中科院1区）</p>
+<p>关键字：空中边缘计算（AEC）、移动边缘计算、服务质量（QoS）、无线通信网络。</p>
+</blockquote>
+<h1 id="《AI-for-UAV-Assisted-IoT-Applications》"><a href="#《AI-for-UAV-Assisted-IoT-Applications》" class="headerlink" title="《AI for UAV-Assisted IoT Applications》"></a>《AI for UAV-Assisted IoT Applications》</h1><blockquote>
+<p>作者：Nan Cheng  et al.</p>
+<p>发表时间：2023年8月</p>
+<p>来源：IEEE INTERNET OF THINGS JOURNAL（JCR Q1）（Top）（中科院1区）</p>
+<p>关键字：人工智能（AI）、物联网（IoT）、强化学习（RL）、无人机应用、无人机（UAV）。</p>
+</blockquote>
+<h2 id="1、研究背景"><a href="#1、研究背景" class="headerlink" title="1、研究背景"></a>1、研究背景</h2><h3 id="无人机在物联网中的应用"><a href="#无人机在物联网中的应用" class="headerlink" title="无人机在物联网中的应用"></a>无人机在物联网中的应用</h3><p>​    随着物联网的发展，无人机凭借着其灵活性、可操作性和经济性在各行各业中得到了广泛地应用</p>
 <ul>
-<li><code>就读院校</code>: NEU，计算机技术（在读）</li>
-<li><code>个人博客</code>: <a target="_blank" rel="noopener" href="http://www.gendml.cn/">http://www.gendml.cn</a></li>
-<li><code>GitHub</code>: <a target="_blank" rel="noopener" href="https://github.com/GenD-max">https://github.com/GenD-max</a></li>
-<li><code>Email</code>: <a href="mailto:dmlgg0425@gmail.com">dmlgg0425@gmail.com</a></li>
-<li><code>手机</code>:</li>
-<li><code>QQ/微信</code>: </li>
+<li>农业：通过部署无人机来监测农作物生长、喷洒农药以及实现农场自动化以实现智能农业</li>
+<li>紧急场景：无人机可以提供通信服务、物资运送和环境监控</li>
+<li>城市：通过无人机实现视频监控、打造智能交通系统（ITSs）和提供医疗保健服务</li>
+<li>现代战争：例如，在俄乌战场中，使用了大量的军用无人机提供通信、侦察和攻击服务</li>
 </ul>
-<p class="tag-plugin quot" type="icon"><img class="icon prefix" src="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif" data-original="https://s2.loli.net/2022/01/04/UvHcsa73jQPnobq.png">友情链接</p>
+<p><img src="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif" data-original="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20231106204702.png" alt="无人机辅助应用场景：农业、紧急场景、城市、现代战争"></p>
+<center style="font-size:14px;color:#C0C0C0;text-decoration:underline">无人机辅助应用场景：农业、紧急场景、城市、现代战争
+</center> 
 
-<div class="tag-plugin users-wrap"><div class="group-body"><div class="user-card"><a class="card-link" target="_blank" rel="external nofollow noopener noreferrer" href="https://qiancijun.github.io/"><img src="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif" data-original="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20220819152959.png" onerror="javascript:this.removeAttribute(&quot;data-src&quot;);this.src=&quot;https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/avatar/round/3442075.svg&quot;;"><div class="name"><span>神奇口袋</span></div></a></div></div></div>
+<h3 id="无人机辅助移动边缘计算"><a href="#无人机辅助移动边缘计算" class="headerlink" title="无人机辅助移动边缘计算"></a>无人机辅助移动边缘计算</h3><ul>
+<li>传统移动边缘计算（MEC）场景中，移动设备可以卸载本地任务至边缘服务器，从而降低延迟和能耗</li>
+<li>然而，受基站、边缘节点与本地设备距离等因素的影响，有时无法为通信拥堵和连接有限的地区提供良好的网络服务质量（QoS）</li>
+<li>通过将边缘服务器配备在无人机上，可以将其充当飞行基站和边缘计算节点，凭借其灵活性快速形成自组织网络，为通信受限的地区提供及时的网络服务</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/XuxuGood/simple-blog-cdn@master/images/site-img/loading3.gif" data-original="https://gendml.oss-cn-hangzhou.aliyuncs.com/picgo/20231106205732.png"></p>
+<center style="font-size:14px;color:#C0C0C0;text-decoration:underline">无人机辅助下的空中移动边缘计算
+</center> 
+
+<h2 id="2、研究现状"><a href="#2、研究现状" class="headerlink" title="2、研究现状"></a>2、研究现状</h2><table>
+<thead>
+<tr>
+<th>带有MEC服务器的无人机相较于传统边缘计算服务器具有以下特点：</th>
+<th>为了在有限资源下，提高QoS、降低延迟和提升能量效率，需要考虑以下四个方面：</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>高速可移动</td>
+<td>计算卸载</td>
+</tr>
+<tr>
+<td>能源有限</td>
+<td>资源分配</td>
+</tr>
+<tr>
+<td>与移动设备（MDs）的距离通常较近</td>
+<td>路径规划</td>
+</tr>
+<tr>
+<td>…</td>
+<td>能量控制</td>
+</tr>
+</tbody></table>
+<p>以下是目前已知的解决方法：</p>
+<ul>
+<li>使用多智能体强化学习（MARL）求解以上问题的联合优化</li>
+<li>尝试其他网络接入模式降低通信延迟，例如非正交多址（NOMA）、时分多址（TDMA）</li>
+<li>在飞行轨迹规划和网络调度上，分别使用深度强化学习（DRL）与其他方法相结合，例如启发式算法<br>……</li>
+</ul>
+<h2 id="3、未来挑战"><a href="#3、未来挑战" class="headerlink" title="3、未来挑战"></a>3、未来挑战</h2><h3 id="无人机的训练问题"><a href="#无人机的训练问题" class="headerlink" title="无人机的训练问题"></a>无人机的训练问题</h3><ul>
+<li>在训练过程中，通常需要智能体与环境不断交互获得训练数据，数据可能存在冗余、标签（奖励）错误和类别不平衡等问题，通常使用数据增强可以解决数据匮乏与收敛问题。<ul>
+<li>作者提出使用联邦学习（FL），以去中心化的方式，通过局部、全局的交互更新模型参数。这样训练数据较少的无人机可以通过其他无人机的训练结果更新本地模型，以保证训练的有效性。</li>
+</ul>
+</li>
+</ul>
+<h3 id="无人机的收敛问题"><a href="#无人机的收敛问题" class="headerlink" title="无人机的收敛问题"></a>无人机的收敛问题</h3><ul>
+<li>由于单架无人机的服务能力有限，无法满足某些场景用户的需求。在大规模无人机场景下，通常智能体的状态和动作空间维度会呈指数型增长，造成“维度灾难”，导致算法难以收敛和学习效率低下等问题。<ul>
+<li>作者提出使用图神经网络（GNN）处理大规模场景方面可能具有良好的效果。</li>
+</ul>
+</li>
+</ul>
+<h3 id="无人机的资源和能源限制问题"><a href="#无人机的资源和能源限制问题" class="headerlink" title="无人机的资源和能源限制问题"></a>无人机的资源和能源限制问题</h3><ul>
+<li>由于单架无人机的服务能力有限，无法满足某些场景用户的需求。在大规模无人机场景下，通常智能体的状态和动作空间维度会呈指数型增长，造成“维度灾难”，导致算法难以收敛和学习效率低下等问题。<ul>
+<li>作者提出使用图神经网络（GNN）处理大规模场景方面可能具有良好的效果。</li>
+</ul>
+</li>
+</ul>
+<h3 id="无人机的安全和隐私问题"><a href="#无人机的安全和隐私问题" class="headerlink" title="无人机的安全和隐私问题"></a>无人机的安全和隐私问题</h3><ul>
+<li>联邦学习（FL）通过分布式模型训练，通过局部参数构建全局模型，这种方式可以做到保护用户数据隐私和安全。</li>
+</ul>
 
 
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://gend-max.gitee.io/2023/11/08/wen-xian-yue-du-zong-shu-uav-assisted-mobile-edge-computing/" /></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/b32ef3da1162a.svg"/></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://gend-max.gitee.io/2023/11/08/wen-xian-yue-du-zong-shu-uav-assisted-mobile-edge-computing/&title=【文献阅读】【综述】UAV-assisted mobile edge computing - Gendml&summary=移动边缘计算领域下的文献阅读"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/80c07e4dbb303.svg"/></a><a class="social share-item email" href="mailto:?subject=【文献阅读】【综述】UAV-assisted mobile edge computing - Gendml&amp;body=https://gend-max.gitee.io/2023/11/08/wen-xian-yue-du-zong-shu-uav-assisted-mobile-edge-computing/"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/a1b00e20f425d.svg"/></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/8411ed322ced6.svg"/></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://gend-max.gitee.io/2023/11/08/wen-xian-yue-du-zong-shu-uav-assisted-mobile-edge-computing/index.html"/></div></div></section></div>
 
-  
-  </article>
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/08/07/docker-xue-xi-bi-ji/">Docker学习笔记<span class="note">较早</span></a><div class="line"></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts"></div>
 
 
 
