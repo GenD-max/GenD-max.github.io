@@ -76,25 +76,6 @@
   </entry>
   
   <entry>
-    <title>Linux命令大全</title>
-    <link href="https://gend-max.gitee.io/2022/05/17/linux-ming-ling-da-quan/"/>
-    <id>https://gend-max.gitee.io/2022/05/17/linux-ming-ling-da-quan/</id>
-    <published>2022-05-17T15:40:12.000Z</published>
-    <updated>2024-04-28T05:47:31.140Z</updated>
-    
-    
-    <summary type="html">包含Linux常用命令</summary>
-    
-    
-    
-    <category term="操作系统" scheme="https://gend-max.gitee.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-    <category term="Linux" scheme="https://gend-max.gitee.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Raspberry Pi使用总结</title>
     <link href="https://gend-max.gitee.io/2022/05/17/raspberry-pi-shi-yong-zong-jie/"/>
     <id>https://gend-max.gitee.io/2022/05/17/raspberry-pi-shi-yong-zong-jie/</id>
@@ -110,6 +91,25 @@
     
     
     <category term="Raspberry Pi" scheme="https://gend-max.gitee.io/tags/Raspberry-Pi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux命令大全</title>
+    <link href="https://gend-max.gitee.io/2022/05/17/linux-ming-ling-da-quan/"/>
+    <id>https://gend-max.gitee.io/2022/05/17/linux-ming-ling-da-quan/</id>
+    <published>2022-05-17T15:40:12.000Z</published>
+    <updated>2024-04-28T05:47:31.140Z</updated>
+    
+    
+    <summary type="html">包含Linux常用命令</summary>
+    
+    
+    
+    <category term="操作系统" scheme="https://gend-max.gitee.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="Linux" scheme="https://gend-max.gitee.io/tags/Linux/"/>
     
   </entry>
   
